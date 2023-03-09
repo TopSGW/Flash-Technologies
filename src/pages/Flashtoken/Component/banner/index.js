@@ -58,7 +58,7 @@ const Banner = () => {
     },
     {
       img: git,
-      link: "https://github.com/FlashTechnologiesOff",
+      link: "https://github.com/Flash-Technologies",
     },
     {
       img: book,

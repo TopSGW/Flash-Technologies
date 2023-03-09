@@ -73,7 +73,7 @@ const pics = [
   },
   {
     img: img7,
-    link: "https://github.com/FlashTechnologiesOff",
+    link: "https://github.com/Flash-Technologies",
   },
   {
     img: img8,
