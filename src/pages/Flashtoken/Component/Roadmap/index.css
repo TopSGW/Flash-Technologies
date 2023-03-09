@@ -1,0 +1,60 @@
+.roadmap-image{
+    width: 100%;
+    display: block;
+    margin: auto;
+    /* margin-bottom: -5px; */
+}
+.makeStyles-overlapIcon{
+    right:10%;
+    left:unset;
+    bottom: -20px;
+    position: absolute;
+}
+.roadmap-overlay{
+    width:100%;
+}
+.slider-container {
+    position: relative;
+    /* margin: 50px auto 20px auto; */
+    width: 1000px;
+    height: 730px;
+  }
+  
+  /* Style each slide */
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .photo {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+  }
+  /* .roadmap-image:hover,
+    .roadmap-image:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    } */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }

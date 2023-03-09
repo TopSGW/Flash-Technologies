@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="151px" height="151px" viewBox="84 0.607 151 151" enable-background="new 84 0.607 151 151" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="134" y="50.607" width="51" height="51"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path fill="#FFFFFF" d="M159.5,50.607l21.07,9.563h2.837c0.422,0,0.827,0.167,1.127,0.467c0.298,0.299,0.466,0.704,0.466,1.127
+			v6.375c0,0.422-0.168,0.828-0.466,1.127c-0.3,0.299-0.705,0.467-1.127,0.467h-1.595v22.313c0.356,0,0.701,0.12,0.982,0.339
+			c0.28,0.22,0.479,0.526,0.564,0.872l1.594,6.375c0.059,0.235,0.064,0.48,0.014,0.717c-0.05,0.237-0.154,0.459-0.303,0.65
+			s-0.34,0.345-0.559,0.45c-0.217,0.106-0.457,0.16-0.698,0.159h-47.813c-0.242,0.001-0.481-0.053-0.699-0.159
+			c-0.218-0.105-0.409-0.259-0.558-0.45s-0.253-0.413-0.303-0.65c-0.05-0.237-0.045-0.482,0.014-0.717l1.594-6.375
+			c0.086-0.345,0.285-0.652,0.565-0.871c0.28-0.22,0.625-0.339,0.981-0.34V69.732h-1.594c-0.423,0-0.828-0.168-1.127-0.467
+			c-0.299-0.299-0.467-0.705-0.467-1.127v-6.375c0-0.423,0.168-0.828,0.467-1.127c0.299-0.299,0.704-0.467,1.127-0.467h2.837
+			L159.5,50.607z M146.04,60.17h26.924L159.5,53.795L146.04,60.17z M140.375,69.732v22.313h3.188V69.732H140.375z M146.75,69.732
+			v22.313h7.969V69.732H146.75z M157.907,69.732v22.313h3.187V69.732H157.907z M164.282,69.732v22.313h7.968V69.732H164.282z
+			 M175.438,69.732v22.313h3.188V69.732H175.438z M181.813,66.545v-3.188h-44.625v3.188H181.813z M180.57,95.232h-42.139
+			l-0.797,3.188h43.733L180.57,95.232L180.57,95.232z"/>
+	</g>
+</g>
+<g>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="159.5" y1="330.3926" x2="159.5" y2="179.3926" gradientTransform="matrix(1 0 0 -1 0 331)">
+		<stop  offset="0" style="stop-color:#FBBF04"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<circle shape-rendering="crispEdges" fill="none" stroke="url(#SVGID_3_)" cx="159.5" cy="76.107" r="75"/>
+</g>
+</svg>

@@ -1,0 +1,113 @@
+.topbarboxparent {
+    display: flex;
+    width: 100%;
+    background-color: #000;
+    align-items: center;
+}
+
+.topbarboxparent>div {
+    width: 33%;
+    /* padding: 5px 0px; */
+}
+.topbarboxparent>div.counter-box{
+    width: 25%;
+}
+.topbarboxparent>div.launc-notify{
+    width: 50%;
+}
+.topbarboxparent>div.sold-coins{
+    width: 30%;
+    padding:0 20p    x;
+}
+.counter-wrap>div {display: inline-block;background: #191818;color: #fff;margin: 0px 5px;padding: 8px;
+    border-radius: 8px;
+    min-width: 55px;}
+
+.counter-wrap div h6 {
+    margin: 0px;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.counter-wrap div p {
+    margin: 0px;
+    font-family: Manrope;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
+    opacity: 0.6;
+}
+
+
+.notify-text {
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: #fff;
+}
+
+.notify-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notify-items>div {
+    margin: 0px 30px;
+}
+.notify-items h4{
+    text-transform: uppercase;
+    margin:0px;
+}
+.notify-items h4 .primary-color{
+    color: #FBBF04;
+}
+
+.notify-button a{
+    background: #E0007B;
+    width: 139px;
+height: 55px;
+border-radius: 50px;
+padding:8px 15px;
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    text-decoration: none;
+
+}
+.sold-coins{
+    padding: 0 10px;
+}
+.sold-coins h5{
+    margin:0px;
+    font-family: 'Manrope';
+font-size: 14px;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color:#fff;
+}
+.sold-coins p{margin:0px;
+    font-family: 'Manrope';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#fff;
+    }
+
+.progressbar-top{
+    margin:5px 0;
+}
+
+    

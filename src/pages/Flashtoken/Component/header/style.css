@@ -1,0 +1,13 @@
+.MuiOutlinedInput-notchedOutline{
+    border: none!important;
+}
+
+/* .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon{
+    color: #ffffff!important;
+} */
+#lang > svg{
+    color: #ffffff!important;
+}
+.LanguageSelector > svg{
+    color: #ffffff!important;
+}

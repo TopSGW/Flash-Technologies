@@ -1,0 +1,102 @@
+.tokenomics-image {
+    width: 100%;
+}
+
+
+.audit-flash-button img {
+    border-radius: 50px;
+    height: 60px;
+}
+
+
+.add-filter {
+    filter: blur(21.5px);
+}
+.doughnut-filter {
+    filter: drop-shadow(rgb(140, 185, 245) 0px 0px 10px);
+}
+.soon {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    z-index: 99999;
+}
+
+@media only screen and (max-width: 768px){
+    .soon{
+        font-size: 30px!important;
+        left: 40%;
+        top: 30%;
+    }
+}
+.btn_icon{
+    height:32px;
+}
+@media screen and (max-width:600px){
+    .btn_icon{
+        height: 24px;
+    }
+}
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   }
+
+   @keyframes clipbooard {
+    0% {opacity: 0;}
+    20% {opacity: 0.75;}
+    100% {opacity: 1;}
+        
+  }
+  .CircleManager{
+    height: 35vw;
+  }
+  @media screen and (min-width:899px){
+    .CircleManager{
+        height: 26vw;
+    }
+}
+@media screen and (min-width:1400px){
+    .CircleManager{
+        height: 368px;
+    }
+}
+.arrowImageReponsive{
+    bottom: 36%;
+}
+@media screen and (min-width: 744px) {
+    .arrowImageReponsive{
+        bottom: 38%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .arrowImageReponsive{
+        display: none;
+    }
+}
+.ShiftImage{
+    display: none;
+}
+@media screen and (min-width: 1200px) {
+    .ShiftImage{
+        display: block;
+    }
+}
+.Audit{
+    display: block;
+}
+a.disabled {
+    pointer-events: none;
+    color: #ccc;
+}
+.tmpBlock{
+    height: 70px;
+}
+@media only screen and (min-wdith:1200px){
+    .tmpBlock{
+        height: 58px;
+    }
+}

@@ -1,0 +1,65 @@
+.faq-heading{
+    text-align: center;
+}
+.faq-heading h3{
+    font-family: 'Manrope';
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+}
+.accordion-box{
+    background-color: #212121 !important;
+}
+
+.accord-heading {
+    background-color: #212121 !important;
+    color: #fff !important;
+    padding:10px 20px !important;
+}
+
+.accord-heading svg {
+    color: #fff;
+    display:none;
+}
+/* .accord-heading{
+    
+} */
+.accord-details{
+    background:#181818;
+    color:#fff;
+}
+/* .faq-box{
+    transform: scale(0.8);
+
+} */
+
+.faq-box>div {
+    border: none;
+    background-color: #000000;
+    border:1px solid ;
+}
+
+.accord-heading .MuiAccordionSummary-expandIconWrapper {
+    position: relative;
+    padding-left: 20px;
+}
+
+.accord-heading .MuiAccordionSummary-expandIconWrapper:before {
+    content: "";
+    
+    position: absolute;
+    width: 11px;
+    height:12px;
+    top: -5px;
+    margin-left: -15px;
+    background-image: url(../../../../assests/Images/plus-icon.png);
+}
+/* .accord-heading.Mui-expanded .MuiAccordionSummary-expandIconWrapper:before{
+
+    background-image: url(../../../../assests/Images/minus-icon.png);
+} */

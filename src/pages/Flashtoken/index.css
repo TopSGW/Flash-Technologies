@@ -1,0 +1,282 @@
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-ExtraLight.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-ExtraBold.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-Medium.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-Light.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-Regular.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.flash-list {
+    max-height: 180px;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../../src/assests/fonts/Manrope-SemiBold.woff2') format('woff2'),
+        url('../../../src/assests/fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.social-vertical{
+    position: fixed !important;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 40s linear infinite;
+    -moz-animation: rotating 40s linear infinite;
+    -ms-animation: rotating 40s linear infinite;
+    -o-animation: rotating 40s linear infinite;
+    animation: rotating 40s linear infinite;
+  }
+
+.iconbutton {
+    border: 1px solid #FBBF04 !important;
+}
+.iconbutton:hover {
+    background: transparent;
+    color: #fff;
+}
+.iconbutton:hover img {
+    filter: invert(1);
+}
+
+.iconbutton1{
+    background: #FBBF04 !important;
+}
+
+.social-vertical{
+    position: relative;
+
+}
+.social-vertical a img{
+    transition: 0.5s all;
+}
+.social-vertical a:hover img{
+    transform: scale(1.2);
+}
+.social-vertical:before{
+    background-color: #202020;
+    height: 100%;
+    position: absolute;
+    content: "";
+    left:0px;
+    top:0px;
+    width:100%;
+    border-radius: 30px;
+}
+.social-vertical div{
+    position: relative;
+    z-index: 2;
+}
+.menu-link{
+    color: rgb(133, 137, 143);
+    text-decoration: none;
+    cursor: pointer;
+}
+.mobile-mockup{
+    margin-bottom: -50px;
+}
+
+.resize-team img{
+    max-width: 270px;
+}
+.arrow-down{
+    margin-right:20px
+}
+
+.flash-button:hover{
+    background: #FBBF04 !important;
+    color: #000 !important;
+}
+.flash-button:hover img{
+    filter: brightness(0.1);
+}
+
+.banner-overlay-icon{
+    left: 20%;
+    bottom: -65px;
+    position: absolute;
+}
+
+.responsive-staking{
+    width:100%;
+}
+.mobile-carousel{
+    display: none;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.owl-stage{
+    display: flex;
+    align-items: center;
+}
+
+.css-hn784z{
+    left: 5%!important;
+}
+
+.css-1abc02a{
+    right: 5%!important;
+}
+
+@media(min-width:0px){
+    .custom{
+        margin: 15px;
+    }
+}
+
+@media(min-width:1200px){
+    .custom{
+        margin: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .mobile-carousel{
+        display: block;
+        max-width: 600px;
+    }
+    .hidden-mobile{
+        display: none !important;
+    }
+
+    .css-hn784z{
+        top: 3%!important;
+    }
+    
+    .css-1abc02a{
+        top: 3%!important;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .mobile-carousel{
+        display: block;
+        max-width: 320px;
+
+    }
+    
+}
+
+@media only screen and (min-width: 900px) {
+    .nft-images img {
+        width: 95%;
+    }
+    
+    .nft-images div {
+        width: 100%;
+    }
+    
+    .nft-images {
+        margin-right: 2px;
+        max-width: 24.3%;
+    }
+}
+
+.cont-main .react-reveal{
+width: 100%;
+}
+
+.main-con{
+    position: relative;
+}
+
+.First,.Second,.Third,.Fourth{
+    position: absolute;
+
+}
+
+.EcosystemItemA{
+    font-size: 12px;
+}
+@media only screen and (min-width: 768px)
+{
+    .EcosystemItemA{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    .EcosystemItemA{
+        font-size: 18px;
+    }
+}
