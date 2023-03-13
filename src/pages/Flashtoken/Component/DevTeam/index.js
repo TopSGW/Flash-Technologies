@@ -169,11 +169,11 @@ const DevTeam = () => {
                 <p
                   className="member-data member_dev"
                 >
-                  Project manager for
-                  {/* <br />{" "} */}
-                  <span className="colored-text"> <br/>Flash Transfer </span> &{" "}
+                  Full stack Developer
+                  <br />{" "}
+                {/* <span className="colored-text"> <br/>Flash Transfer </span> &{" "} */}
                   {/* <span className="colored-text"> </span> */}
-                  Full stack
+                  {/* Full stack */}
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>

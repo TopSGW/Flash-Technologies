@@ -61,7 +61,7 @@ const Footer = () => {
     },
     {
       url: "License",
-      link: LicenseImg
+      link: ""
     },
   ];
 
@@ -263,10 +263,10 @@ const Footer = () => {
                             }}
                           >
                           {i.url === 'License' ?
-                            <a className="menu-link" target="_blank" rel="noreferrer"
-                                href={LicenseImg}>
+                            <p className="menu-link"
+                                >
                                 {i.url}
-                            </a> :                           
+                            </p> :                           
                             <div className="menu-link" onClick={()=>setTimeout(()=>{
                                 if(i.url ==="Whitepaper"){
                                   document.getElementById(i.link).scrollIntoView();
@@ -338,9 +338,12 @@ const Footer = () => {
                               color: "#85898F",
                             }}
                           >
-                          <a href={i.link} className="menu-link" target="_blank" rel="noreferrer">
-                              {i.url}
-                          </a>
+                          {i.url ==="License" ? <a className="menu-link"> {i.url}</a> :
+                                    <a href={i.link} className="menu-link" target="_blank" rel="noreferrer">
+                                                      {i.url}
+                                                  </a>
+                        
+                          }
                           </Typography>
                         </Box>
                       </Box>
