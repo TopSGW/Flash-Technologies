@@ -26,6 +26,9 @@ import PitchDeckCTA from "../../../../assests/Images/Whitepaper-en2.png";
 import EN from "../../../../assests/pdf/WhitePaperEN.pdf";
 import FR from "../../../../assests/pdf/WhitePaperFR.pdf";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import DescriptionIcon from '@mui/icons-material/Description';
+import flashWalletImg from '../../../../assests/Images/flash-wallet.png'
 import "./index.css";
 
 const Accordion2 = styled((props) => (
@@ -520,24 +523,38 @@ const Faq = () => {
           <Box>
             {" "}
             <Button>
-              <a href={EN} target="__blank">
-                <img src={PitchDeckCTA} />
+              <a href={EN} target="__blank"  className="fq_btn">
+                {/* <img src={PitchDeckCTA} /> */}
+                <p>Whitepaper ER</p>  
+                  <DescriptionIcon sx={{
+                  marginLeft: '38px',
+                  fontSize: 35
+                  }}/>                
               </a>
             </Button>{" "}
           </Box>
           <Box>
             {" "}
             <Button>
-            <a href={FR} target="__blank">
-              <img src={WhitepaperCTA} />
+            <a href="https://youtu.be/gMZXsvlxgcg" target="__blank" className="fq_btn">
+              <p>Presentation</p>  
+              <YouTubeIcon sx={{
+                marginLeft: '38px',
+                fontSize: 40
+              }}/>
+
+              {/* <img src={WhitepaperCTA} /> */}
               </a>
             </Button>{" "}
           </Box>
           <Box>
             {" "}
-            <Button>
-              <img src={UsingFW} />
-            </Button>{" "}
+            <Button >
+              <div className="fq_btn">
+                <p>Using Flash Wallet</p>
+                <img src={flashWalletImg} style={{marginLeft:'38px', width:'40px'}}/>
+              </div>
+            </Button>{""}
           </Box>
         </Box>
       </Grid>

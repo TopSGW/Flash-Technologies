@@ -9,7 +9,7 @@ import partner1 from "../../../../assests/Images/cropped-Onramper-Logo.png";
 import partner2 from "../../../../assests/Images/solid_proof.png";
 import partner3 from "../../../../assests/Images/partner3.png";
 import partner4 from "../../../../assests/Images/partner4.png";
-import partner5 from "../../../../assests/Images/partner5.png";
+import partner5 from "../../../../assests/Images/osborne.png";
 import partner6 from "../../../../assests/Images/partner6.png";
 import partner7 from "../../../../assests/Images/partner7.png";
 import partner8 from "../../../../assests/Images/partner8.png";
@@ -21,6 +21,7 @@ import partner13 from "../../../../assests/Images/partner13.png";
 import partner14 from "../../../../assests/Images/partner14.png";
 import partner15 from "../../../../assests/Images/partner15.png";
 import partner16 from "../../../../assests/Images/partner16.png";
+import partner17 from "../../../../assests/svg/clertlogo.svg";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -34,6 +35,9 @@ const ListingPartners = () => {
   const list1 = [
     {
       img: partner3,
+    },
+    {
+      img:partner17,
     },
     {
       img: partner2,
@@ -135,6 +139,9 @@ const ListingPartners = () => {
     },
     {
       img: partner16,
+    },
+    {
+      img: partner17,
     },
   ];
 
@@ -342,7 +349,7 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        {i.img == partner2 ? <a href="https://solidproof.io/" target="_blank"> <img src={i.img} width="140px" /> </a> :
+                        {i.img == partner2 || i.img == partner17 ? <a href="https://solidproof.io/" target="_blank"> <img src={i.img} width="140px" /> </a> :
                         <img src={i.img} />}
                       </Box>
                     </Box>
