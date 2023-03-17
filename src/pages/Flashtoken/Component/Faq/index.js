@@ -525,7 +525,7 @@ const Faq = () => {
             <Button>
               <a href={EN} target="__blank"  className="fq_btn">
                 {/* <img src={PitchDeckCTA} /> */}
-                <p>Whitepaper ER</p>  
+                <p>Whitepaper EN</p>  
                   <DescriptionIcon sx={{
                   marginLeft: '38px',
                   fontSize: 35
