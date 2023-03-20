@@ -38,9 +38,11 @@ const ListingPartners = () => {
     },
     {
       img:partner17,
+      url: "https://www.certik.com"
     },
     {
       img: partner2,
+      url: "https://solidproof.io/"
     },
     {
       img: partner1,
@@ -97,6 +99,7 @@ const ListingPartners = () => {
     },
     {
       img: partner2,
+      url: "https://solidproof.io/"
     },
     {
       img: partner3,
@@ -142,6 +145,7 @@ const ListingPartners = () => {
     },
     {
       img: partner17,
+      url: "https://www.certik.com"
     },
   ];
 
@@ -243,7 +247,8 @@ const ListingPartners = () => {
               {list5.map((i) => {
                 return (
                   <div>
-                    <img src={i.img} width="101px" height="auto" />
+                    {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} width="140px" /> </a> :
+                        <img src={i.img} />}                    
                   </div>
                 );
               })}
@@ -349,7 +354,7 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        {i.img == partner2 || i.img == partner17 ? <a href="https://solidproof.io/" target="_blank"> <img src={i.img} width="140px" /> </a> :
+                        {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} width="140px" /> </a> :
                         <img src={i.img} />}
                       </Box>
                     </Box>

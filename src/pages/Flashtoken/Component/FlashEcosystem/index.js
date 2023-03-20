@@ -413,9 +413,8 @@ const FlashEcosystem = () => {
                 Flash Transfer
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Exchange your cryptocurrency vs fiat or buy directly
-                cryptocurrency with fiat through our approved partners. You can
-                also send your cryptocurrency and the receiver withdraws it in
+                Exchange your cash vs crypto or crypto vs cash. Buy directly cryptocurrency with our approved partners.
+                You can also send your cryptocurrency and the receiver withdraws it in
                 fiat all over the world using a Binance account or using your
                 non custodial wallet ( Flash wallet, Metamask, Trust wallet ...).
               </Typography>
