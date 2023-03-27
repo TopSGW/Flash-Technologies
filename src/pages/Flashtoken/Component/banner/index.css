@@ -1,0 +1,31 @@
+.logo_cert{
+    position:absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.audit_by{
+    font-size: 40px;
+    color: #FBBF04;
+}
+@media only screen and (max-width:1200px) {
+    .logo_cert{
+        margin-top: 0px;
+    } 
+}
+@media only screen and (max-width:578px){
+    .certImg1{
+        width: 90px;
+    }
+    .certImg2{
+        width: 20px
+    }
+    .audit_by{
+        font-size: 12px;
+    }
+    .logo_cert{
+        margin-top: 40px;
+    }
+}

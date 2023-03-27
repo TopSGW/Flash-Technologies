@@ -29,9 +29,11 @@ import twetterbtn from "../../../../assests/Images/Twitter (5).png";
 import telebtn from "../../../../assests/Images/Telegram.png";
 import flashbtn from "../../../../assests/Images/flashbtn.png";
 import bannerline from "../../../../assests/Images/bannerline.png";
-
+import certImg1 from '../../../../assests/Images/Hcertlogo.png';
+import certImg2 from '../../../../assests/Images/Lcert.png';
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
+import "./index.css"
 
 const Banner = () => {
   const classes = useStyles();
@@ -146,7 +148,7 @@ const Banner = () => {
               <Box
                 sx={{
                   padding: { lg: "0px 0px", xs: "0px 30px" },
-                  marginTop: { lg: "40px", xs: "30px" },
+                  marginTop: { lg: "100px", xs: "80px" },
                   transform: { lg: "scale(0.8)", xs: "scale(none)" },
                 }}
               >
@@ -299,7 +301,7 @@ const Banner = () => {
               <Box
                 sx={{
                   padding: { lg: "0px 0px", xs: "0px 30px" },
-                  marginTop: { lg: "40px", xs: "10px" },
+                  marginTop: { lg: "100px", xs: "10px" },
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "start",
@@ -513,6 +515,15 @@ const Banner = () => {
             </Box>
           </Box>
         </Grid>
+        <div className="logo_cert">
+          <h3 className="audit_by">Audited by</h3>
+          <div style={{marginLeft:"10px"}}>
+            <img src={certImg1} className="certImg1"></img>
+          </div>
+          <div style={{marginLeft:"10px"}}>
+            <img src={certImg2} className="certImg2"></img>
+          </div>
+        </div>
       </Grid>
     </>
   );
