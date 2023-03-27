@@ -515,7 +515,7 @@ const Banner = () => {
             </Box>
           </Box>
         </Grid>
-        <div className="logo_cert">
+        <a className="logo_cert" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
           <h3 className="audit_by">Audited by</h3>
           <div style={{marginLeft:"10px"}}>
             <img src={certImg1} className="certImg1"></img>
@@ -523,7 +523,7 @@ const Banner = () => {
           <div style={{marginLeft:"10px"}}>
             <img src={certImg2} className="certImg2"></img>
           </div>
-        </div>
+        </a>
       </Grid>
     </>
   );

@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+    text-decoration: none;
 }
 .audit_by{
     font-size: 40px;
@@ -20,7 +21,7 @@
         width: 90px;
     }
     .certImg2{
-        width: 20px
+        width: 20px;
     }
     .audit_by{
         font-size: 12px;
