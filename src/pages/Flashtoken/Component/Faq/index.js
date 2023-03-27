@@ -520,26 +520,30 @@ const Faq = () => {
           }}
           id="whitepaper"
         >
-          <Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: 'center'
+          }}>
             {" "}
             <Button>
               <a href={EN} target="__blank"  className="fq_btn">
                 {/* <img src={PitchDeckCTA} /> */}
                 <p>Whitepaper EN</p>  
                   <DescriptionIcon sx={{
-                  marginLeft: '38px',
                   fontSize: 35
                   }}/>                
               </a>
             </Button>{" "}
           </Box>
-          <Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: 'center'
+          }}>
             {" "}
             <Button>
             <a href="https://youtu.be/gMZXsvlxgcg" target="__blank" className="fq_btn">
               <p>Presentation</p>  
               <YouTubeIcon sx={{
-                marginLeft: '38px',
                 fontSize: 40
               }}/>
 
@@ -547,12 +551,15 @@ const Faq = () => {
               </a>
             </Button>{" "}
           </Box>
-          <Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: 'center'
+          }}>
             {" "}
             <Button >
               <div className="fq_btn">
                 <p>Using Flash Wallet</p>
-                <img src={flashWalletImg} style={{marginLeft:'38px', width:'40px'}}/>
+                <img src={flashWalletImg} style={{ width:'40px'}}/>
               </div>
             </Button>{""}
           </Box>
