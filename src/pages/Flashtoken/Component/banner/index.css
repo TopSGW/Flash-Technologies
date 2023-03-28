@@ -10,6 +10,7 @@
 .audit_by{
     font-size: 40px;
     color: #FBBF04;
+    padding-bottom: 9px;
 }
 @media only screen and (max-width:1200px) {
     .logo_cert{
@@ -25,6 +26,7 @@
     }
     .audit_by{
         font-size: 12px;
+        padding-bottom: 6px;
     }
     .logo_cert{
         margin-top: 40px;
