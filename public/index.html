@@ -47,6 +47,10 @@
     Weglot.initialize({
         api_key: 'wg_d47fbfcba07d716bf6ec6cbae53fad113'
     });
+    Weglot.on("languageChanged", function(newLang, prevLang) {
+      console.log("The language on the page just changed to (code): " + newLang)
+      console.log("The full name of the language is: " + Weglot.getLanguageName(newLang))
+    })    
 </script>
 <!-- Customized Style -->
 <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">

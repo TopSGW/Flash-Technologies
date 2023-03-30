@@ -6,6 +6,7 @@ import Bloomberg from "../../../../assests/carousel_Img/Bloomberg.svg";
 import Vector from "../../../../assests/carousel_Img/Vector.svg";
 import YahooFinance from "../../../../assests/carousel_Img/YahooFinance.svg";
 import Binance from "../../../../assests/svg/binance.svg";
+import telechargementImg from '../../../../assests/carousel_Img/telechargement.svg';
 
 
 import "./index.css";
@@ -62,6 +63,10 @@ export default function Media(){
             img:Binance,
             link: "https://www.binance.com/en/feed/post/221737"
         },
+        {
+          img:telechargementImg,
+          link: "https://fr.cointelegraph.com/press-releases/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
+        },
       ];    
     return(
         <div style={{
@@ -93,32 +98,33 @@ export default function Media(){
                     style={{display:"flex", justifyContent:"center", alignItems:"center"}}
                 >
                 {list1.map((i,index) => {
-                    if(i.img == Bloomberg){
+                     if(i.img == Bloomberg){
+                        return (<a href={i.link} target="_blank" rel="noreferrer">
+                           <img src={i.img} style={{width:"134px"}} />
+                         </a>
+                        )
+                     }
+                    else if(i.img == telechargementImg){
                        return (<a href={i.link} target="_blank" rel="noreferrer">
-                          <img src={i.img} style={{width:"134px", height:"44px"}} width="80px" height="50px" />
-                        </a>
+                           <img src={i.img} style={{width:"180px"}}/>
+                         </a>
                        )
-                    }
-                    else if(i.img == Vector){
-                      return (<a href={i.link} target="_blank" rel="noreferrer">
-                          <img src={i.img} style={{width:"134px", height:"44px"}} width="80px" height="50px" />
-                        </a>
-                      )
-                    }
+                     }
                     else if(i.img == Binance){
                       return (<a href={i.link} target="_blank" rel="noreferrer">
-                          <img src={i.img} style={{width:"134px", height:"44px"}} width="80px" height="50px" />
+                          <img src={i.img} style={{width:"160px"}} />
                         </a>
                       )
                     }
                     else{
                       return (
                         <a href={i.link} target="_blank" rel="noreferrer">
-                            <img src={i.img} width="120px" height="50px" />
+                            <img src={i.img} width="120px" style={{width:"120px"}}/>
                         </a>
                         );    
                     }
-                })}
+                  }
+                )}
                 </OwlCarousel>
             </div>
             {/* <div className="MediaMobile">
