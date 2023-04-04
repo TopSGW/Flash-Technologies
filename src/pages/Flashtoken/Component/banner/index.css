@@ -17,7 +17,7 @@
         margin-top: 0px;
     } 
 }
-@media only screen and (max-width:578px){
+@media only screen and (max-width:1000px){
     .certImg1{
         width: 90px;
     }

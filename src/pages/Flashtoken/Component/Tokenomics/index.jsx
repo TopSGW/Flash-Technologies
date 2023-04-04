@@ -190,13 +190,13 @@ const Tokenomics = () => {
                   }}
                 >
                   {/* {CircleTrack ? 'TOKEN FLASH' : 'Flash Transfer'} */}
-                  Tokenomics
+                  {/* Tokenomics */}
                   <Typography sx={{ 
                     color: "#FBBF04",
                     fontStyle: 'inherit',
                     fontSize: 'inherit',
                     fontWeight: 'inherit',
-                    marginLeft: '20px'
+
                   }}> {isTransfer ? ' Flash 3.0' : ' Flash Token'}</Typography>
                 </Typography>
                 <Typography

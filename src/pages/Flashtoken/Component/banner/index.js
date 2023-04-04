@@ -159,7 +159,7 @@ const Banner = () => {
               <Box
                 sx={{
                   padding: { lg: "0px 0px", xs: "0px 30px" },
-                  marginTop: { lg: "50px", xs: "54px" },
+                  marginTop: { lg: "100px", xs: "90px" },
                   transform: { lg: "scale(0.8)", xs: "scale(none)" },
                 }}
               >
@@ -312,7 +312,7 @@ const Banner = () => {
               <Box
                 sx={{
                   padding: { lg: "0px 0px", xs: "0px 30px" },
-                  marginTop: { lg: "50px", xs: "10px" },
+                  marginTop: { lg: "100px", xs: "10px" },
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "start",
@@ -526,7 +526,7 @@ const Banner = () => {
             </Box>
           </Box>
         </Grid>
-        {/* <a className="logo_cert" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
+        <a className="logo_cert" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
           <h3 className="audit_by">Audited by</h3>
           <div style={{marginLeft:"10px"}}>
             <img src={certImg1} className="certImg1"></img>
@@ -534,7 +534,7 @@ const Banner = () => {
           <div style={{marginLeft:"10px"}}>
             <img src={certImg2} className="certImg2"></img>
           </div>
-        </a> */}
+        </a>
       </Grid>
     </>
   );

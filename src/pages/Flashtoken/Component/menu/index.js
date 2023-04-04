@@ -47,11 +47,11 @@ export default function Menu( props ){
           color: "#85898F",
           link: "team",
         },
-        {
-          name: "Medias",
-          color: "#85898F",
-          link: "Medias",
-        },
+        // {
+        //   name: "Medias",
+        //   color: "#85898F",
+        //   link: "Medias",
+        // },
         {
           name: "FAQ",
           color: "#85898F",
