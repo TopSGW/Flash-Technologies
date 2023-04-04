@@ -10,9 +10,14 @@ import telechargementImg from '../../../../assests/carousel_Img/telechargement.s
 
 
 import "./index.css";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useEffect } from "react";
 
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 export default function Media(){
-    const Option = {
+  const fixedbar = useMediaQuery('(max-width : 1200px)');
+      const Option = {
         responsive: {
           0: {
             items: 2,
@@ -46,6 +51,19 @@ export default function Media(){
           },
         },
       };
+      const responsive = {
+        0: { 
+            items: 1
+        },
+        568: { 
+            items: 2
+        },
+        1024: {
+            items: 4, 
+            itemsFit: 'contain'
+        },
+    };
+    
       const list1 = [
         {
             img:Bloomberg,
@@ -77,18 +95,18 @@ export default function Media(){
         >
             <h1 style={{
                 color: "white",
-                padding: "0px 0px 35px 0px",
+                padding: "20px 0px 20px 0px",
                 textAlign: "center",
                 margin: 0,
                 lineHeight: 0
-            }}>Seen in the media</h1>
-            <div className="MediaContentQuery" style={{paddingBottom: "30px",zIndex:22}}>
+            }} className="seeIntheMedia">Seen in the media</h1>             
+            <div className="MediaContentQuery" style={{zIndex:22}}>
                 <OwlCarousel
                     className="owl-theme"
                     autoplay={true}
                     loop
                     margin={40}
-                    autoplaySpeed={9000}
+                    autoplaySpeed={10000}
                     // autoplayTimeout={1000}
                     nav={false}
                     dots={false}
@@ -106,7 +124,7 @@ export default function Media(){
                      }
                     else if(i.img == telechargementImg){
                        return (<a href={i.link} target="_blank" rel="noreferrer">
-                           <img src={i.img} style={{width:"180px"}}/>
+                           <img src={i.img} style={{width:"180px"}} id="telechargement"/>
                          </a>
                        )
                      }
@@ -126,6 +144,41 @@ export default function Media(){
                   }
                 )}
                 </OwlCarousel>
+                    {/* <AliceCarousel
+                      mouseTracking
+                      items= {list1.map((i,index) => {
+                        if(i.img == Bloomberg){
+                           return (<a href={i.link} target="_blank" rel="noreferrer">
+                              <img src={i.img} style={{width:"134px"}} />
+                            </a>
+                           )
+                        }
+                       else if(i.img == telechargementImg){
+                          return (<a href={i.link} target="_blank" rel="noreferrer">
+                              <img style={{width:"180px"}} id="telechargement"/>
+                            </a>
+                          )
+                        }
+                       else if(i.img == Binance){
+                         return (<a href={i.link} target="_blank" rel="noreferrer">
+                             <img src={i.img} style={{width:"160px"}} />
+                           </a>
+                         )
+                       }
+                       else{
+                         return (
+                           <a href={i.link} target="_blank" rel="noreferrer">
+                               <img src={i.img} width="120px" style={{width:"120px"}}/>
+                           </a>
+                           );    
+                       }
+                     }
+                   )}
+                      responsive={responsive}
+                      autoPlay={true}
+                      infinite={false}
+                    /> */}
+                
             </div>
             {/* <div className="MediaMobile">
                 {list1.map((m)=>{

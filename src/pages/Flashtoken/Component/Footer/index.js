@@ -6,7 +6,7 @@ import FlashLogo from "../../../../assests/Logo/Flashlogo.png";
 import PrivacyPDF from "../../../../assests/pdf/LLC.pdf"
 import LicenseImg from "../../../../assests/pdf/Business_License.jpg";
 import LegalNotice from "../../../../assests/pdf/LNotice.pdf";
-
+import License from '../../../../assests/pdf/N_Business_License_MFZ.pdf';
 import AppButton from "../../../../components/AppButton";
 import { Link } from "react-router-dom";
 // import MobileDrawer from "../MobileDrawer";
@@ -61,7 +61,7 @@ const Footer = () => {
     },
     {
       url: "License",
-      link: ""
+      link: License
     },
   ];
 
@@ -338,7 +338,8 @@ const Footer = () => {
                               color: "#85898F",
                             }}
                           >
-                          {i.url ==="License" ? <a className="menu-link"> {i.url}</a> :
+                          {i.url ==="License" ? <a className="menu-link" target="_blank" rel="noreferrer"
+                            href={i.link}> {i.url}</a> :
                                     <a href={i.link} className="menu-link" target="_blank" rel="noreferrer">
                                                       {i.url}
                                                   </a>

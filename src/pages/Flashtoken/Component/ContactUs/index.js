@@ -320,6 +320,14 @@ const ContactUs = () => {
                       return (
                         <Grid item xs={2.3} md={1} sm={1}>
                           <Box m="5px" sx={{ lg: "100%", xs: "50px" }}>
+                            {i.img == img2 ?                             
+                            <a
+                              id="telegramlink2"
+                              target="_blank"
+                              style={{ textDecoration: "none" }}
+                            >
+                              <img src={i.img} />
+                            </a>:
                             <a
                               href={i.link}
                               target="_blank"
@@ -327,6 +335,7 @@ const ContactUs = () => {
                             >
                               <img src={i.img} />
                             </a>
+                            }
                           </Box>
                         </Grid>
                       );

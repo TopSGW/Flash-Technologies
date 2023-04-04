@@ -525,12 +525,13 @@ const Faq = () => {
             justifyContent: 'center'
           }}>
             {" "}
-            <Button>
+            <Button className="mobile_button">
               <a href={EN} target="__blank"  className="fq_btn">
                 {/* <img src={PitchDeckCTA} /> */}
                 <p>Whitepaper EN</p>  
                   <DescriptionIcon sx={{
-                  fontSize: 35
+                  fontSize: 35,
+                  marginLeft: "12px"
                   }}/>                
               </a>
             </Button>{" "}
@@ -540,11 +541,12 @@ const Faq = () => {
             justifyContent: 'center'
           }}>
             {" "}
-            <Button>
-            <a href="https://youtu.be/gMZXsvlxgcg" target="__blank" className="fq_btn">
+            <Button className="mobile_button">
+            <a  id="youtube_url" target="__blank" className="fq_btn">
               <p>Presentation</p>  
               <YouTubeIcon sx={{
-                fontSize: 40
+                fontSize: 40,
+                marginLeft: "12px"
               }}/>
 
               {/* <img src={WhitepaperCTA} /> */}
@@ -556,10 +558,10 @@ const Faq = () => {
             justifyContent: 'center'
           }}>
             {" "}
-            <Button >
+            <Button className="mobile_button">
               <div className="fq_btn">
                 <p>Using Flash Wallet</p>
-                <img src={flashWalletImg} style={{ width:'40px'}}/>
+                <img src={flashWalletImg} style={{ width:'40px', marginLeft: "12px"}}/>
               </div>
             </Button>{""}
           </Box>

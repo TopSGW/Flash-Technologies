@@ -129,17 +129,28 @@ const Banner = () => {
                 className="social-vertical"
               >
                 {Navs.map((i) => {
-                  return (
-                    <Box sx={{ margin: "10px 0px" }}>
-                      {i.img == git ? <a href={i.link} target="__blank">
-                          <img src={i.img} style={{width:'27px', height:'40px'}}/>
-                        </a> :
-                        <a href={i.link} target="__blank">
+                  if(i.img == tele){
+                    return (
+                      <Box sx={{ margin: "10px 0px" }}>
+                      <a id="telegramlink" target="__blank">
                             <img src={i.img} />
                         </a>
-                      }
-                    </Box>
-                  );
+                      </Box>
+                    )
+                  }
+                  else{
+                    return (
+                      <Box sx={{ margin: "10px 0px" }}>
+                        {i.img == git ? <a href={i.link} target="__blank">
+                            <img src={i.img} style={{width:'27px'}}/>
+                          </a> :
+                          <a href={i.link} target="__blank">
+                              <img src={i.img} />
+                          </a>
+                        }
+                      </Box>
+                    );  
+                  }
                 })}
               </Box>
             </Grid>
@@ -239,9 +250,9 @@ const Banner = () => {
                   </Grid>
                   <Grid item lg={3.3} md={4} xs={6}>
                     <a
-                      href="https://t.me/flashtokenenglish"
                       target="_blank"
                       style={{ textDecoration: "none" }}
+                      id="telegramlink3"
                     >
                       <IconButton
                         className="iconbutton"

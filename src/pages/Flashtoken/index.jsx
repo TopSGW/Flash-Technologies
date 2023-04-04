@@ -129,7 +129,7 @@ const FlashToken = () => {
           <Grid id="Contact" sx={{ backgroundColor: "black" }}>
             <ContactUs />
           </Grid>
-          <Grid sx={{ backgroundColor: "#181818" }}>
+          <Grid sx={{ backgroundColor: "#181818", paddingBottom: '190px'}}>
             <Footer />
           </Grid>
         </Grid>

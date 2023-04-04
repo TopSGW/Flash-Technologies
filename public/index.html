@@ -45,18 +45,43 @@
 <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
 <script>
     Weglot.initialize({
-        api_key: 'wg_d47fbfcba07d716bf6ec6cbae53fad113'
+        api_key: 'wg_d47fbfcba07d716bf6ec6cbae53fad113',
     });
     Weglot.on("languageChanged", function(newLang, prevLang) {
       console.log("The language on the page just changed to (code): " + newLang)
       console.log("The full name of the language is: " + Weglot.getLanguageName(newLang))
-    })    
+      if(newLang ==='fr'){
+        document.getElementById("youtube_url").href = "https://www.youtube.com/watch?v=2rMHlkZ0vCI&ab_channel=FlashTechnologies";
+        document.getElementById('telegramlink').href=" https://t.me/flashtechnologiesfr";
+        document.getElementById('telegramlink2').href=" https://t.me/flashtechnologiesfr";
+        document.getElementById('telegramlink3').href=" https://t.me/flashtechnologiesfr";
+      }
+      else{
+        document.getElementById("youtube_url").href = "https://youtu.be/gMZXsvlxgcg";
+        document.getElementById('telegramlink').href="https://t.me/flashtokenenglish";
+        document.getElementById('telegramlink2').href="https://t.me/flashtokenenglish";
+        document.getElementById('telegramlink3').href="https://t.me/flashtokenenglish";
+      }
+      if(newLang ==='de'){
+        document.getElementById("telechargement").src = "/telegraph.svg"
+      }
+      else{
+        document.getElementById("telechargement").src = "/telechargement.svg"
+      }
+    })
+    function init(){
+      document.getElementById('youtube_url').href = 'https://youtu.be/gMZXsvlxgcg';
+      document.getElementById('telechargement').src="/telechargement.svg";
+      document.getElementById('telegramlink').href="https://t.me/flashtokenenglish";
+      document.getElementById('telegramlink2').href="https://t.me/flashtokenenglish";
+      document.getElementById('telegramlink3').href="https://t.me/flashtokenenglish";
+    }    
 </script>
 <!-- Customized Style -->
 <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
 <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
   </head>
-  <body oncontextmenu="return true">
+  <body oncontextmenu="return true" onload="init()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

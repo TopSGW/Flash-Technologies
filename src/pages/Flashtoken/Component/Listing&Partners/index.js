@@ -40,10 +40,10 @@ const ListingPartners = () => {
       img:partner17,
       url: "https://www.certik.com"
     },
-    {
-      img: partner2,
-      url: "https://solidproof.io/"
-    },
+    // {
+    //   img: partner2,
+    //   url: "https://solidproof.io/"
+    // },
     {
       img: partner1,
     },
@@ -97,10 +97,10 @@ const ListingPartners = () => {
     {
       img: partner1,
     },
-    {
-      img: partner2,
-      url: "https://solidproof.io/"
-    },
+    // {
+    //   img: partner2,
+    //   url: "https://solidproof.io/"
+    // },
     {
       img: partner3,
     },

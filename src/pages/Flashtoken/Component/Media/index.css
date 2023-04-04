@@ -1,10 +1,15 @@
 .MediaContentQuery{
     display: block;
     position: relative;
-    padding-top: 20px;
 }
 .MediaContent{
-    padding-top: 23px;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    border-top-width: 1px;
+    border-top-color: #252222;
+    border-style: solid;
+    z-index: 999999;  
 }
 .MediaMobile{
     display: flex;
@@ -22,9 +27,21 @@
 }
 @media only screen and (min-width:1200px){
     .MediaContent{
-        padding-top: 71px;
-        position: absolute;
-        top: 738px;
         padding-top: 0px;
     }
+}
+
+.fixedbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.seeIntheMedia{
+    font-size: 22px;
+}
+@media only screen and (max-width:600px) {
+    .seeIntheMedia{
+        font-size: 18px;
+    }    
 }

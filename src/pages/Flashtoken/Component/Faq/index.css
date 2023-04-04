@@ -74,5 +74,12 @@
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
-    width: 300px;
+}
+@media only screen and (max-width:1200px) {
+    .mobile_button{
+        width: 100%;
+    }
+    .fq_btn{
+        width: 100%;
+    }
 }
