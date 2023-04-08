@@ -7,6 +7,8 @@ import Vector from "../../../../assests/carousel_Img/Vector.svg";
 import YahooFinance from "../../../../assests/carousel_Img/YahooFinance.svg";
 import Binance from "../../../../assests/svg/binance.svg";
 import telechargementImg from '../../../../assests/carousel_Img/telechargement.svg';
+import tradingviewSvg from '../../../../assests/carousel_Img/tradingview-logo-vector.svg';
+import marketwatchSvg from '../../../../assests/carousel_Img/marketwatch-vector-logo.svg';
 
 
 import "./index.css";
@@ -67,15 +69,15 @@ export default function Media(){
       const list1 = [
         {
             img:Bloomberg,
-            link: "https://www.bloomberg.com/press-releases/2022-08-01/flash-technologies-is-set-to-launch-a-new-non-custodial-decentralized-wallet-called-flashwallet"
+            link: "https://www.bloomberg.com/press-releases/2023-04-04/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
         {
             img:Vector,
-            link: "https://www.benzinga.com/pressreleases/22/07/28281363/flash-technologies-is-set-to-launch-a-new-non-custodial-decentralized-wallet-called-flashwallet"
+            link: "https://www.benzinga.com/pressreleases/23/04/g31662539/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
         {
             img:YahooFinance,
-            link: "https://finance.yahoo.com/news/flash-technologies-set-launch-non-002200129.html"
+            link: "https://finance.yahoo.com/news/flash-technologies-set-revolutionize-money-170000615.html"
         },
         {
             img:Binance,
@@ -85,6 +87,14 @@ export default function Media(){
           img:telechargementImg,
           link: "https://fr.cointelegraph.com/press-releases/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
+        // {
+        //   img:tradingviewSvg,
+        //   link: "https://www.tradingview.com/news/reuters.com,2023-04-04:newsml_GNX2nycJb:0/"
+        // },
+        // {
+        //   img: marketwatchSvg,
+        //   link: "https://www.marketwatch.com/press-release/flash-technologies-is-set-to-revolutionize-the-money-transfer-market-2023-04-04?mod=search_headline"
+        // }
       ];    
     return(
         <div style={{
@@ -105,7 +115,7 @@ export default function Media(){
                     className="owl-theme"
                     autoplay={true}
                     loop
-                    margin={40}
+                    margin={30}
                     autoplaySpeed={10000}
                     // autoplayTimeout={1000}
                     nav={false}
@@ -134,6 +144,18 @@ export default function Media(){
                         </a>
                       )
                     }
+                    // else if(i.img == tradingviewSvg){
+                    //   return (<a href={i.link} target="_blank" rel="noreferrer">
+                    //       <img src={i.img} style={{width:"190px"}} />
+                    //     </a>
+                    //   )
+                    // }
+                    // else if(i.img == marketwatchSvg){
+                    //   return (<a href={i.link} target="_blank" rel="noreferrer">
+                    //       <img src={i.img} style={{width:"190px"}} />
+                    //     </a>
+                    //   )
+                    // }
                     else{
                       return (
                         <a href={i.link} target="_blank" rel="noreferrer">
