@@ -129,7 +129,7 @@ const FlashRecharge = () => {
                   }}
                 >
                   The Flash recharge is a prepaid card that allows users to top
-                  up their account in $ BUSD on the Flash wallet website
+                  up their account in $ BUSD on the Flash wallet
                   without any intermediary.
                 </Typography>
                 <Box>
@@ -165,8 +165,7 @@ const FlashRecharge = () => {
                           color: "#85898F",
                         }}
                       >
-                        Flash recharge allows users to top up their balance on
-                        our Flash wallet website.
+                        Flash Recharge allows users to top up their balance on Flash Wallet.
                       </Typography>
                     </Box>
                     <Box
