@@ -255,7 +255,7 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Alik Developer
+                  Umair Developer
                 </Typography>
                 <p
                   className="member-data member_dev"

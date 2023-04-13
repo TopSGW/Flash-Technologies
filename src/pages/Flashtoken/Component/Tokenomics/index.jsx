@@ -258,12 +258,12 @@ const Tokenomics = () => {
                                 >
                                 Copied!
                               </div>
-                              {/* <CopyToClipboard text={discount} onCopy={() => setCopied(!copied)}>
+                              <CopyToClipboard text={!isTransfer ? discount : '0x4362B603AE4b198ddE3C9EeF641B79C6f801B895'} onCopy={() => setCopied(!copied)}>
                                 <img src={copy} style={{
                                   cursor:'pointer',
                                   marginLeft: "10px"
                                   }}/>
-                              </CopyToClipboard> */}
+                              </CopyToClipboard>
                             </>
                           }
                       </Typography>
@@ -430,7 +430,7 @@ const Tokenomics = () => {
                     </IconButton>
                       </a>
                     <a
-                      href={!isTransfer ? AuditReport : 'https://skynet.certik.com/projects/flash-technologies'}
+                      href= 'https://skynet.certik.com/projects/flash-technologies'
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       rel="noreferrer"
@@ -621,7 +621,7 @@ const Tokenomics = () => {
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
               <a
-                href={!isTransfer ? AuditReport : 'https://skynet.certik.com/projects/flash-technologies'}
+                href='https://skynet.certik.com/projects/flash-technologies'
                 target="_blank"
                 style={{ textDecoration: "none" }}
                 className="Audit"

@@ -58,7 +58,7 @@ export default function Map3(){
                     width: "262px",
                     margin: "0px 16% 0px 65%",
                 }}>
-                    <p style={{color:"white", textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
+                    <p style={{color:"#a19898", textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
                       Flash x Binance
                     </p>
                 </div>
@@ -93,8 +93,8 @@ export default function Map3(){
                     width: "275px",
                     margin: "0px 8% 0px 73%",
                 }}>
-                    <p style={{color:"#a19898", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        AML compliance (Aml CEO & CMO training, kyc partner...)
+                    <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
+                        AML compliance
                     </p>
                 </div>
             </div>

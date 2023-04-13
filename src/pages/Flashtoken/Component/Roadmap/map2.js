@@ -58,7 +58,7 @@ export default function Map2(){
                     width: "262px",
                     margin: "0px 16% 0px 65%",
                 }}>
-                    <p style={{color:"#a19898", textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
+                    <p style={{color:'white', textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
                         Unveiling of the first Flash Transfer partners
                     </p>
                 </div>
@@ -110,7 +110,7 @@ export default function Map2(){
                     width: "218px",
                     margin: "0px 0px 0px -1%",
                 }}>
-                    <p style={{color:"#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 400}}>
+                    <p style={{color:'white', textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 400}}>
                         Development of the Staking platform
                     </p>
                 </div>
