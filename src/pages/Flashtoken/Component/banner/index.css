@@ -7,6 +7,16 @@
     margin-top: 80px;
     text-decoration: none;
 }
+
+.logo_elements{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
 .audit_by{
     font-size: 40px;
     color: #FBBF04;

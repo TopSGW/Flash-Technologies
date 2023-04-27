@@ -24,6 +24,10 @@ const Footer = () => {
       link: "tokenomics",
     },
     {
+      url: "Partnership",
+      link: "partners",
+    },
+    {
       url: "Roadmap",
       link: "roadmap",
     },
@@ -45,10 +49,9 @@ const Footer = () => {
       url: "Audit",
       link: "tokenomics",
     },
-    // {
-    //   url: "Flash Company",
-    //   link: "",
-    // },
+    {
+      url: "Become a Partner",
+    },
   ];
   const list3 = [
     {
@@ -201,7 +204,7 @@ const Footer = () => {
                                   document.getElementById(i.link).scrollIntoView();
                                   window.scrollBy(0,-55);
                                 }
-                                else{
+                                else {
                                   document.getElementById(i.link).scrollIntoView();
                                   window.scrollBy(0,-55);
                                 }
@@ -262,11 +265,11 @@ const Footer = () => {
                               color: "#85898F",
                             }}
                           >
-                          {i.url === 'License' ?
-                            <p className="menu-link"
+                          {i.url === 'Become a Partner' ?
+                            <a className="menu-link" id="become_a_partner1" target="_blank" rel="noreferrer"
                                 >
                                 {i.url}
-                            </p> :                           
+                            </a> :                           
                             <div className="menu-link" onClick={()=>setTimeout(()=>{
                                 if(i.url ==="Whitepaper"){
                                   document.getElementById(i.link).scrollIntoView();
@@ -449,7 +452,8 @@ const Footer = () => {
         >
           <Box
             sx={{
-              margin: { lg: "0px 0px", xs: "10px 0px" },
+              marginBottom: {xs: "55px"},
+              marginTop: {xs: "10px"}              
             }}
           >
             <Typography

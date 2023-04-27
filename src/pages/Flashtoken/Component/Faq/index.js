@@ -31,6 +31,9 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import flashWalletImg from '../../../../assests/Images/flash-wallet.png'
 import "./index.css";
 
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+
 const Accordion2 = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({}));
@@ -82,7 +85,7 @@ const Faq = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid

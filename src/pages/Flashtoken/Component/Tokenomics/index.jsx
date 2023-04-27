@@ -27,7 +27,6 @@ import flashbtn from "../../../../assests/Images/flashbtn.png";
 import EN from "../../../../assests/pdf/WhitePaperEN.pdf";
 import FR from "../../../../assests/pdf/WhitePaperFR.pdf";
 
-import AuditReport from "../../../../assests/pdf/Flash_AuditReport_InterFi.pdf";
 
 import "./index.css";
 // Chart
@@ -47,6 +46,7 @@ const Tokenomics = () => {
   const classes = useStyles();
   const COLORS = ["#0088FE", "#03C39F", "#FFB827", "#FE8042"];
   const [isTransfer, SetisTransfer] = useState(true);
+  const AuditReport = "https://github.com/interfinetwork/smart-contract-audits/blob/audit-updates/Flash_AuditReport_InterFi.pdf";
   const next = () => {
     SetisTransfer(!isTransfer);
   };
@@ -401,7 +401,7 @@ const Tokenomics = () => {
                             lineHeight: " 160%",
                           }}
                         >
-                          BNB Chain - Ethereum - Polygon - Cronos
+                          BNB Chain &nbsp;  {isTransfer ? '- Ethereum - Polygon - Cronos' : ''}
                         </Typography>
                       </Box>
                     </Grid>
@@ -430,7 +430,8 @@ const Tokenomics = () => {
                     </IconButton>
                       </a>
                     <a
-                      href= 'https://skynet.certik.com/projects/flash-technologies'
+                    href={isTransfer ? 'https://skynet.certik.com/projects/flash-technologies'
+                    : AuditReport}
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       rel="noreferrer"
@@ -621,7 +622,8 @@ const Tokenomics = () => {
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
               <a
-                href='https://skynet.certik.com/projects/flash-technologies'
+                href={isTransfer ? 'https://skynet.certik.com/projects/flash-technologies'
+                  : AuditReport}
                 target="_blank"
                 style={{ textDecoration: "none" }}
                 className="Audit"

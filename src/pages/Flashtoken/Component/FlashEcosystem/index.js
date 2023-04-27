@@ -25,7 +25,7 @@ import In from "../../../../assests/Images/in.png";
 import face from "../../../../assests/Images/face.png";
 import flashECO1 from "../../../../assests/Images/flash-eco-box1.png";
 import flashbridge from "../../../../assests/Images/flashbridge.png";
-import integrateFlashWallet from "../../../../assests/Images/integrateFlashWalletnew.png";
+import integrateFlashWallet from "../../../../assests/Images/integrateFlashWalletnew.svg";
 import StakingFLash from "../../../../assests/Images/StakingFLash.png";
 import flashaudit from "../../../../assests/Images/flashaudit.png";
 import flashlaunchpad from "../../../../assests/Images/flashlaunchpad.png";

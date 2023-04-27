@@ -396,11 +396,12 @@ const FTheader = () => {
                   </FormControl>
               </div> */}
                 <Box sx={{ display: { lg: "flex", xs: "none" }, width:"150px"}}>
-                  <a href='https://www.flash-transfer.com/registrationformerchant' target='__blank' style={{textDecoration: 'none', fontFamily:'Manrope'}}>
+                  <a  target='__blank' 
+                  id="headPartnerurl" style={{textDecoration: 'none', fontFamily:'Manrope'}}>
                   <AppButton
                     textTransform="none"
                     marginLeft="20px"
-                    title="Become a Merchant"
+                    title="Become a Partner"
                     width="250px"
                     backgroundColor="#FBBF04"
                     borderRadius="50px"

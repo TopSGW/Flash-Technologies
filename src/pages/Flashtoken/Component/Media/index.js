@@ -1,14 +1,15 @@
+import Marquee from "react-fast-marquee";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import Bloomberg from "../../../../assests/carousel_Img/Bloomberg.svg";
-import Vector from "../../../../assests/carousel_Img/Vector.svg";
+import benzinga from "../../../../assests/carousel_Img/benzinga.svg";
 import YahooFinance from "../../../../assests/carousel_Img/YahooFinance.svg";
 import Binance from "../../../../assests/svg/binance.svg";
 import telechargementImg from '../../../../assests/carousel_Img/telechargement.svg';
-import tradingviewSvg from '../../../../assests/carousel_Img/tradingview-logo-vector.svg';
-import marketwatchSvg from '../../../../assests/carousel_Img/marketwatch-vector-logo.svg';
+import tradingviewSvg from '../../../../assests/carousel_Img/tradingview.svg';
+import marketwatchSvg from '../../../../assests/carousel_Img/marketwatch.svg';
 
 
 import "./index.css";
@@ -72,7 +73,7 @@ export default function Media(){
             link: "https://www.bloomberg.com/press-releases/2023-04-04/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
         {
-            img:Vector,
+            img:benzinga,
             link: "https://www.benzinga.com/pressreleases/23/04/g31662539/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
         {
@@ -87,14 +88,14 @@ export default function Media(){
           img:telechargementImg,
           link: "https://fr.cointelegraph.com/press-releases/flash-technologies-is-set-to-revolutionize-the-money-transfer-market"
         },
-        // {
-        //   img:tradingviewSvg,
-        //   link: "https://www.tradingview.com/news/reuters.com,2023-04-04:newsml_GNX2nycJb:0/"
-        // },
-        // {
-        //   img: marketwatchSvg,
-        //   link: "https://www.marketwatch.com/press-release/flash-technologies-is-set-to-revolutionize-the-money-transfer-market-2023-04-04?mod=search_headline"
-        // }
+        {
+          img:tradingviewSvg,
+          link: "https://www.tradingview.com/news/reuters.com,2023-04-04:newsml_GNX2nycJb:0/"
+        },
+        {
+          img: marketwatchSvg,
+          link: "https://www.marketwatch.com/press-release/flash-technologies-is-set-to-revolutionize-the-money-transfer-market-2023-04-04?mod=search_headline"
+        }
       ];    
     return(
         <div style={{
@@ -111,45 +112,32 @@ export default function Media(){
                 lineHeight: 0
             }} className="seeIntheMedia">Seen in the media</h1>             
             <div className="MediaContentQuery" style={{zIndex:22}}>
-                <OwlCarousel
-                    className="owl-theme"
-                    autoplay={true}
-                    loop
-                    margin={30}
-                    autoplaySpeed={10000}
-                    // autoplayTimeout={1000}
-                    nav={false}
-                    dots={false}
-                    items={4}
-                    responsive={Option.responsive}
-                    callbacks={true}
-                    style={{display:"flex", justifyContent:"center", alignItems:"center"}}
-                >
+              <Marquee gradient={false} speed={60}>
                 {list1.map((i,index) => {
-                     if(i.img == Bloomberg){
-                        return (<a href={i.link} target="_blank" rel="noreferrer">
-                           <img src={i.img} style={{width:"134px"}} />
+                     if(i.img == YahooFinance){
+                        return (<a href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                           <img src={i.img} style={{height:"40px"}} />
                          </a>
                         )
                      }
                     else if(i.img == telechargementImg){
-                       return (<a href={i.link} target="_blank" rel="noreferrer">
-                           <img src={i.img} style={{width:"180px"}} id="telechargement"/>
-                         </a>
+                      return (<a href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                            <img src={i.img} style={{height:"44px"}} />
+                          </a>
                        )
                      }
                     else if(i.img == Binance){
-                      return (<a href={i.link} target="_blank" rel="noreferrer">
-                          <img src={i.img} style={{width:"160px"}} />
+                      return (<a href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                            <img src={i.img} style={{height:"37px"}} />
                         </a>
                       )
                     }
-                    // else if(i.img == tradingviewSvg){
-                    //   return (<a href={i.link} target="_blank" rel="noreferrer">
-                    //       <img src={i.img} style={{width:"190px"}} />
-                    //     </a>
-                    //   )
-                    // }
+                    else if(i.img == benzinga){
+                      return (<a href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                          <img src={i.img} style={{height:"26px"}} />
+                        </a>
+                      )
+                    }
                     // else if(i.img == marketwatchSvg){
                     //   return (<a href={i.link} target="_blank" rel="noreferrer">
                     //       <img src={i.img} style={{width:"190px"}} />
@@ -157,15 +145,13 @@ export default function Media(){
                     //   )
                     // }
                     else{
-                      return (
-                        <a href={i.link} target="_blank" rel="noreferrer">
-                            <img src={i.img} width="120px" style={{width:"120px"}}/>
+                        return <a key={index} href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                          <img src={i.img} style={{height:"30px"}} />
                         </a>
-                        );    
                     }
-                  }
+                }
                 )}
-                </OwlCarousel>
+                </Marquee>
                     {/* <AliceCarousel
                       mouseTracking
                       items= {list1.map((i,index) => {

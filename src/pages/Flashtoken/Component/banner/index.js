@@ -252,7 +252,7 @@ const Banner = () => {
                     <a
                       target="_blank"
                       style={{ textDecoration: "none" }}
-                      id="telegramlink3"
+                      id="telegramlink4"
                     >
                       <IconButton
                         className="iconbutton"
@@ -413,7 +413,7 @@ const Banner = () => {
                 className="resp-buttons"
               >
                 <a
-                  href="https://t.me/flashtokenenglish"
+                  id="telegramlink3"
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >
@@ -526,14 +526,16 @@ const Banner = () => {
             </Box>
           </Box>
         </Grid>
-        <a className="logo_cert" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
-          <h3 className="audit_by">Audited by</h3>
-          <div style={{marginLeft:"10px"}}>
-            <img src={certImg1} className="certImg1"></img>
-          </div>
-          <div style={{marginLeft:"10px"}}>
-            <img src={certImg2} className="certImg2"></img>
-          </div>
+        <a className="logo_cert">
+          <a className="logo_elements" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
+            <h3 className="audit_by">Audited by</h3>
+            <div style={{marginLeft:"10px"}}>
+              <img src={certImg1} className="certImg1"></img>
+            </div>
+            <div style={{marginLeft:"10px"}}>
+              <img src={certImg2} className="certImg2"></img>
+            </div>
+          </a>
         </a>
       </Grid>
     </>

@@ -347,14 +347,14 @@ const ListingPartners = () => {
                   >
                     <Box
                       sx={{
-                        margin: "20px 30px",
+                        margin: "0px 30px",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                       }}
                     >
                       <Box>
-                        {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} width="140px" /> </a> :
+                        {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} height={"120px"} width={"140px"}/> </a> :
                         <img src={i.img} />}
                       </Box>
                     </Box>

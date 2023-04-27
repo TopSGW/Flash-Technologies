@@ -26,9 +26,9 @@ export default function Map3(){
                     width: "350px",
                     textAlign: "center",
                     fontSize: "13px",
-                    color: "#a19898",
+                    color: 'white',
                     margin: "auto",
-                }}>Beta Launch Flash Transfert</p>
+                }}>Beta Launch Flash Transfer</p>
             </div>
             <div style={{
                 position:"absolute",
@@ -42,7 +42,7 @@ export default function Map3(){
                     margin: "0px 74% 0px 14%",
                 }}>
                     <p style={{color:"#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch FlashWallet extension & application Android + IOS
+                        Launch Flash Wallet extension & application Android + IOS
                     </p>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export default function Map3(){
                     width: "262px",
                     margin: "0px 16% 0px 65%",
                 }}>
-                    <p style={{color:"#a19898", textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
+                    <p style={{color:'white', textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
                       Flash x Binance
                     </p>
                 </div>
@@ -76,8 +76,8 @@ export default function Map3(){
                     width: "280px",
                     margin: "0px 74% 0px 0%",
                 }}>
-                    <p style={{color: "#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch of V2 Flash Token   
+                    <p style={{color: "white", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
+                        Flash x Synaps 
                     </p>
                 </div>
             </div>
@@ -111,7 +111,7 @@ export default function Map3(){
                     margin: "0px 0px 0px -3%",
                 }}>
                     <p style={{color:"#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 400}}>
-                        Audit/MVP  of : FlashWallet, FlashStaking, Flashlaunch, FlashTransfer.
+                        Launch Flash Transfer extension & application Android + IOS
                     </p>
                 </div>
             </div>
@@ -127,8 +127,8 @@ export default function Map3(){
                     width: "219px",
                     margin: "0px 0% 0px 80%",
                 }}>
-                    <p style={{color:"#a19898", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch FlashLaunch & FlashStaking.
+                    <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
+                        Flash x Certik
                     </p>
                 </div>
             </div>

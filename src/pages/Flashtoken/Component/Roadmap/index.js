@@ -48,29 +48,28 @@ const photos = [
 const Roadmap = () => {
   const classes = useStyles();
   const [listItem, setlistItem]= useState([]);
-  const listIndexs = [0,7,14];
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(2);
   const handleList = (index) =>{
-    // switch(currentIndex){
-    //   case 0: setlistItem(details.slice(listIndexs[2]));break;
-    //   case 1: setlistItem(details.slice(listIndexs[0],listIndexs[1]));
-    //   default:
-    //     setlistItem(details.slice(listIndexs[1],listIndexs[2]));
-    // }
-    index === 2 ? setlistItem(details.slice(listIndexs[2])) :  
-      setlistItem(details.slice(listIndexs[index],listIndexs[index + 1] ));
+    switch(index){
+      case 0: setlistItem(details.slice(0,7));break;
+      case 1: setlistItem(details.slice(7,14));break;
+      case 2:
+        setlistItem(details.slice(14)); break;
+    }
+    // index === 0 ? setlistItem(details.slice(listIndexs[0])) :  
+    //   setlistItem(details.slice(listIndexs[index],listIndexs[index + 1] ));
   }
   const next = () => {
-    setCurrentIndex((currentIndex + 1) % photos.length);
-    handleList((currentIndex + 1) % photos.length);
+    handleList((currentIndex + 1) % photos.length);    
+    setCurrentIndex((currentIndex + 1)  % photos.length);
   };
   const prev = () => {
+    handleList((currentIndex - 1 + photos.length) % photos.length);    
     setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
-    handleList((currentIndex - 1 + photos.length) % photos.length);
   };
   const [hover, setHover] = useState(false);
   useEffect(()=>{
-    setlistItem(details.slice(7,14));
+    setlistItem(details.slice(14));
   },[])
   // const setFontColor = details.map((num, index) => {
   //   if (index == 1 || 2 || 3 || 4 || 5 || 6 || 7 || 10 || 11 || 12 || 13) {
@@ -133,7 +132,7 @@ const Roadmap = () => {
     {
       num: "9",
       name: "2022",
-      color: color_dark,
+      color: color_white,
       des: "Unveiling of the first Flash Transfer partners",
     },
     {
@@ -163,13 +162,13 @@ const Roadmap = () => {
     {
       num: "14",
       name: "2022",
-      color: color_dark,
+      color: color_white,
       des: "Development of the Staking platform",
     },
     {
       num: "15",
       name: "2023",
-      color: color_dark,
+      color: color_white,
       des: "Beta Launch Flash Transfert",
     },
     {
@@ -182,31 +181,31 @@ const Roadmap = () => {
       num: "17",
       name: "2023",
       color: color_dark,
-      des: "Launch FlashWallet extension & application Android + IOS",
+      des: "Launch Flash Wallet extension & application Android + IOS",
     },
     {
       num: "18",
       name: "2023",
-      color: color_dark,
-      des: "AML compliance (Aml CEO & CMO training, kyc partner...)",
+      color: color_white,
+      des: "AML compliance",
     },
     {
       num: "19",
       name: "2023",
-      color: color_dark,
-      des: "Launch of V2 Flash Token  ",
+      color: color_white,
+      des: "Flash x Synaps",
     },
     {
       num: "20",
       name: "2023",
-      color: color_dark,
-      des: "Launch FlashLaunch & FlashStaking.",
+      color: color_white,
+      des: "Flash x Certik",
     },
     {
       num: "21",
       name: "2023",
       color: color_dark,
-      des: "Audit/MVP  of : FlashWallet, FlashStaking, Flashlaunch, FlashTrasnfer.",
+      des: "Launch Flash Transfer extension & application Android + IOS",
     },
   ];
   const list = [
@@ -243,14 +242,14 @@ const Roadmap = () => {
             display: "flex",
             justifyContent: "center",
             position: "relative",
-            paddingTop: {lg:"40px",xs:"0px"},
+            paddingTop: {lg:"55px",xs:"0px"},
           }}
         >
           <Box
             sx={{
               right: "10%",
               left: "unset",
-              bottom: {lg:"-25px",xs:"-50px"},
+              bottom: {lg:"-12px",xs:"-50px"},
               position: "absolute",
               maxWidth:{lg:'117px',xs:'86px'}
             }}
