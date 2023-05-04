@@ -11,3 +11,25 @@
 .LanguageSelector > svg{
     color: #ffffff!important;
 }
+.ReactFlagsSelect-module_selectBtn__19wW7{
+    color: white !important;
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7:after {
+    border-top: 5px solid #f3ebeb !important;
+    border-left: 5px solid transparent !important;
+    border-right: 5px solid transparent !important;
+    border-bottom: 0 !important;
+}
+.ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+    border-top: 0 !important;
+    border-left: 5px solid transparent !important;
+    border-right: 5px solid transparent !important;
+    border-bottom: 5px solid #e7dede !important;
+}
+.ReactFlagsSelect-module_selectOptions__3LNBJ{
+    background-color: #000 !important;
+}
+.ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D{
+    color: #fff !important;
+}

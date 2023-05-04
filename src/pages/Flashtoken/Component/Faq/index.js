@@ -86,6 +86,7 @@ const Faq = () => {
     setExpanded(newExpanded ? panel : false);
   };
   const lang = useSelector(Languagemodel)
+  const LanguageState = useSelector((state) => state.translate.mode)
   return (
     <>
       <Grid
@@ -134,7 +135,7 @@ const Faq = () => {
                 color: "#ffff",
               }}
             >
-              FAQ
+              {lang["FAQ"]}
             </Typography>
           </Grid>
         </Grid>
@@ -164,7 +165,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  What is Flash technologies?
+                  {lang["What is Flash technologies?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -176,8 +177,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  Flash Technologies is the name that represents all Flash
-                  projects.
+                  {lang["Flash Technologies is the name that represents all Flash projects."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -205,7 +205,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  How can I buy Flash?
+                  {lang["How can I buy Flash?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -217,7 +217,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  You can buy Flash tokens directly by credit card on <a href="https://flash-dex.com/" target="_blank" rel="noreferrer"
+                  {lang["You can buy Flash tokens directly by credit card on"]} <a href="https://flash-dex.com/" target="_blank" rel="noreferrer"
                     style={{color:'#FBBF04'}}>flash-dex.com</a>
                 </Typography>
               </AccordionDetails>
@@ -246,7 +246,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  What is Flash Transfer?
+                  {lang["What is Flash Transfer?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -258,11 +258,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  Flash Transfer is the main project of Flash Technologies. We
-                  will be able to bank people who do not have a bank account or
-                  who wish to free themselves from traditional banks. We can
-                  exchange cash for crypto via our various partners. Users of
-                  this service will be able to make transfers worldwide.
+                  {lang["Flash Transfer is the main project of Flash Technologies. We will be able to bank people who do not have a bank account or who wish to free themselves from traditional banks. We can exchange cash for crypto via our various partners. Users of this service will be able to make transfers worldwide."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -290,7 +286,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  What are the advantages of buying Flash ?
+                  {lang["What are the advantages of buying Flash ?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -302,9 +298,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  Your Flash token increases in value according to the evolution
-                  of the course. When Flash Technologies projects evolve, it has
-                  a positive impact on the price.
+                  {lang["Your Flash increases in value according to the evolution of the course. When Flash Technologies projects evolve, it has a positive impact on the price."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -332,7 +326,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  On which site will the token be listed?
+                  {lang["On which site will the token be listed?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -344,7 +338,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  The token will be listed on cex and dex.
+                  {lang["The token will be listed on cex and dex."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -372,7 +366,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  Why transaction fees?
+                  {lang["Why transaction fees?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
@@ -384,7 +378,7 @@ const Faq = () => {
                     lineHeight: { lg: "0px !important", xs: "15px" },
                   }}
                 >
-                  Transaction fees support the project.
+                  {lang["Transaction fees support the project."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -402,12 +396,11 @@ const Faq = () => {
                 aria-controls="panel1d-content"
                 id="panel1d-header"
               >
-                <Typography>What is Flash technologies?</Typography>
+                <Typography>{lang["What is Flash technologies?"]}</Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                  Flash Technologies is the name that represents all Flash
-                  projects.
+                {lang["Flash Technologies is the name that represents all Flash projects."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -421,11 +414,11 @@ const Faq = () => {
                 aria-controls="panel2d-content"
                 id="panel2d-header"
               >
-                <Typography>How can I buy Flash?</Typography>
+                <Typography>{lang["How can I buy Flash?"]}</Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                  You can buy our tokens directly on <a href="https://flash-dex.com/" target="_blank" rel="noreferrer"
+                {lang["You can buy Flash tokens directly by credit card on"]} <a href="https://flash-dex.com/" target="_blank" rel="noreferrer"
                     style={{color:'#FBBF04', textDecoration:'none'}}>flash-dex.com</a>
                 </Typography>
               </AccordionDetails>
@@ -440,15 +433,11 @@ const Faq = () => {
                 aria-controls="panel3d-content"
                 id="panel3d-header"
               >
-                <Typography>What is Flash Transfer?</Typography>
+                <Typography>{lang["What is Flash Transfer?"]}</Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                  Flash Transfer is the main project of Flash Technologies. We
-                  will be able to bank people who do not have a bank account or
-                  who wish to free themselves from traditional banks. We can
-                  exchange cash for crypto via our various partners. Users of
-                  this service will be able to make transfers worldwide.
+                {lang["Flash Transfer is the main project of Flash Technologies. We will be able to bank people who do not have a bank account or who wish to free themselves from traditional banks. We can exchange cash for crypto via our various partners. Users of this service will be able to make transfers worldwide."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -463,14 +452,12 @@ const Faq = () => {
                 id="panel4d-header"
               >
                 <Typography>
-                What are the advantages of buying Flash ?
+                {lang["What are the advantages of buying Flash ?"]}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                  Your Flash increases in value according to the evolution
-                  of the course. When Flash Technologies projects evolve, it has
-                  a positive impact on the price.
+                {lang["Your Flash increases in value according to the evolution of the course. When Flash Technologies projects evolve, it has a positive impact on the price."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -484,11 +471,11 @@ const Faq = () => {
                 aria-controls="panel5d-content"
                 id="panel5d-header"
               >
-                <Typography>On which site will the token be listed?</Typography>
+                <Typography>{lang["On which site will the token be listed?"]}</Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                  The token will be listed on cex and dex.
+                {lang["The token will be listed on cex and dex."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -502,11 +489,11 @@ const Faq = () => {
                 aria-controls="panel6d-content"
                 id="panel6d-header"
               >
-                <Typography>Why transaction fees?</Typography>
+                <Typography>{lang["Why transaction fees?"]}</Typography>
               </AccordionSummary>
               <AccordionDetails className="accord-details">
                 <Typography>
-                Transaction fees support the project.
+                {lang["Transaction fees support the project."]}
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -531,7 +518,7 @@ const Faq = () => {
             <Button className="mobile_button">
               <a href={EN} target="__blank"  className="fq_btn">
                 {/* <img src={PitchDeckCTA} /> */}
-                <p>Whitepaper EN</p>  
+                <p>{lang["Whitepaper EN"]}</p>  
                   <DescriptionIcon sx={{
                   fontSize: 35,
                   marginLeft: "12px"
@@ -545,8 +532,8 @@ const Faq = () => {
           }}>
             {" "}
             <Button className="mobile_button">
-            <a  id="youtube_url" target="__blank" className="fq_btn">
-              <p>Presentation</p>  
+            <a  id="youtube_url" target="__blank" className="fq_btn" href={`${LanguageState == 'fr' ? 'https://www.youtube.com/watch?v=2rMHlkZ0vCI&ab_channel=FlashTechnologies' : 'https://youtu.be/gMZXsvlxgcg'}`}>
+              <p>{lang["Presentation"]}</p>  
               <YouTubeIcon sx={{
                 fontSize: 40,
                 marginLeft: "12px"
@@ -563,7 +550,7 @@ const Faq = () => {
             {" "}
             <Button className="mobile_button">
               <div className="fq_btn">
-                <p>Using Flash Wallet</p>
+                <p>{lang["Using Flash Wallet"]}</p>
                 <img src={flashWalletImg} style={{ width:'40px', marginLeft: "12px"}}/>
               </div>
             </Button>{""}

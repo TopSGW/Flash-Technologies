@@ -24,6 +24,8 @@ import { motion } from "framer-motion";
 import Bounce from "react-reveal/Bounce";
 
 import AppButton from "../../../../components/AppButton";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 // import MobileDrawer from "../MobileDrawer";
 const data = [
   {
@@ -32,9 +34,9 @@ const data = [
     number: "01.",
     img: lock,
     txt: "Airdrop",
-    para1: "Each month receive Flash in your wallet. ",
+    para1: "Each month receive Flash in your wallet.",
     para2:
-      " Holders of the AIRDROP NFTS receive Flash tokens every month. The amount differs depending on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed in the future.",
+      "Holders of the AIRDROP NFTS receive Flash tokens every month. The amount differs depending on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed in the future.",
   },
   {
     cardimg: two,
@@ -44,7 +46,7 @@ const data = [
     txt: "Ranking Increase",
     para1: "Will quickly increase the privilege ranking.",
     para2:
-      "The NFTS RANKING INCREASE allow you to increase quickly your ranking points  on Flash Transfer Website. The earned points depend on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed later.",
+      "The NFTS RANKING INCREASE allow you to increase quickly your ranking points on Flash Transfer Website. The earned points depend on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed later.",
   },
   {
     cardimg: three,
@@ -54,7 +56,7 @@ const data = [
     txt: "Discount on transaction fees",
     para1: "Will entitle you to fees on money transfer site transactions.",
     para2:
-      " The NFTS DISCOUNT ON TRANSACTION FEES provide discounts on transaction fees. The reduction is bigger depending on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed later.",
+      "The NFTS DISCOUNT ON TRANSACTION FEES provide discounts on transaction fees. The reduction is bigger depending on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed later.",
   },
   {
     cardimg: four,
@@ -67,6 +69,7 @@ const data = [
       "The NFTS RANDOM EFFECT change abilities every 4 months. The benefit is greater depending on the rarity of the NFT. It also gives access to other benefits including the vip club (call nft & tokens), whitelist, discounts and other benefits that will be disclosed later.",
   },
 ];
+
 const NFTutility = () => {
   const classes = useStyles();
   const list = [
@@ -83,6 +86,7 @@ const NFTutility = () => {
       img: four,
     },
   ];
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -109,7 +113,6 @@ const NFTutility = () => {
           <Grid item xs={12} md={6} > 
             <Typography
               sx={{
-                textTransform: "uppercase",
                 fontFamily: "'Manrope' !important",
                 fontSize: { lg: "50px !important", xs: "26px" },
                 fontWeight: "800 !important",
@@ -119,7 +122,7 @@ const NFTutility = () => {
                 paddingX: "10px",
               }}
             >
-              Get your nft utility
+              {lang["GET YOUR NFT UTILITY"]}
             </Typography>
           </Grid>
           <Grid
@@ -216,7 +219,7 @@ const NFTutility = () => {
                               margin: "10px 0",
                             }}
                           >
-                            {i.txt}
+                            {lang[i.txt]}
                           </Typography>
                           <Typography
                             sx={{
@@ -227,7 +230,7 @@ const NFTutility = () => {
                               color: "#FBBF04",
                             }}
                           >
-                            {i.para1}
+                            {lang[i.para1]}
                           </Typography>{" "}
                           <Typography
                             sx={{
@@ -238,7 +241,7 @@ const NFTutility = () => {
                               color: "#85898F",
                             }}
                           >
-                            {i.para2}
+                            {lang[i.para2]}
                           </Typography>
                         </Box>
                       </Box>

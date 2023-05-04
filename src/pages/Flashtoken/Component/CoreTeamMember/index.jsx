@@ -27,11 +27,13 @@ import "./index.css";
 
 import AppButton from "../../../../components/AppButton";
 import Avatar from "@mui/material/Avatar";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 // import MobileDrawer from "../MobileDrawer";
 
 const CoreTeamMember = () => {
   const classes = useStyles();
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -84,7 +86,7 @@ const CoreTeamMember = () => {
                 color: "#ffff",
               }}
             >
-              Core Team
+              {lang["Core Team"]}
             </Typography>
           </Grid>
         </Grid>
@@ -119,7 +121,7 @@ const CoreTeamMember = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Aladdin CEO & Founder
+                  {lang["Aladdin CEO & Founder"]}
                 </Typography>
                 <Typography
                   className="member-data"
@@ -130,9 +132,9 @@ const CoreTeamMember = () => {
                     lineHeight: "17px !important",
                   }}
                 >
-                  CEO & Founder of <br />{" "}
-                  <span className="colored-text">Blocklabchain </span> &{" "}
-                  <span className="colored-text">Hulk</span>
+                  {lang["CEO & Founder of"]} <br />{" "}
+                  <span className="colored-text">{lang["Blocklabchain"]} </span> &{" "}
+                  <span className="colored-text">{lang["Hulk"]}</span>
                 </Typography>
                 <Box mt="10px">
                   <a
@@ -165,7 +167,7 @@ const CoreTeamMember = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Safi CCO & Co-Founder
+                  {lang["Safi CCO & Co-Founder"]}
                 </Typography>
                 <Typography
                   className="member-data"
@@ -176,8 +178,8 @@ const CoreTeamMember = () => {
                     lineHeight: "17px !important",
                   }}
                 >
-                  CEO & Founder of <br />
-                  <span className="colored-text">Les Artisans d’Orient</span>
+                  {lang["CEO & Founder of"]} <br />
+                  <span className="colored-text">{lang["Les Artisans d’Orient"]}</span>
                 </Typography>
                 <Box mt="10px">
                   <a
@@ -204,7 +206,7 @@ const CoreTeamMember = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Junior COO
+                  {lang["Junior COO"]}
                 </Typography>
                 <Typography
                   className="member-data"
@@ -215,11 +217,11 @@ const CoreTeamMember = () => {
                     lineHeight: "17px !important",
                   }}
                 >
-                  Communication English & German. Works in{" "}
-                  <span className="colored-text">Diplomatic Institution </span>,{" "}
+                  {lang["Communication English & German. Works in"]}{" "}
+                  <span className="colored-text">{lang["Diplomatic Institution"]} </span>,{" "}
                   <a className="colored-text"
                     style={{textDecoration:'none'}} 
-                    href="https://www.binance.com/en/feed/profile/84382884" target="_blank">Binance feed creator </a>{" "}
+                    href="https://www.binance.com/en/feed/profile/84382884" target="_blank">{lang["Binance feed creator"]} </a>{" "}
                 </Typography>
                 <Box mt="10px">
                   <a
@@ -253,7 +255,7 @@ const CoreTeamMember = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Mimirk CMO & CDO
+                  {lang["Mimirk CMO & CDO"]}
                 </Typography>
                 <Typography
                   className="member-data"
@@ -264,9 +266,9 @@ const CoreTeamMember = () => {
                     lineHeight: "17px !important",
                   }}
                 >
-                  Chief marketing officer. Works as a{" "}&nbsp;
+                  {lang["Chief marketing officer. Works as a"]}{" "}&nbsp;
                   <span className="colored-text">
-                    Expert in marketing and public relations{" "}
+                    {lang["Expert in marketing and public relations"]}{" "}
                   </span>{" "}
                   {/* and{" "}
                   <span className="colored-text">digital communication</span> */}

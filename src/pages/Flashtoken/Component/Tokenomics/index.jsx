@@ -33,6 +33,8 @@ import "./index.css";
 import { Doughnut } from 'react-chartjs-2';
 import {Data, DataMobile, Options, chartLabel, transferChartLabel,  TransferChartData} from './chartData'
 import {Chart, ArcElement, Legend} from 'chart.js'
+import { useSelector } from 'react-redux';
+import { Languagemodel } from '../../../../Slice/translateSlice';
 Chart.register(ArcElement, Legend);
 
 const Tokenomics = () => {
@@ -53,7 +55,7 @@ const Tokenomics = () => {
   const prev = () => {
     SetisTransfer(!isTransfer);
   };
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -133,7 +135,7 @@ const Tokenomics = () => {
                   }}
                   className={isTransfer ? classes.blurTransferComponent : ''}
                 >
-                  Tokenomics
+                  {lang["Tokenomics"]}
                 </Typography>
               </Box>
             </Grid>
@@ -197,7 +199,7 @@ const Tokenomics = () => {
                     fontSize: 'inherit',
                     fontWeight: 'inherit',
 
-                  }}> {isTransfer ? ' Flash 3.0' : ' Flash Token'}</Typography>
+                  }}> {isTransfer ? lang['Flash 3.0']  : lang['Flash Token']}</Typography>
                 </Typography>
                 <Typography
                   sx={{
@@ -211,10 +213,8 @@ const Tokenomics = () => {
                   }}
                 >
                 { !isTransfer ?   
-                  <>Flash token is a governance token tied to the entire Flash Technologies ecosystem. 2% of all revenues (transaction fees) will be reinvested in the token in the form of a monthly Buyback. Flash token is also linked to NFT "Airdrops," where holders will receive 1% of the monthly token volume directly. The token is cross-chain, meaning it can be purchased on multiple networks with the same address. It can also be transferred to other wallets without paying transfer fees.
-                  <div style={{width:'100%'}} className="tmpBlock"></div></>: `Flash 3.0 is a cross-chain token that aims to become a means of exchange within the Flash Technologies ecosystem, which includes services such as Flash-transfer.com, Flash Wallet, and more, so that regular users are not exposed to exorbitant transaction fees.
-                  One of the primary goals of Flash 3.0 is to provide holders with the ability to trade at a lower cost. Additionally, it will provide various benefits based on the number of tokens held by the user.
-                  Flash 3.0 can be purchased on different blockchains with the same address. It can also be transferred from one wallet to another without transfer fees.`
+                  <>{lang["Flash token is a governance token tied to the entire Flash Technologies ecosystem. 2% of all revenues (transaction fees) will be reinvested in the token in the form of a monthly Buyback. Flash token is also linked to NFT Airdrops, where holders will receive 1% of the monthly token volume directly. The token is cross-chain, meaning it can be purchased on multiple networks with the same address. It can also be transferred to other wallets without paying transfer fees."]}
+                  <div style={{width:'100%'}} className="tmpBlock"></div></>: lang["Flash 3.0 is a cross-chain token that aims to become a means of exchange within the Flash Technologies ecosystem, which includes services such as Flash-transfer.com, Flash Wallet, and more, so that regular users are not exposed to exorbitant transaction fees. One of the primary goals of Flash 3.0 is to provide holders with the ability to trade at a lower cost. Additionally, it will provide various benefits based on the number of tokens held by the user. Flash 3.0 can be purchased on different blockchains with the same address. It can also be transferred from one wallet to another without transfer fees."]
                 }
                 </Typography>
                 <Box>
@@ -230,7 +230,7 @@ const Tokenomics = () => {
                         margin: "30px 0",
                       }}
                     >
-                      Contract address:{" "}
+                      {lang["Contract address"]}:{" "}
                       <Typography
                         sx={{
                           color: "#FBBF04",
@@ -302,7 +302,7 @@ const Tokenomics = () => {
                             color: "#85898F",
                           }}
                         >
-                          Token name :
+                          {lang["Token name"]} :
                         </Typography>
                         <Typography
                           sx={{
@@ -313,7 +313,7 @@ const Tokenomics = () => {
                           }}
                           component="h4"
                         >
-                          {!isTransfer ? 'Flash Token' : 'Flash 3.0'}  {/* mobile */} 
+                          {!isTransfer ? lang["Flash Token"] : lang["Flash 3.0"]}  {/* mobile */} 
                         </Typography>
                       </Box>
 
@@ -327,7 +327,7 @@ const Tokenomics = () => {
                             color: "#85898F",
                           }}
                         >
-                          Total Supply :
+                          {lang["Total Supply"]} :
                         </Typography>
                         <Typography
                           sx={{
@@ -365,7 +365,7 @@ const Tokenomics = () => {
                             color: "#85898F",
                           }}
                         >
-                          Symbol :
+                          {lang["Symbol"]} :
                         </Typography>
                         <Typography
                           sx={{
@@ -390,7 +390,7 @@ const Tokenomics = () => {
                             color: "#85898F",
                           }}
                         >
-                          Available on :
+                          {lang["Available on"]} :
                         </Typography>
                         <Typography
                           component="h4"
@@ -426,7 +426,7 @@ const Tokenomics = () => {
                       /*</a>disabled={isTransfer}*/
                     >
                       <img src={flashbtn} className="btn_icon"/>
-                      {" "}Buy Flash
+                      {" "}{lang["Buy Flash"]}
                     </IconButton>
                       </a>
                     <a
@@ -453,7 +453,7 @@ const Tokenomics = () => {
                         }}
                       >
                         <img src={AuditFlashImage} />
-                        Audit Flash
+                        {lang["Audit Flash"]}
                       </IconButton>
                     </a>
 
@@ -534,7 +534,7 @@ const Tokenomics = () => {
                     <Typography 
                       sx={{fontSize: { lg: "20px", xs: "13px" }}}
                       style={{ alignSelf: "center" ,fontFamily: "Manrope"}} variant="h6" ml={1}>
-                        {!isTransfer ? '5' : '1'}% Marketing</Typography>
+                        {!isTransfer ? '5' : '1'}% {lang["Marketing"]}</Typography>
                   </div>
                 </Grid>
                 <Grid xs={12} md={12} mt={3}>
@@ -545,7 +545,7 @@ const Tokenomics = () => {
                     variant="determinate" id="liquidity" value={100} style={{'color': '#039D81'}} />
                     <Typography 
                       sx={{fontSize: { lg: "20px", xs: "13px" }}}
-                      style={{ alignSelf: "center" ,fontFamily: "Manrope"}} variant="h6" ml={1}>1% Liquidity</Typography>
+                      style={{ alignSelf: "center" ,fontFamily: "Manrope"}} variant="h6" ml={1}>1% {lang["Liquidity"]}</Typography>
                   </div>
                 </Grid>
                 <Grid xs={12} md={12} mt={3}>
@@ -556,7 +556,7 @@ const Tokenomics = () => {
                     variant="determinate" id="burn" value={100} style={{'color': '#FF8D08'}} />
                     <Typography 
                       sx={{fontSize: { lg: "20px", xs: "13px" }}}
-                      style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>1% Burn</Typography>
+                      style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>1% {lang["Burn"]}</Typography>
                   </div>
                 </Grid>
                 { !isTransfer &&
@@ -568,7 +568,7 @@ const Tokenomics = () => {
                         variant="determinate" id="reward" value={100} style={{'color': '#FF0808'}} />
                         <Typography 
                           sx={{fontSize: { lg: "18px", xs: "13px" }}}
-                          style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>3% Rewards</Typography>
+                          style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>3% {lang["Rewards"]}</Typography>
                       </div>
                     </Grid> 
                 }
@@ -686,7 +686,7 @@ const Tokenomics = () => {
                   backgroundColor: "#FBBF04",
                 }}
               >
-                Using Flash Wallet
+                {lang["Using Flash Wallet"]}
                 <img src={fw} style={{ marginLeft: "30px" }} />
               </IconButton>
             </Grid>

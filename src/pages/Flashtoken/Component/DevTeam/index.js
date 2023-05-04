@@ -42,6 +42,8 @@ import coreteam4 from "../../../../assests/Images/coreteam4.png";
 
 import dev33 from "../../../../assests/Images/dev33.png";
 import dev44 from "../../../../assests/Images/dev44.png";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 
 import "./index.css";
 
@@ -50,7 +52,7 @@ import AppButton from "../../../../components/AppButton";
 
 const DevTeam = () => {
   const classes = useStyles();
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -101,7 +103,7 @@ const DevTeam = () => {
                 marginBottom: "0px",
               }}
             >
-              Dev. Team
+              {lang["Dev. Team"]}
             </Typography>
           </Grid>
         </Grid>
@@ -135,12 +137,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Ernest CTO
+                  {lang["Ernest CTO"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                Full stack & Blockchain Developer <br/>
+                {lang["Full stack & Blockchain Developer"]} <br/>
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -164,12 +166,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Jawad Developer
+                  {lang["Jawad Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                  Full stack Developer
+                  {lang["Full stack Developer"]}
                   <br />{" "}
                 {/* <span className="colored-text"> <br/>Flash Transfer </span> &{" "} */}
                   {/* <span className="colored-text"> </span> */}
@@ -226,12 +228,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Mikhail Developer
+                  {lang["Mikhail Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                Full stack & Blockchain Developer<br /> 
+                {lang["Full stack & Blockchain Developer"]}<br /> 
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -255,12 +257,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Umair Developer
+                  {lang["Umair Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                Full stack & Blockchain Developer<br />
+                {lang["Full stack & Blockchain Developer"]}<br />
                   
                 </p>
                 {/* <Box mt="10px">
@@ -299,11 +301,11 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Vilgelm Developer
+                  {lang["Vilgelm Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev">
-                  Full stack & Blockchain Developer <br />
+                  {lang["Full stack & Blockchain Developer"]}<br />
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -328,11 +330,11 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Vadim Developer
+                  {lang["Vadim Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev">
-                  Blockchain Developer 
+                  {lang["Blockchain Developer"]} 
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -356,12 +358,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Alex Developer
+                  {lang["Alex Developer"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                  Frontend & Blockchain Developer<br />
+                  {lang['Frontend & Blockchain Developer']}<br />
                   
                 </p>
                 {/* <Box mt="10px">
@@ -386,12 +388,12 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Hassam Editor video
+                  {lang["Hassam Editor video"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                  Video creation and editor
+                  {lang["Video creation and editor"]}
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -430,13 +432,13 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Runnart Designer
+                  {lang["Runnart Designer"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                  Administrative graphic,<br></br><span className="colored-text">White paper{" "}</span>
-                    & App logo designer <br></br><span className="colored-text">Flash-Wallet.com</span> 
+                  {lang["Administrative graphic"]},<br></br><span className="colored-text">{lang["White paper"]}{" "}</span>
+                    {lang["& App logo designer"]} <br></br><span className="colored-text">Flash-Wallet.com</span> 
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -460,13 +462,13 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                  Eznau Illustrator
+                  {lang["Eznau Illustrator"]}
                 </Typography>
                 <p
                   className="member-data member_dev">
-                  Graphic flyers, logos, <br />
-                  NFT for all products of {" "}
-                  <span className="colored-text">Flash Technologies</span>
+                  {lang["Graphic flyers, logos"]}, <br />
+                  {lang["NFT for all products of"]} {" "}
+                  <span className="colored-text">{lang["Flash Technologies"]}</span>
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -490,15 +492,15 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                 Numa Designer UI/UX
+                 {lang["Numa Designer UI/UX"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
                  
                   {/* CEO & Founder of <br />{" "} */}
-                  <span className="colored-text"> Flash Transfer  </span> &{" "}
-                  <span className="colored-text">Flash Wallet App </span>  UI/UX designer
+                  <span className="colored-text"> {lang["Flash Transfer"]}  </span> &{" "}
+                  <span className="colored-text">{lang["Flash Wallet App"]} </span>  {lang["UI/UX designer"]}
                 </p>
                 {/* <Box mt="10px">
                   // <img src={min} style={{marginRight:"10px"}}/>
@@ -524,13 +526,13 @@ const DevTeam = () => {
                     lineHeight: "25.6px !important",
                   }}
                 >
-                 Easin Team Designer UI/UX
+                 {lang["Easin Team Designer UI/UX"]}
                 </Typography>
                 <p
                   className="member-data member_dev"
                 >
-                  <span className="colored-text">Flash Technologies<span style={{color:'white'}}>,</span> Flash Staking<span style={{color:'white'}}>,{" "}</span>
-                    Flash Launch<span style={{color:'white'}}>,{" "}</span> Flash Audit<span style={{color:'white'}}>,{" "}</span> Flash  Wallet Website </span> UI/UX designer
+                  <span className="colored-text">{lang["Flash Technologies"]}<span style={{color:'white'}}>,</span> Flash Staking<span style={{color:'white'}}>,{" "}</span>
+                    Flash Launch<span style={{color:'white'}}>,{" "}</span> Flash Audit<span style={{color:'white'}}>,{" "}</span> Flash  Wallet Website </span> {lang["UI/UX designer"]}
                   
                 </p>
                 {/* <Box mt="10px">

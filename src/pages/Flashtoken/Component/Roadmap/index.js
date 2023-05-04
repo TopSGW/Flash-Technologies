@@ -24,6 +24,9 @@ import flashappOveralIcon from "../../../../assests/Images/flasapp-hanging-icon.
 
 import "./index.css";
 
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
 
@@ -83,21 +86,21 @@ const Roadmap = () => {
   const details = [
     {
       num: "1",
-      name: " August 2021 ",
+      name: "August 2021",
       color: color_white,
       des: "Market study and meeting with professionals for the feasibility of the project.",
     },
     {
       num: "2",
-      name: " September 2021",
+      name: "September 2021",
       color: color_white,
       des: "Definition of the project and creation of the whitepaper.",
     },
     {
       num: "3",
-      name: "October 2021 ",
+      name: "October 2021",
       color: color_white,
-      des: "Creation of the team of developers. Creation of the Flash Token Website. ",
+      des: "Creation of the team of developers. Creation of the Flash Token Website.",
     },
     {
       num: "4",
@@ -109,25 +112,25 @@ const Roadmap = () => {
       num: "5",
       name: "December 2021",
       color: color_white,
-      des: "Promotion of the Flash Token by influencers. ",
+      des: "Promotion of the Flash Token by influencers.",
     },
     {
       num: "6",
-      name: "January 2022 ",
+      name: "January 2022",
       color: color_white,
       des: "Launch of the 1st NFT collection. Launch of the Flash Token on the Bsc.",
     },
     {
       num: "7",
-      name: " February 2022 ",
+      name: "February 2022",
       color: color_white,
-      des: "Release of the beta version of the money transfer. Coming out of the Nft mint platform Deployment ",
+      des: "Release of the beta version of the money transfer. Coming out of the Nft mint platform Deployment.",
     },
     {
       num: "8",
       name: "2022",
       color: color_white,
-      des: "Launch of Flash Technologies website ",
+      des: "Launch of Flash Technologies website",
     },
     {
       num: "9",
@@ -139,7 +142,7 @@ const Roadmap = () => {
       num: "10",
       name: "2022",
       color: color_white,
-      des: "Launch of Flash Audit ",
+      des: "Launch of Flash Audit",
     },
     {
       num: "11",
@@ -151,7 +154,7 @@ const Roadmap = () => {
       num: "12",
       name: "2022",
       color: color_white,
-      des: "Launch of the advertising campaign with influencers + new ambassadors ",
+      des: "Launch of the advertising campaign with influencers + new ambassadors",
     },
     {
       num: "13",
@@ -169,7 +172,7 @@ const Roadmap = () => {
       num: "15",
       name: "2023",
       color: color_white,
-      des: "Beta Launch Flash Transfert",
+      des: "Beta Launch Flash Transfer",
     },
     {
       num: "16",
@@ -226,6 +229,7 @@ const Roadmap = () => {
       name: "Polygon",
     },
   ];
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -308,7 +312,7 @@ const Roadmap = () => {
                 color: "#ffff",
               }}
             >
-              Flash Technologies Roadmap
+              {lang["Flash Technologies Roadmap"]}
             </Typography>
             <Box
               sx={{
@@ -423,7 +427,7 @@ const Roadmap = () => {
                             color: "#FBBF04",
                           }}
                         >
-                          {i.name}
+                          {lang[i.name]}
                         </Typography>
                         <Typography
                           sx={{
@@ -435,7 +439,7 @@ const Roadmap = () => {
                             color: i.color,
                           }}
                         >
-                          {i.des}
+                          {lang[i.des]}
                         </Typography>
                       </Box>
                     </Box>

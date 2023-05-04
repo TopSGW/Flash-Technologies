@@ -9,6 +9,8 @@ import LegalNotice from "../../../../assests/pdf/LNotice.pdf";
 import License from '../../../../assests/pdf/N_Business_License_MFZ.pdf';
 import AppButton from "../../../../components/AppButton";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 // import MobileDrawer from "../MobileDrawer";
 
 const Footer = () => {
@@ -67,7 +69,8 @@ const Footer = () => {
       link: License
     },
   ];
-
+  const lang = useSelector(Languagemodel)
+  const LanguageState = useSelector((state) => state.translate.mode)
   return (
     <>
       <Grid
@@ -123,7 +126,7 @@ const Footer = () => {
                   lineHeight: "40px !important",
                 }}
               >
-                Flash Technologies
+                {lang["Flash Technologies"]}
               </Typography>
             </Box>
             <Typography
@@ -136,8 +139,7 @@ const Footer = () => {
                 color: "#85898F",
               }}
             >
-              Flash Technologies : Business Center 1, M Floor, The Meydan Hotel,
-              Nad Al Sheba, Dubai, U.A.E.
+              {lang["Flash Technologies : Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E."]}
             </Typography>
           </Grid>
           <Grid
@@ -173,7 +175,7 @@ const Footer = () => {
                     lineHeight: "160% !important",
                   }}
                 >
-                  Pages
+                  {lang["Pages"]}
                 </Typography>
                 {list1.map((i) => {
                   return (
@@ -209,7 +211,7 @@ const Footer = () => {
                                   window.scrollBy(0,-55);
                                 }
                             },20)}>
-                            {i.url}
+                            {lang[i.url]}
                           </div>
                           </Typography>
                         </Box>
@@ -243,7 +245,7 @@ const Footer = () => {
                     lineHeight: "160% !important",
                   }}
                 >
-                  Documents
+                  {lang["Documents"]}
                 </Typography>
                 {list2.map((i) => {
                   return (
@@ -267,8 +269,9 @@ const Footer = () => {
                           >
                           {i.url === 'Become a Partner' ?
                             <a className="menu-link" id="become_a_partner1" target="_blank" rel="noreferrer"
+                              href={`${LanguageState == 'fr' ? 'https://tcjpmvkkcyv.typeform.com/to/ILnGtfxh' : 'https://tcjpmvkkcyv.typeform.com/to/De146S9S'}`}
                                 >
-                                {i.url}
+                                {lang[i.url]}
                             </a> :                           
                             <div className="menu-link" onClick={()=>setTimeout(()=>{
                                 if(i.url ==="Whitepaper"){
@@ -285,7 +288,7 @@ const Footer = () => {
                                 }
                               },20)}
                               >
-                                {i.url}
+                                {lang[i.url]}
                               </div> 
                           }              
                           </Typography>
@@ -319,7 +322,7 @@ const Footer = () => {
                     lineHeight: "160% !important",
                   }}
                 >
-                  Legal
+                  {lang["Legal"]}
                 </Typography>
                 {list3.map((i,index) => {
                   return (
@@ -342,9 +345,9 @@ const Footer = () => {
                             }}
                           >
                           {i.url ==="License" ? <a className="menu-link" target="_blank" rel="noreferrer"
-                            href={i.link}> {i.url}</a> :
+                            href={i.link}> {lang[i.url]}</a> :
                                     <a href={i.link} className="menu-link" target="_blank" rel="noreferrer">
-                                                      {i.url}
+                                                      {lang[i.url]}
                                                   </a>
                         
                           }
@@ -378,7 +381,7 @@ const Footer = () => {
                 lineHeight: "160% !important",
               }}
             >
-              Join Our Newsletter
+              {lang["Join Our Newsletter"]}
             </Typography>
 
             <Box
@@ -390,7 +393,7 @@ const Footer = () => {
             >
               {/* <Typography pl="20px">Your email address</Typography>  */}
               <input
-                placeholder="Your email address"
+                placeholder={`${lang["Your email address"]}`}
                 style={{
                   width: "100%",
                   height: "52px",
@@ -421,7 +424,7 @@ const Footer = () => {
                   right: "0px",
                 }}
               >
-                Subscribe
+                {lang["Subscribe"]}
               </IconButton>
             </Box>
             <Typography
@@ -435,7 +438,7 @@ const Footer = () => {
                 color: "#85898F",
               }}
             >
-              Will send you weekly updates for your better finance management.
+              {lang["Will send you weekly updates for your better finance management."]}
             </Typography>
           </Grid>
         </Grid>

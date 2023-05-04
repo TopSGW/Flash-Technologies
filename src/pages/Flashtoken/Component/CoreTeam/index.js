@@ -19,6 +19,8 @@ import partner24 from "../../../../assests/Images/huawei.png";
 import partner25 from "../../../../assests/Images/partner25.png";
 import flashappOveralIcon from "../../../../assests/Images/flasapp-hanging-icon.png";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 import "./index.css";
 
 import AppButton from "../../../../components/AppButton";
@@ -118,7 +120,7 @@ const CoreTeams = () => {
     //   img: partner25,
     // }
   ];
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -163,7 +165,7 @@ const CoreTeams = () => {
                 color: "#ffff",
               }}
             >
-              Our{" "}
+              {lang["Our"]}{" "}
               <Typography
                 component="span"
                 sx={{
@@ -175,9 +177,9 @@ const CoreTeams = () => {
                   display: "inline",
                 }}
               >
-                CORE TEAM{" "}
+                {lang["CORE TEAM"]}{" "}
               </Typography>{" "}
-              has worked with
+              {lang["has worked with"]}
             </Typography>
           </Grid>
           <Grid

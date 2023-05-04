@@ -28,6 +28,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { motion } from "framer-motion";
 // import "react-owl-carousel2/style.css";
 import AppButton from "../../../../components/AppButton";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 // import MobileDrawer from "../MobileDrawer";
 
 const ListingPartners = () => {
@@ -183,7 +185,7 @@ const ListingPartners = () => {
       },
     },
   };
-
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -227,7 +229,7 @@ const ListingPartners = () => {
                 color: "#ffff",
               }}
             >
-              Listing & Partners
+              {lang["Listing & Partners"]}
             </Typography>
           </Grid>
 

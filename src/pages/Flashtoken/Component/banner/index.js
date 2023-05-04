@@ -7,7 +7,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import { useStyles } from "../../../../Styles";
 import FlashLogo from "../../../../assests/Logo/Flashlogo.png";
 // import Flag from "../../assests/Logo/Flag.svg";
@@ -32,6 +32,8 @@ import bannerline from "../../../../assests/Images/bannerline.png";
 import certImg1 from '../../../../assests/Images/Hcertlogo.png';
 import certImg2 from '../../../../assests/Images/Lcert.png';
 import AppButton from "../../../../components/AppButton";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 // import MobileDrawer from "../MobileDrawer";
 import "./index.css"
 
@@ -83,6 +85,8 @@ const Banner = () => {
       link: "#",
     },
   ];
+  const lang = useSelector(Languagemodel)
+  const languageMode = useSelector((state) => state.translate.mode)
   return (
     <>
       <Grid
@@ -132,7 +136,7 @@ const Banner = () => {
                   if(i.img == tele){
                     return (
                       <Box sx={{ margin: "10px 0px" }}>
-                      <a id="telegramlink" target="__blank">
+                      <a id="telegramlink" target="__blank" href={`${languageMode == 'fr' ? 'https://t.me/flashtechnologiesfr' : 'https://t.me/flashtokenenglish'}`}>
                             <img src={i.img} />
                         </a>
                       </Box>
@@ -173,7 +177,8 @@ const Banner = () => {
                     color: "#FBBF04",
                   }}
                 >
-                  Flash Technologies L.L.C-FZ
+                  {lang["Flash Technologies L.L.C-FZ"]}
+                  
                 </Typography>
                 <Typography
                   sx={{
@@ -244,7 +249,7 @@ const Banner = () => {
                       }}
                     >
                       <img src={flashbtn} />
-                      Buy Flash
+                      {lang["Buy Flash"]}
                     </IconButton>
                     </a>
                   </Grid>
@@ -253,6 +258,7 @@ const Banner = () => {
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       id="telegramlink4"
+                      href={`${languageMode == 'fr' ? 'https://t.me/flashtechnologiesfr' : 'https://t.me/flashtokenenglish'}`}
                     >
                       <IconButton
                         className="iconbutton"
@@ -335,7 +341,7 @@ const Banner = () => {
                     maxWidth: "350px",
                   }}
                 >
-                  Flash Technologies creates a money transfer ecosystem.
+                  {lang["Flash Technologies creates a money transfer ecosystem."]}
                 </Typography>
                 <Typography
                   sx={{
@@ -348,10 +354,7 @@ const Banner = () => {
                     maxWidth: "600px",
                   }}
                 >
-                  Flash transfer is the first platform in the world that allows
-                  you to buy, send or sell cryptocurrencies, via our merchant
-                  network with reasonable fees. 
-                  Flash wallet will store your crypto by holding your private key and bequeath your funds in the event of death or loss of wallet.
+                  {lang["Flash transfer is the first platform in the world that allows you to buy, send or sell cryptocurrencies, via our merchant network with reasonable fees. Flash wallet will store your crypto by holding your private key and bequeath your funds in the event of death or loss of wallet."]}
                 </Typography>
                 <Box sx={{ display: { lg: "flex", xs: "none" } }}>
                   <img src={bannerline} />
@@ -400,7 +403,7 @@ const Banner = () => {
                     src={flashbtn}
                     style={{ width: "24px", height: "21.33px" }}
                   />
-                  Buy Flash
+                  {lang["Buy Flash"]}
                 </IconButton>
                 </a>
               </Grid>
@@ -416,6 +419,7 @@ const Banner = () => {
                   id="telegramlink3"
                   target="_blank"
                   style={{ textDecoration: "none" }}
+                  href={`${languageMode == 'fr' ? 'https://t.me/flashtechnologiesfr' : 'https://t.me/flashtokenenglish'}`}
                 >
                   <IconButton
                   className="iconbutton"
@@ -528,7 +532,7 @@ const Banner = () => {
         </Grid>
         <a className="logo_cert">
           <a className="logo_elements" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
-            <h3 className="audit_by">Audited by</h3>
+            <h3 className="audit_by">{lang["Audited by"]}</h3>
             <div style={{marginLeft:"10px"}}>
               <img src={certImg1} className="certImg1"></img>
             </div>

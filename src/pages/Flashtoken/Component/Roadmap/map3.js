@@ -1,4 +1,7 @@
+import { useSelector } from "react-redux"
+import { Languagemodel } from "../../../../Slice/translateSlice"
 export default function Map3(){
+    const lang = useSelector(Languagemodel)
     return(
         <div>
             <div style={{
@@ -28,7 +31,7 @@ export default function Map3(){
                     fontSize: "13px",
                     color: 'white',
                     margin: "auto",
-                }}>Beta Launch Flash Transfer</p>
+                }}>{lang["Beta Launch Flash Transfer"]}</p>
             </div>
             <div style={{
                 position:"absolute",
@@ -42,7 +45,7 @@ export default function Map3(){
                     margin: "0px 74% 0px 14%",
                 }}>
                     <p style={{color:"#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch Flash Wallet extension & application Android + IOS
+                        {lang["Launch Flash Wallet extension & application Android + IOS"]}
                     </p>
                 </div>
             </div>
@@ -59,7 +62,7 @@ export default function Map3(){
                     margin: "0px 16% 0px 65%",
                 }}>
                     <p style={{color:'white', textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
-                      Flash x Binance
+                      {lang["Flash x Binance"]}
                     </p>
                 </div>
             </div>
@@ -77,7 +80,7 @@ export default function Map3(){
                     margin: "0px 74% 0px 0%",
                 }}>
                     <p style={{color: "white", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Flash x Synaps 
+                        {lang["Flash x Synaps"]} 
                     </p>
                 </div>
             </div>
@@ -94,7 +97,7 @@ export default function Map3(){
                     margin: "0px 8% 0px 73%",
                 }}>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        AML compliance
+                        {lang["AML compliance"]}
                     </p>
                 </div>
             </div>
@@ -111,7 +114,7 @@ export default function Map3(){
                     margin: "0px 0px 0px -3%",
                 }}>
                     <p style={{color:"#a19898", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 400}}>
-                        Launch Flash Transfer extension & application Android + IOS
+                        {lang["Launch Flash Transfer extension & application Android + IOS"]}
                     </p>
                 </div>
             </div>
@@ -128,7 +131,7 @@ export default function Map3(){
                     margin: "0px 0% 0px 80%",
                 }}>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Flash x Certik
+                        {lang["Flash x Certik"]}
                     </p>
                 </div>
             </div>

@@ -26,6 +26,8 @@ import Twelveimg from '../../../../assests/img_gallery/12.jpg'
 import Thirteenimg from '../../../../assests/img_gallery/13.jpg'
 import Fourteenimg from '../../../../assests/img_gallery/14.jpg'
 import Fifteenimg from '../../../../assests/img_gallery/15.jpg'
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 // import MobileDrawer from "../MobileDrawer";
 import Marquee from "react-fast-marquee";
 const FlashList = () => {
@@ -65,6 +67,7 @@ const FlashList = () => {
     {img:Fourteenimg},
     {img:Fifteenimg},
   ]
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -110,7 +113,7 @@ const FlashList = () => {
                 color: "#FBBF04",
               }}
             >
-              WE ARE SUPPORTED
+              {lang["WE ARE SUPPORTED"]}
 
             </Typography>
 {/* 

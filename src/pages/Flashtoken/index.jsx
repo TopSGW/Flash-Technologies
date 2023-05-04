@@ -95,10 +95,6 @@ const FlashToken = () => {
               display:`${tokenomicsBreakpoint ? 'none' : 'block'}`
             }}></div>
             <Tokenomics/>
-            {/* <Carousel navButtonsAlwaysVisible={true} autoPlay={false} > */}
-              {/* <Tokenomics isTransfer={true}/> */}
-              
-            {/* </Carousel> */}
           </Grid> 
           <Grid sx={{ backgroundColor: "#181818" }}>
             <FlashRecharge />

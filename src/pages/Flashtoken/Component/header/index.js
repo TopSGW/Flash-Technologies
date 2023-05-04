@@ -15,9 +15,9 @@ import LinearProgress, {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
 import { Box } from "@mui/system";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { useStyles } from "../../../../Styles";
-import FlashLogo from "../../../../assests/Logo/flash-logosvg.svg";
+import FlashLogo from "../../../../assests/Logo/flash-logosvg.svg"
 
 // import Flag from "../../assests/Logo/Flag.svg";
 import AmericanFlag from "../../../../assests/Images/flag.png";
@@ -29,6 +29,11 @@ import arrowDownIcon from "../../../../assests/Images/arrow-chevron.png";
 import AppButton from "../../../../components/AppButton";
 import Menubar from "../menu";
 import NativeSelect from '@mui/material/NativeSelect';
+
+import { useSelector, useDispatch } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { Translatechangemode } from "../../../../Slice/translateSlice";
+import ReactFlagsSelect from "react-flags-select";
 // import MobileDrawer from "../MobileDrawer";
 
 import '../header/style.css';
@@ -48,24 +53,19 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 const FTheader = () => {
   const classes = useStyles();
-  const [lang, setLang] = useState('US')
-
-  const handleChange = (e) => {
-    setLang(e.target.value)
-  }
   const Navs = [
     {
-      name: " Our services",
+      name: "Our Services",
       color: "#FBBF04",
       link: "services",
     },
     {
-      name: " Roadmap",
+      name: "Roadmap",
       color: "#85898F",
       link: "roadmap",
     },
     {
-      name: " Tokenomics",
+      name: "Tokenomics",
       color: "#85898F",
       link: "tokenomics",
     },
@@ -80,12 +80,12 @@ const FTheader = () => {
       link: "tokenomics",
     },
     {
-      name: " NFT",
+      name: "NFT",
       color: "#85898F",
       link: "nft",
     },
     {
-      name: " Partners",
+      name: "Partners",
       color: "#85898F",
       link: "partners",
     },
@@ -110,7 +110,54 @@ const FTheader = () => {
       link: "Contact",
     },
   ];
+  const languageState = useSelector((state) => state.translate.mode)
   const [menuStatus, SetmenuStatus] = useState(false);
+  const dispatch = useDispatch()
+  const Lang = useSelector(Languagemodel)
+  const [selected, setSelected] = useState("GB");
+  const handleSelected = (code) =>{
+    if(code == "GB"){
+      dispatch(Translatechangemode('en'))
+    }
+    else if(code == "FR"){
+      dispatch(Translatechangemode('fr'))
+    }
+    else if(code == "DE"){
+      dispatch(Translatechangemode('de'))
+    }
+    else if(code == "ES"){
+      dispatch(Translatechangemode('es'))
+    }
+    else if(code == "SA"){
+      dispatch(Translatechangemode('ar'))
+    }
+    else if(code == "PT"){
+      dispatch(Translatechangemode('pt'))
+    }
+    setSelected(code)
+    console.log(code)
+  }
+  useEffect(()=>{
+    if(languageState == 'en'){
+      setSelected("GB")
+      console.log("GBGBGBGB")
+    }
+    else if (languageState == 'fr'){
+      setSelected("FR")
+    }
+    else if(languageState == 'es'){
+      setSelected("ES")
+    }
+    else if(languageState == 'pt'){
+      setSelected("PT")
+    }
+    else if(languageState == 'ar'){
+      setSelected("SA")
+    }
+    else if(languageState == 'de'){
+      setSelected("DE")
+    }
+  })
   return (
     <>
       <Grid
@@ -147,6 +194,7 @@ const FTheader = () => {
               padding: "10px 10px",
               display: { lg: "none", xs: "flex" },
               flexDirecion: "row",
+              alignItems: "center",
               justifyContent: "space-between",
             }}
           >
@@ -176,54 +224,12 @@ const FTheader = () => {
                 height: "40px"
               }}
             >
-              {/* <Box>
-                <img
-                  src={lang == "US" ? AmericanFlag : FranceFlag}
-                  style={{
-                    marginTop:"5px",
-                    marginRight: "10px",
-                    width: "27px",
-                    height: "27px",
-                  }}
-                />
-              </Box> */}
-              {/* <FormControl
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <Typography sx={{ color: "white", marginRight: "10px" }}>
-                  EN
-                </Typography>
-                <img src={arrowDownIcon} className="arrow-down" />
-              </FormControl> */}
-              {/* <FormControl
-                  sx={{
-                    // m: 1,
-                    // minWidth: 70,
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                <Select
-                    sx={{
-                          color: '#ffffff', 
-                          outline: 0
-                    }}
-                    labelId="lang"
-                    id="lang"
-                    value={lang}
-                    onChange={handleChange}
-                    className="LanguageSelector"
-                    // style={{color: '#ffffff', outline: 0}}
-                  >
-                    <MenuItem value={'US'}>US</MenuItem>
-                    <MenuItem value={'FR'}>FR</MenuItem>
-                  </Select>
-                </FormControl> */}
+              <ReactFlagsSelect
+                    selected={selected}
+                    onSelect={(code) => handleSelected(code)}
+                   countries={["GB", "FR", "DE", "ES", "PT", "SA"]}
+                   customLabels={{"GB": "EN","SA": "AR","FR": "FR","DE": "DE","PT": "PT", "ES": "ES"}}
+                  />
             </Box>
           </Grid>
         </Grid>
@@ -325,7 +331,7 @@ const FTheader = () => {
                             }
                           },20)}
                         >
-                          {i.name}
+                          {Lang[i.name]}
                         </div>
                       </Typography>
                     </Box>
@@ -343,7 +349,6 @@ const FTheader = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  alignItems: "center",
                   padding: "0",
                   justifyContent:"end"
                 }}
@@ -395,13 +400,22 @@ const FTheader = () => {
                     </NativeSelect>
                   </FormControl>
               </div> */}
-                <Box sx={{ display: { lg: "flex", xs: "none" }, width:"150px"}}>
+              <div style={{marginRight: "20px", marginTop: "3px"}}>
+                <ReactFlagsSelect
+                    selected={selected}
+                    onSelect={(code) => handleSelected(code)}
+                   countries={["GB", "FR", "DE", "ES", "PT", "SA"]}
+                   customLabels={{"GB": "EN","SA": "AR","FR": "FR","DE": "DE","PT": "PT", "ES": "ES"}}
+                  />
+              </div>
+                <Box sx={{ display: { lg: "flex", xs: "none" }, width:"150px", marginTop: "2px"}}>
                   <a  target='__blank' 
-                  id="headPartnerurl" style={{textDecoration: 'none', fontFamily:'Manrope'}}>
+                  id="headPartnerurl" style={{textDecoration: 'none', fontFamily:'Manrope'}}
+                  href={`${languageState == 'fr' ? 'https://tcjpmvkkcyv.typeform.com/to/ILnGtfxh' : 'https://tcjpmvkkcyv.typeform.com/to/De146S9S'}`}>
                   <AppButton
                     textTransform="none"
                     marginLeft="20px"
-                    title="Become a Partner"
+                    title={Lang["Become a Partner"]}
                     width="250px"
                     backgroundColor="#FBBF04"
                     borderRadius="50px"

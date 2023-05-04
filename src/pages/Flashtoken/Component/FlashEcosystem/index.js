@@ -50,6 +50,8 @@ import telebtn from "../../../../assests/Images/tele2.png";
 import flashbtn from "../../../../assests/Images/flashbtn.png";
 
 import AppButton from "../../../../components/AppButton";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 // import MobileDrawer from "../MobileDrawer";
 import { motion } from "framer-motion";
 const FlashEcosystem = () => {
@@ -87,6 +89,7 @@ const FlashEcosystem = () => {
       img: face,
     },
   ];
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid>
@@ -121,7 +124,6 @@ const FlashEcosystem = () => {
             >
               <Typography
                 sx={{
-                  textTransform: "uppercase",
                   fontFamily: "'Manrope' !important",
                   fontSize: "16px !important",
                   fontWeight: "500 !important",
@@ -129,7 +131,7 @@ const FlashEcosystem = () => {
                   color: "#FBBF04",
                 }}
               >
-                Services
+                {lang["SERVICES"]}
               </Typography>
 
               <Typography
@@ -142,7 +144,7 @@ const FlashEcosystem = () => {
                   color: "#ffff",
                 }}
               >
-                Flash Ecosystem
+                {lang["Flash Ecosystem"]}
               </Typography>
               <Typography
                 sx={{
@@ -154,7 +156,7 @@ const FlashEcosystem = () => {
                   color: "#85898F",
                 }}
               >
-                Discover all our services.
+                {lang["Discover all our services."]}
               </Typography>
               <Box
                 sx={{
@@ -201,7 +203,7 @@ const FlashEcosystem = () => {
                       }}
                     />
                   </Box>
-                  Buy Flash
+                  {lang["Buy Flash"]}
                 </IconButton>
                 </a>
               </Box>
@@ -410,13 +412,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Transfer
+                {lang["Flash Transfer"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Exchange your cash vs crypto or crypto vs cash. Buy directly cryptocurrency with our approved partners.
-                You can also send your cryptocurrency and the receiver withdraws it in
-                fiat all over the world using a Binance account or using your
-                non custodial wallet ( Flash wallet, Metamask, Trust wallet ...).
+                {lang["Exchange your cash vs crypto or crypto vs cash. Buy directly cryptocurrency with our approved partners. You can also send your cryptocurrency and the receiver withdraws it in fiat all over the world using a Binance account or using your non custodial wallet ( Flash wallet, Metamask, Trust wallet ...)."]}
               </Typography>
 
               <a
@@ -477,10 +476,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Dex
+                {lang["Flash Dex"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Flash dex dapps is an all-in-one swap and bridge that allows users to swap their crypto assets from the same blockchain or from one blockchain to another. With the best possible direct market fees.
+                {lang["Flash dex dapps is an all-in-one swap and bridge that allows users to swap their crypto assets from the same blockchain or from one blockchain to another. With the best possible direct market fees."]}
               </Typography>
               <a
                 href="https://flash-dex.com/"
@@ -535,14 +534,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Wallet
+                {lang["Flash Wallet"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Flash Technologies has built a fully integrated cryptocurrency
-                wallet that holders and merchants can use to buy, sell, stake,
-                earn rewards and browse on internet. Flash Wallet has a special
-                function that is unique in cryptospace. A very important feature
-                that users will enjoy everywhere in the world. 
+                  {lang["Flash Technologies has built a fully integrated cryptocurrency wallet that holders and merchants can use to buy, sell, stake, earn rewards and browse on internet. Flash Wallet has a special function that is unique in cryptospace. A very important feature that users will enjoy everywhere in the world."]}
               </Typography>
               <a
                 href  ='https://flash-wallet.com/'
@@ -608,12 +603,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Staking
+                {lang["Flash Staking"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Customers and merchants have the opportunity to earn rewards by
-                using the staking protocol. Each month stakers receive a % of
-                our staking pool.
+                  {lang["Customers and merchants have the opportunity to earn rewards by using the staking protocol. Each month stakers receive a % of our staking pool."]}
               </Typography>
               <a
                 href="https://flash-staking.com"
@@ -663,16 +656,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Audit
+                {lang["Flash Audit"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Flash audit will audit smart contracts (tokens, bridges,
-                staking, all types of dapps) and blockchains of our
-                partners/customers on all networks.
-                <br />
-                Each partner/customer who would like to be in our ecosystem will
-                have to go through our security audit to make sure there is no
-                malicious code.
+                {lang["Flash audit will audit smart contracts (tokens, bridges, staking, all types of dapps) and blockchains of our partners/customers on all networks."]}
               </Typography>
 
               <a
@@ -729,12 +716,10 @@ const FlashEcosystem = () => {
                   textAlign: "left",
                 }}
               >
-                Flash Launchpad
+                {lang["Flash Launchpad"]}
               </Typography>
               <Typography className={classes.flashBoxesPara}>
-                Flash pad is our launchpad for upcoming IDOs and allows crypto
-                projects to create their tokens (BNB Chain, Polygon, Eth &
-                Cronos) and raise funds in pre-sales or fair launches.
+                {lang["Flash pad is our launchpad for upcoming IDOs and allows crypto projects to create their tokens (BNB Chain, Polygon, Eth & Cronos) and raise funds in pre-sales or fair launches."]}
               </Typography>
               
 
@@ -840,7 +825,7 @@ const FlashEcosystem = () => {
                 }}
                   className="EcosystemItemA"
                 >
-                Secured blockchain
+                {lang["Secured blockchain"]}
               </h1>
               {/* <Box
                 sx={{ display: { lg: "flex", xs: "none" } }}
@@ -912,7 +897,7 @@ const FlashEcosystem = () => {
                 }}
                   className="EcosystemItemA"
                 >
-                Single transaction
+                {lang["Single transaction"]}
               </h1>
 
               {/* <Box
@@ -984,7 +969,7 @@ const FlashEcosystem = () => {
                 }}
                   className="EcosystemItemA"
                 >
-                Deflationary token
+                {lang["Deflationary token"]}
               </h1>
 
               {/* <Box
@@ -1055,7 +1040,7 @@ const FlashEcosystem = () => {
                 }}
                   className="EcosystemItemA"
                 >
-                Replace a Bank Account
+                {lang["Replace a Bank Account"]}
               </h1>
 {/* 
               <Box

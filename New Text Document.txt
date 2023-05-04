@@ -1,0 +1,47 @@
+https://sxb1plzcpnl489893.prod.sxb1.secureserver.net:2083/logout/?locale=fr
+Cpanel : r1bg0wutn7rv
+Password : !e6_C8Zc*l<Vs
+
+
+GfD*%?tyTgz+
+
+92.205.104.154
+id : root
+password : O251qx%MLr2%
+O251qx%MLr2%
+
+
+new password idZXrT8H!t7P
+
+
+SSH info: coR98.Z!}*HF  name: flash
+
+https://154.104.205.92.host.secureserver.net:2083/logout/?locale=en
+flash
+
+flasht: GL3xl!fH4pc%
+
+GL3xl!fH4pc%
+
+
+ucK#WZm7M0xH
+
+smartdev!@#
+
+New account Cpannel
+yd38i2aih92r
+
+KXmy)8-(e-j
+
+368829317
+
+
+
+
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_d47fbfcba07d716bf6ec6cbae53fad113'
+    });
+</script>
+

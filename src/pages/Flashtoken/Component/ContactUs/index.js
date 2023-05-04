@@ -32,7 +32,8 @@ import contactsectionicons from "../../../../assests/Images/contact-section-icon
 import contactnumber from "../../../../assests/Images/contactnumber.png";
 import contactemail from "../../../../assests/Images/mails.png";
 import sendmessagebutton from "../../../../assests/Images/sendmessagebutton.png";
-
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 import "./index.css";
 // import MobileDrawer from "../MobileDrawer";
 
@@ -130,6 +131,8 @@ const ContactUs = () => {
         }, 2000);
       });
   }
+  const lang = useSelector(Languagemodel)
+  const LaguageState = useSelector((state) => state.translate.mode)
   return (
     <>
       <Stack sx={{ width: '100%', position:'fixed', top:0, zIndex:9999999}} spacing={2}>
@@ -178,7 +181,7 @@ const ContactUs = () => {
                     lineHeight: "140%",
                   }}
                 >
-                  CONTACT
+                  {lang["CONTACT"]}
                 </Typography>
                 <Typography
                   sx={{
@@ -191,7 +194,7 @@ const ContactUs = () => {
                     lineHeight: "140%",
                   }}
                 >
-                  Contact Us
+                  {lang["Contact Us"]}
                 </Typography>
                 <Typography
                   sx={{
@@ -204,8 +207,7 @@ const ContactUs = () => {
                     paddingRight: { lg: "60px", xs: "60px" },
                   }}
                 >
-                  Whether you have a question about one of our services or want
-                  to get involved in our mission, we are ready to help.
+                  {lang["Whether you have a question about one of our services or want to get involved in our mission, we are ready to help."]}
                 </Typography>
                 <Box>
                   <br></br>
@@ -306,7 +308,7 @@ const ContactUs = () => {
                           lineHeight: "25.6px !important",
                         }}
                       >
-                        Follow us:
+                        {lang["Follow us:"]}
                   </Typography>
                   <Grid
                     container
@@ -325,6 +327,7 @@ const ContactUs = () => {
                               id="telegramlink2"
                               target="_blank"
                               style={{ textDecoration: "none" }}
+                              href={`${LaguageState == 'fr' ? 'https://t.me/flashtechnologiesfr' : 'https://t.me/flashtokenenglish'}`}
                             >
                               <img src={i.img} />
                             </a>:
@@ -360,7 +363,7 @@ const ContactUs = () => {
                   {/* <TextField label="First Name" fullWidth autocomplete="none"/> */}
                   <div className="contact-form-box">
                     <label>
-                      <span>First Name</span>
+                      <span>{lang["First Name"]}</span>
                       <input type="text" placeholder="Jenny" value={firstName} 
                         onChange={(e)=>SetfirstName(e.target.value)}/>
                     </label>
@@ -370,7 +373,7 @@ const ContactUs = () => {
                   {/* <TextField label="Last Name" fullWidth autocomplete="none"/> */}
                   <div className="contact-form-box">
                     <label>
-                      <span>Last Name</span>
+                      <span>{lang["Last Name"]}</span>
                       <input type="text" placeholder="Wilson" value={lastName} 
                         onChange={(e) => SetlastName(e.target.value)}/>
                     </label>
@@ -379,7 +382,7 @@ const ContactUs = () => {
                 <Grid item xs={12} md={12}>
                   <div className="contact-form-box">
                     <label>
-                      <span>Your Email Address</span>
+                      <span>{lang["Your Email Address"]}</span>
                       <input
                         type="email"
                         placeholder="jenny.lawson@example.com" value={emailAddress}
@@ -391,8 +394,8 @@ const ContactUs = () => {
                 <Grid item xs={12} md={12}>
                   <div className="contact-form-box">
                     <label>
-                      <span>Tell us about your project</span>
-                      <textarea placeholder="Type Here..." value={messageContent}
+                      <span>{lang["Tell us about your project"]}</span>
+                      <textarea placeholder={`${lang["Type Here"]}...`} value={messageContent}
                         onChange={(e) => SetmessageContent(e.target.value)}></textarea>
                     </label>
                   </div>
@@ -407,10 +410,10 @@ const ContactUs = () => {
                     // width: { lg: "350px", xs: "100%" },
                   }}
                 >
-                  <Grid item xs={12} md={6} className="contact-form-box">
-                    <Button sx={{ textTransform: "none" }}
+                  <Grid item xs={12} md={6} className="contact-form-box" style={{padding: "20px"}}>
+                    <Button sx={{ textTransform: "none", padding: "10px" }} 
                       onClick={()=>SendMessage()}>
-                        Send Message</Button>
+                        {lang["Send Message"]}</Button>
                   </Grid>
                 </Grid>
               </Grid>

@@ -9,13 +9,14 @@ import circle from "../../../../assests/Images/circle.png";
 import appstore from "../../../../assests/Images/applebtn.png";
 import playstore from "../../../../assests/Images/storebtn.png";
 
-
-
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
 
 const FlashTransfer = () => {
   const classes = useStyles();
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -128,7 +129,7 @@ const FlashTransfer = () => {
                   marginTop: { lg: "90px", xs: "0px" },
                 }}
               >
-                Cash to crypto and vice versa.
+                {lang["Cash to crypto and vice versa."]}
               </Typography>
               <Typography
                 sx={{
@@ -141,7 +142,7 @@ const FlashTransfer = () => {
                   marginBottom: "20px",
                 }}
               >
-                Flash Transfer
+                {lang["Flash Transfer"]}
               </Typography>
               <Typography
                 sx={{
@@ -154,11 +155,7 @@ const FlashTransfer = () => {
                   maxWidth: { lg: "80%", xs: "100%",sm: "70%" },
                 }}
               >
-                Exchange your cash vs crypto or crypto vs cash. Buy directly cryptocurrency with our approved partners.
-                You can also send your cryptocurrency and the receiver withdraws it in
-                fiat all over the world using a Binance account or using your
-                non custodial wallet ( Flash wallet, Metamask,
-                Trust wallet ...).
+                {lang["Exchange your cash vs crypto or crypto vs cash. Buy directly cryptocurrency with our approved partners. You can also send your cryptocurrency and the receiver withdraws it in fiat all over the world using a Binance account or using your non custodial wallet ( Flash wallet, Metamask, Trust wallet ...)."]}
               </Typography>
               <a href="https://flash-dex.com/" target="__blank" style={{textDecoration:'none', cursor:'pointer'}}>
               
@@ -178,7 +175,7 @@ const FlashTransfer = () => {
                 }}
               >
                 <img src={flashbtn} />
-                Buy Flash
+                {lang["Buy Flash"]}
               </IconButton>
 
               </a>
@@ -193,7 +190,7 @@ const FlashTransfer = () => {
                   color: "#84898F",
                 }}
               >
-                DOWNLOAD FROM
+                {lang["DOWNLOAD FROM"]}
               </Typography>
 
               <Box

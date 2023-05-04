@@ -19,10 +19,13 @@ import checkSquare from "../../../../assests/Images/check-square.png";
 import "./index.css";
 
 import AppButton from "../../../../components/AppButton";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 // import MobileDrawer from "../MobileDrawer";
 
 const FlashRecharge = () => {
   const classes = useStyles();
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -102,7 +105,7 @@ const FlashRecharge = () => {
                     marginTop: "0px",
                   }}
                 >
-                  Flash Recharge Card
+                  {lang["Flash Recharge Card"]}
                 </Typography>
                 <Typography
                   sx={{
@@ -114,7 +117,7 @@ const FlashRecharge = () => {
                     lineHeight: "140%",
                   }}
                 >
-                  Flash Recharge
+                  {lang["Flash Recharge"]}
                 </Typography>
                 <Typography
                   sx={{
@@ -128,9 +131,7 @@ const FlashRecharge = () => {
                     color: "#85898F",
                   }}
                 >
-                  The Flash recharge is a prepaid card that allows users to top
-                  up their account in $ BUSD on the Flash wallet
-                  without any intermediary.
+                  {lang["The Flash recharge is a prepaid card that allows users to top up their account in $ BUSD on the Flash wallet without any intermediary."]}
                 </Typography>
                 <Box>
                   <Grid item md={12}>
@@ -165,7 +166,7 @@ const FlashRecharge = () => {
                           color: "#85898F",
                         }}
                       >
-                        Flash Recharge allows users to top up their balance on Flash Wallet.
+                        {lang["Flash Recharge allows users to top up their balance on Flash Wallet."]}
                       </Typography>
                     </Box>
                     <Box
@@ -198,8 +199,7 @@ const FlashRecharge = () => {
                           color: "#85898F",
                         }}
                       >
-                        The Flash recharge's cards will be printed at the time
-                        of purchase for an eco-responsible approach.
+                        {lang["The Flash recharge's cards will be printed at the time of purchase for an eco-responsible approach."]}
                       </Typography>
                     </Box>
                   </Grid>

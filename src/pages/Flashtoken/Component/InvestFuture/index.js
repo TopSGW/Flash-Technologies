@@ -20,6 +20,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import useMediaQuery from '@mui/material/useMediaQuery'; // import MobileDrawer from "../MobileDrawer";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 
 const InvestFuture = () => {
   const InvestSize = useMediaQuery('(max-width : 440px)');
@@ -145,6 +147,7 @@ const InvestFuture = () => {
     // }
   }, [inView, inView2]);
 
+  const lang = useSelector(Languagemodel)
   return (
     <>
       <Grid
@@ -318,7 +321,7 @@ const InvestFuture = () => {
                   color: "#FBBF04",
                 }}
               >
-                Staking
+                {lang["Staking"]}
               </Typography>
               <Typography
                 sx={{
@@ -330,7 +333,7 @@ const InvestFuture = () => {
                   color: "#FFF",
                 }}
               >
-                Invest in your Future
+                {lang["Invest in your Future"]}
               </Typography>
               <Typography
                 sx={{
@@ -342,8 +345,7 @@ const InvestFuture = () => {
                   color: "#84898F",
                 }}
               >
-                Clients can stake Flash or our approved partner's tokens for a
-                certain period of time in order to earn rewards and bonuses
+                {lang["Clients can stake Flash or our approved partner's tokens for a certain period of time in order to earn rewards and bonuses"]}
               </Typography>
             </Box>
             <Box
@@ -385,7 +387,7 @@ const InvestFuture = () => {
                         lineHeight: "27px !important",
                       }}
                     >
-                      Stake
+                      {lang["Stake"]}
                     </Typography>
                     <Typography
                       sx={{
@@ -397,7 +399,7 @@ const InvestFuture = () => {
                         color: "#84898F",
                       }}
                     >
-                      Stake FLASH and receive rewards.
+                      {lang["Stake FLASH and receive rewards."]}
                     </Typography>
                   </Box>
                 </Box>
@@ -419,7 +421,7 @@ const InvestFuture = () => {
                         lineHeight: "27px !important",
                       }}
                     >
-                      Complete Staking Term
+                      {lang["Complete Staking Term"]}
                     </Typography>
                     <Typography
                       sx={{
@@ -433,8 +435,7 @@ const InvestFuture = () => {
                         marginBottom: "20px",
                       }}
                     >
-                      Users can choose the staking terms and hold their stake
-                      for s period of time to earn higher yield bonus returns.
+                      {lang["Users can choose the staking terms and hold their stake for s period of time to earn higher yield bonus returns."]}
                     </Typography>
                   </Box>
                 </Box>
@@ -455,7 +456,7 @@ const InvestFuture = () => {
                         lineHeight: "27px !important",
                       }}
                     >
-                      Pay via Flash and partner tokens
+                      {lang["Pay via Flash and partner tokens"]}
                     </Typography>
                     <Typography
                       sx={{
@@ -468,8 +469,7 @@ const InvestFuture = () => {
                         maxWidth: { lg: "70%", xs: "100%" },
                       }}
                     >
-                      After every successful stake, users are rewarded with
-                      Flash token as a farming bonus and partners tokens.
+                      {lang["After every successful stake, users are rewarded with Flash token as a farming bonus and partners tokens."]}
                     </Typography>
                   </Box>
                 </Box>

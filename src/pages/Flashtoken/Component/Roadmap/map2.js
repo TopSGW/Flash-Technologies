@@ -1,4 +1,7 @@
+import { useSelector } from "react-redux"
+import { Languagemodel } from "../../../../Slice/translateSlice"
 export default function Map2(){
+    const lang = useSelector(Languagemodel)
     return(
         <div>
             <div style={{
@@ -28,7 +31,7 @@ export default function Map2(){
                     fontSize: "13px",
                     color: "white",
                     margin: "auto",
-                }}>Launch of Flash Technologies website</p>
+                }}>{lang["Launch of Flash Technologies website"]}</p>
             </div>
             <div style={{
                 position:"absolute",
@@ -42,7 +45,7 @@ export default function Map2(){
                     margin: "0px 74% 0px 14%",
                 }}>
                     <p style={{color:"white", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch of Flash Audit
+                        {lang["Launch of Flash Audit"]}
                     </p>
                 </div>
             </div>
@@ -59,7 +62,7 @@ export default function Map2(){
                     margin: "0px 16% 0px 65%",
                 }}>
                     <p style={{color:'white', textAlign:'left', fontSize:"12px", margin: 0, fontWeight: 500}}>
-                        Unveiling of the first Flash Transfer partners
+                        {lang["Unveiling of the first Flash Transfer partners"]}
                     </p>
                 </div>
             </div>
@@ -77,7 +80,7 @@ export default function Map2(){
                     margin: "0px 74% 0px 0%",
                 }}>
                     <p style={{color: "white", textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Launch of the advertising campaign with influencers + new ambassadors   
+                        {lang["Launch of the advertising campaign with influencers + new ambassadors"]}   
                     </p>
                 </div>
             </div>
@@ -94,7 +97,7 @@ export default function Map2(){
                     margin: "0px 8% 0px 73%",
                 }}>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Vip Club Launch (only for the 200 Nft)
+                        {lang["Vip Club Launch (only for the 200 Nft)"]}
                     </p>
                 </div>
             </div>
@@ -111,7 +114,7 @@ export default function Map2(){
                     margin: "0px 0px 0px -1%",
                 }}>
                     <p style={{color:'white', textAlign:'right', fontSize:"13px", margin: 0, fontWeight: 400}}>
-                        Development of the Staking platform
+                        {lang["Development of the Staking platform"]}
                     </p>
                 </div>
             </div>
@@ -128,7 +131,7 @@ export default function Map2(){
                     margin: "0px 0% 0px 80%",
                 }}>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: 0, fontWeight: 500}}>
-                        Development of the Audit platform
+                        {lang["Development of the Audit platform"]}
                     </p>
                 </div>
             </div>

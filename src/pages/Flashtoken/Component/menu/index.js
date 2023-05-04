@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
 export default function Menu( props ){
     const handleChange = (id)=>{
         props.SetmenuStatus(false);
@@ -8,17 +10,17 @@ export default function Menu( props ){
     }
     const Navs = [
         {
-          name: " Our services",
+          name: "Our Services",
           color: "#85898F",
           link: "services",
         },
         {
-          name: " Roadmap",
+          name: "Roadmap",
           color: "#85898F",
           link: "roadmap",
         },
         {
-          name: " Tokenomics",
+          name: "Tokenomics",
           color: "#85898F",
           link: "tokenomics",
         },
@@ -33,12 +35,12 @@ export default function Menu( props ){
           link: "tokenomics",
         },
         {
-          name: " NFT",
+          name: "NFT",
           color: "#85898F",
           link: "nft",
         },
         {
-          name: " Partners",
+          name: "Partners",
           color: "#85898F",
           link: "partners",
         },
@@ -62,7 +64,8 @@ export default function Menu( props ){
           color: "#85898F",
           link: "Contact",
         },
-      ];    
+      ];
+    const lang = useSelector(Languagemodel)    
     return(
         <div style={{
             position: "absolute",
@@ -95,7 +98,7 @@ export default function Menu( props ){
                             lineHeight: "16.4px !important",
                         }} 
                         onClick={()=>handleChange(m.link)}>
-                            {m.name}
+                            {lang[m.name]}
                         </div>
                     </div>
                 })}

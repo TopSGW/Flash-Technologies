@@ -18,6 +18,8 @@ import { useEffect } from "react";
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { Languagemodel } from "../../../../Slice/translateSlice";
+import { useSelector } from "react-redux";
 export default function Media(){
   const fixedbar = useMediaQuery('(max-width : 1200px)');
       const Option = {
@@ -97,6 +99,7 @@ export default function Media(){
           link: "https://www.marketwatch.com/press-release/flash-technologies-is-set-to-revolutionize-the-money-transfer-market-2023-04-04?mod=search_headline"
         }
       ];    
+      const lang = useSelector(Languagemodel)
     return(
         <div style={{
             width: "100%",
@@ -110,7 +113,7 @@ export default function Media(){
                 textAlign: "center",
                 margin: 0,
                 lineHeight: 0
-            }} className="seeIntheMedia">Seen in the media</h1>             
+            }} className="seeIntheMedia">{lang["Seen in the media"]}</h1>             
             <div className="MediaContentQuery" style={{zIndex:22}}>
               <Marquee gradient={false} speed={60}>
                 {list1.map((i,index) => {

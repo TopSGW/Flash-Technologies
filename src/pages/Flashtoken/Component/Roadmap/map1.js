@@ -1,4 +1,8 @@
+import { Languagemodel } from "../../../../Slice/translateSlice"
+import { useSelector } from "react-redux"
+
 export default function Map1(){
+    const lang = useSelector(Languagemodel)
     return(
         <div>
             <div style={{
@@ -13,7 +17,7 @@ export default function Map1(){
                     margin:0,
                     color: "#FABE04",
                     lineHeight: 0
-                }}>August 2021</p>
+                }}>{lang["August 2021"]}</p>
             </div>
             <div style={{
                 position:"absolute",
@@ -28,7 +32,7 @@ export default function Map1(){
                     fontSize: "13px",
                     color: "white",
                     margin: "auto",
-                }}>Market study and meeting with professionals for the feasibility of the project.</p>
+                }}>{lang["Market study and meeting with professionals for the feasibility of the project."]}</p>
             </div>
             <div style={{
                 position:"absolute",
@@ -42,10 +46,10 @@ export default function Map1(){
                     margin: "0px 74% 0px 14%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'right', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        October 2021
+                        {lang["October 2021"]}
                     </p>
                     <p style={{color:"white", textAlign:'right', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Creation of the team of developers. Creation of the Flash Token Website.
+                        {lang["Creation of the team of developers. Creation of the Flash Token Website."]}
                     </p>
                 </div>
             </div>
@@ -62,10 +66,10 @@ export default function Map1(){
                     margin: "0px 16% 0px 66%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'left', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        September 2021
+                        {lang["September 2021"]}
                     </p>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Definition of the project and creation of the whitepaper.
+                        {lang["Definition of the project and creation of the whitepaper."]}
                     </p>
                 </div>
             </div>
@@ -83,10 +87,10 @@ export default function Map1(){
                     margin: "0px 74% 0px 8%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'right', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        December 2021
+                        {lang["December 2021"]}
                     </p>
                     <p style={{color:"white", textAlign:'right', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Promotion of the Flash Token by influencers.
+                        {lang["Promotion of the Flash Token by influencers."]}
                     </p>
                 </div>
             </div>
@@ -103,10 +107,10 @@ export default function Map1(){
                     margin: "0px 8% 0px 73%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'left', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        November 2021
+                        {lang["November 2021"]}
                     </p>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Implementation of the Marketing strategy. Creation of the money transfer platform website. Meeting with influencers for the promotion of Flash Token. Launch of the Flash Token on the Bsc.
+                        {lang["Implementation of the Marketing strategy. Creation of the money transfer platform website. Meeting with influencers for the promotion of Flash Token. Launch of the Flash Token on the Bsc."]}
                     </p>
                 </div>
             </div>
@@ -123,10 +127,10 @@ export default function Map1(){
                     margin: "0px 74% 0px 0%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'right', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        February 2022
+                        {lang["February 2022"]}
                     </p>
                     <p style={{color:"white", textAlign:'right', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Release of the beta version of the money transfer. Coming out of the Nft mint platform Deployment
+                        {lang["Release of the beta version of the money transfer. Coming out of the Nft mint platform Deployment."]}
                     </p>
                 </div>
             </div>
@@ -143,10 +147,10 @@ export default function Map1(){
                     margin: "0px 0% 0px 80%",
                 }}>
                     <p style={{color:"#FABE04", textAlign:'left', fontSize:"20px", margin: 0, fontWeight: 600}}>
-                        January 2022
+                        {lang["January 2022"]}
                     </p>
                     <p style={{color:"white", textAlign:'left', fontSize:"13px", margin: "10px 0px 0px 0px"}}>
-                        Launch of the 1st NFT collection. Launch of the Flash Token on the Bsc.
+                        {lang["Launch of the 1st NFT collection. Launch of the Flash Token on the Bsc."]}
                     </p>
                 </div>
             </div>
