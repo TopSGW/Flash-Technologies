@@ -10,7 +10,7 @@ import Binance from "../../../../assests/svg/binance.svg";
 import telechargementImg from '../../../../assests/carousel_Img/telechargement.svg';
 import tradingviewSvg from '../../../../assests/carousel_Img/tradingview.svg';
 import marketwatchSvg from '../../../../assests/carousel_Img/marketwatch.svg';
-
+import telemerchargementSvg_de from '../../../../assests/carousel_Img/telechargement_de.svg'
 
 import "./index.css";
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -100,6 +100,7 @@ export default function Media(){
         }
       ];    
       const lang = useSelector(Languagemodel)
+      const langugemode = useSelector((state) => state.translate.mode)
     return(
         <div style={{
             width: "100%",
@@ -124,8 +125,8 @@ export default function Media(){
                         )
                      }
                     else if(i.img == telechargementImg){
-                      return (<a href={i.link} target="_blank" rel="noreferrer" className="marquee_element">
-                            <img src={i.img} style={{height:"44px"}} />
+                      return (<a href={langugemode === 'de'? 'https://de.cointelegraph.com/press-releases/flash-technologies-is-set-to-revolutionize-the-money-transfer-market': i.link} target="_blank" rel="noreferrer" className="marquee_element">
+                            <img src={langugemode === 'de' ? telemerchargementSvg_de : i.img} style={{height:"44px"}} />
                           </a>
                        )
                      }
