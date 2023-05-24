@@ -497,7 +497,7 @@ const FlashEcosystem = () => {
                 className={classes.flashBoxesImage}
                 component="img"
                 sx={{
-                  marginTop: { lg: "90px", xs: "17px" },
+                  marginTop: { lg: "40px", xs: "17px" },
                 }}
                 src={flashbridge}
               />
@@ -737,7 +737,7 @@ const FlashEcosystem = () => {
               <Box
                 className={classes.flashBoxesImage}
                 sx={{
-                  marginTop: { lg: "100px", xs: "17px" },
+                  marginTop: { lg: "40px", xs: "17px" },
                 }}
                 component="img"
                 src={flashlaunchpad}
