@@ -14,6 +14,7 @@ const languageDetection = window.navigator.language
 console.log("dection Module >>>>", detectBrowserLanguage())
 const deteclanguage = detectBrowserLanguage()
 let defaultLanguage = "en"
+let Init_Languagemodel = English
 console.log(typeof defaultLanguage)
 if(deteclanguage.search("en") >= 0){
   defaultLanguage = "en"
@@ -21,18 +22,23 @@ if(deteclanguage.search("en") >= 0){
 }
 else if(deteclanguage.search("fr") >=0){
   defaultLanguage = "fr"
+  Init_Languagemodel = French
 }
 else if(deteclanguage.search("de") >=0){
   defaultLanguage = "de"
+  Init_Languagemodel = German
 }
 else if(deteclanguage.search("es") >=0){
   defaultLanguage = "es"
+  Init_Languagemodel = Spain
 }
 else if(deteclanguage.search("pt") >=0){
   defaultLanguage = "pt"
+  Init_Languagemodel = Potugues
 }
 else if(deteclanguage.search("ar") >=0){
   defaultLanguage = "ar"
+  Init_Languagemodel = Arabic
 }
 
 export interface translateState {
@@ -42,7 +48,7 @@ export interface translateState {
 
 const initialState: translateState = {
   mode: defaultLanguage,
-  languagemodel: English,
+  languagemodel: Init_Languagemodel,
 }
 
 
