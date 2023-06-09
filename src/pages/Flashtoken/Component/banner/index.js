@@ -54,7 +54,7 @@ const Banner = () => {
     },
     {
       img: insta,
-      link: "https://www.instagram.com/flash_token_off/",
+      link: "https://www.instagram.com/flash_techno_of/",
     },
     {
       img: fb,
@@ -531,7 +531,7 @@ const Banner = () => {
           </Box>
         </Grid>
         <a className="logo_cert">
-          <a className="logo_elements" href="https://www.certik.com/projects/flash-technologies" target="_blank" rel="noreferrer">
+          <a className="logo_elements" href="https://skynet.certik.com/projects/flash-3.0" target="_blank" rel="noreferrer">
             <h3 className="audit_by">{lang["Audited by"]}</h3>
             <div style={{marginLeft:"10px"}}>
               <img src={certImg1} className="certImg1"></img>

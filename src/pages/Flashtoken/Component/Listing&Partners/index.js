@@ -22,6 +22,7 @@ import partner14 from "../../../../assests/Images/partner14.png";
 import partner15 from "../../../../assests/Images/partner15.png";
 import partner16 from "../../../../assests/Images/partner16.png";
 import partner17 from "../../../../assests/svg/clertlogo.svg";
+import partner18 from '../../../../assests/svg/dexview-full.svg';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -62,6 +63,9 @@ const ListingPartners = () => {
     },
     {
       img: partner7,
+    },
+    {
+      img: partner18,
     },
     {
       img: partner8,
@@ -149,6 +153,9 @@ const ListingPartners = () => {
       img: partner17,
       url: "https://www.certik.com"
     },
+    {
+      img: partner18
+    }
   ];
 
   const Option = {

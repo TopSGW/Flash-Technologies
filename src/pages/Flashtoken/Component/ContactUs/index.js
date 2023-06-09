@@ -62,7 +62,7 @@ const pics = [
   },
   {
     img: img4,
-    link: "https://www.instagram.com/flash_token_off/",
+    link: "https://www.instagram.com/flash_techno_of/",
   },
   {
     img: img5,

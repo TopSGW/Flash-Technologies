@@ -29,6 +29,8 @@ import integrateFlashWallet from "../../../../assests/Images/integrateFlashWalle
 import StakingFLash from "../../../../assests/Images/StakingFLash.png";
 import flashaudit from "../../../../assests/Images/flashaudit.png";
 import flashlaunchpad from "../../../../assests/Images/flashlaunchpad.png";
+import flashDeadWalletImg from '../../../../assests/Images/dead-wallet.png';
+import flashPayImg from '../../../../assests/Images/flash-pay.png'
 import line3 from "../../../../assests/Images/Line3.png";
 import line4 from "../../../../assests/Images/Line4.png";
 
@@ -626,6 +628,113 @@ const FlashEcosystem = () => {
               />
             </motion.fragment>
           </Grid>
+          <Grid
+            item
+            md={6}
+            sm={12}
+            xs={12}
+            sx={{
+              display: "flex",
+              alignItems: "start",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <motion.fragment
+                whileHover={{ scale: 1.1 , boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',zIndex:'2' }}
+                
+                className={`${classes.flashBoxes} ${'custom'}`}
+              
+              >
+              <Typography
+                component="h2"
+                sx={{
+                  fontFamily: "Manrope",
+                  fontSize: { lg: "30px", xs: "16px" },
+                  marginBottom: { lg: "0px", xs: "10px" },
+                  fontWeight: "800",
+                  lineHeight: { lg: "61px", xs: "21.86px" },
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                {lang["Dead Wallet"]}
+              </Typography>
+              <Typography className={classes.flashBoxesPara}>
+                  {lang["The 'dead-wallet' function. This function enables the recovery of cryptos in another wallet in case of loss of seed phrase and in the event of a death of a crypto holder. It is embedded with a smart-contract linked to a timer that automatically triggers the transfer of funds out of the wallet after a period of time has elapsed. With extra security if ever the dead wallet doesn't have enough gas costs."]}
+              </Typography>
+              <a
+                href="https://flash-wallet.com"
+                target="_blank"
+                style={{
+                  textDecoration: "none",
+                  color: "#FBBF04",
+                  fontSize: "20px",
+                }}
+              >
+                flash-wallet.com
+              </a>
+              <Box
+                className={classes.flashBoxesImage}
+                component="img"
+                src={flashDeadWalletImg}
+              />
+            </motion.fragment>
+          </Grid>
+          <Grid
+            item
+            md={6}
+            sm={12}
+            xs={12}
+            sx={{
+              display: "flex",
+              alignItems: "start",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <motion.fragment
+                whileHover={{ scale: 1.1 , boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',zIndex:'2' }}
+                
+                className={`${classes.flashBoxes} ${'custom'}`}
+              
+              >
+              <Typography
+                component="h2"
+                sx={{
+                  fontFamily: "Manrope",
+                  fontSize: { lg: "30px", xs: "16px" },
+                  marginBottom: { lg: "0px", xs: "10px" },
+                  fontWeight: "800",
+                  lineHeight: { lg: "61px", xs: "21.86px" },
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                {lang["Flash Pay"]}
+              </Typography>
+              <Typography className={classes.flashBoxesPara}>
+                  {lang["FlashPay, escrow agreements can be created quickly by buyer or seller. Once receipt of goods or services is confirmed funds are immediately transferred to the seller via the smart contract. In the event of a dispute, Flash Pay settles the dispute with the evidence received. At no time are the funds held by Flash Pay, everything is decentralized via the smart contract. Flash Pay can only validate or refuse the payment, nothing else."]}
+              </Typography>
+              <a
+                href="https://flash-payment.com"
+                target="_blank"
+                style={{
+                  textDecoration: "none",
+                  color: "#FBBF04",
+                  fontSize: "20px",
+                }}
+              >
+                flash-payment.com
+              </a>
+              <Box
+                className={classes.flashBoxesImage}
+                component="img"
+                src={flashPayImg}
+              />
+            </motion.fragment>
+          </Grid>
+
           <Grid
             item
             xs={12}
