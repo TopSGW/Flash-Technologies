@@ -56,7 +56,6 @@
 
 .notify-items {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .notify-items>div {

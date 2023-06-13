@@ -78,7 +78,7 @@ const pics = [
   },
   {
     img: img8,
-    link: "https://flash-technologies.gitbook.io/docs/overall-documents/flash-technologies",
+    link: "https://flash-technologies.org/static/media/WhitePaperEN.c27fd014bb4bde310044.pdf",
   },
   {
     img: img9,

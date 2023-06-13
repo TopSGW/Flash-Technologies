@@ -38,15 +38,16 @@ const HeaderTopBar = () => {
   return (
     <>
       <Grid
-        container
+        container = {true}
         sx={{
-          mb: { lg: "0px", xs: "-10px" },
+          mb: { lg: "0px", xs: "0px" },
+          width: '100vw'
         }}
       >
         <Grid
           sx={{
             display: "flex",
-            width: { lg: "1400px", xs: "100%" },
+            width: { xs: "100%" },
             maxWidth: "100%",
             margin: "0 auto",
             padding: "0px 20px",
@@ -58,7 +59,7 @@ const HeaderTopBar = () => {
               item
               xs={12}
               sx={{
-                display: "none",
+                display: "block",
                 width: "100%",
               }}
             >
@@ -100,7 +101,7 @@ const HeaderTopBar = () => {
                 </div>
                 <div className="launc-notify">
                   <div className="notify-items">
-                    <Grid container>
+                    <Grid>
                       <Grid sx={{ display: { md: "flex", xs: "none" } }}>
                         <div className="notify-text">
                           <h4>
@@ -147,7 +148,7 @@ const HeaderTopBar = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid sx={{ display: "none", justifyContent: "center" }}>
+        <Grid sx={{ display: "block", justifyContent: "center" }}>
           <Grid
             sx={{
               transform: { lg: "scale(none)", xs: "scale(1)",sm: "scale(1)" },
@@ -181,10 +182,12 @@ const HeaderTopBar = () => {
                 <p>secondes</p>
               </div>
             </Grid>
-            <Grid>
+            <Grid sx={{
+              ml: { xs:"20px", lg: '0px'}
+            }}>
               <Box
                 sx={{
-                  ml: {xs:"30px",sm:"440px"},
+                  ml: {xs:"0px",sm:"440px"},
                   width: "83px",
                   backgroundColor: "#E0007B",
                   borderRadius: "56px",

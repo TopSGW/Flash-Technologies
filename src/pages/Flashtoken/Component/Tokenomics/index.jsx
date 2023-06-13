@@ -401,7 +401,7 @@ const Tokenomics = () => {
                             lineHeight: " 160%",
                           }}
                         >
-                          BNB Chain &nbsp;  {isTransfer ? '- Ethereum - Polygon - Cronos' : ''}
+                          Ethereum  {isTransfer ? '- BNB Chain - Polygon' : ' - BNB Chain - Polygon'}
                         </Typography>
                       </Box>
                     </Grid>
@@ -430,7 +430,7 @@ const Tokenomics = () => {
                     </IconButton>
                       </a>
                     <a
-                    href={isTransfer ? 'https://skynet.certik.com/projects/flash-technologies'
+                    href={isTransfer ? 'https://skynet.certik.com/projects/flash-3.0'
                     : AuditReport}
                       target="_blank"
                       style={{ textDecoration: "none" }}
@@ -622,7 +622,7 @@ const Tokenomics = () => {
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
               <a
-                href={isTransfer ? 'https://skynet.certik.com/projects/flash-technologies'
+                href={isTransfer ? 'https://skynet.certik.com/projects/flash-3.0'
                   : AuditReport}
                 target="_blank"
                 style={{ textDecoration: "none" }}

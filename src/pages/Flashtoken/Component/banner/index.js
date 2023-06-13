@@ -66,7 +66,7 @@ const Banner = () => {
     },
     {
       img: book,
-      link: "https://flash-technologies.gitbook.io/docs/overall-documents/flash-technologies",
+      link: "https://flash-technologies.org/static/media/WhitePaperEN.c27fd014bb4bde310044.pdf",
     },
     {
       img: In,
@@ -103,7 +103,7 @@ const Banner = () => {
           item
           md={12}
           sx={{
-            mt: { lg: "70px", xs: "0px" },
+            mt: { lg: "140px", xs: "0px" },
             display: "flex",
             justifyContent: "center",
           }}
@@ -346,15 +346,15 @@ const Banner = () => {
                 <Typography
                   sx={{
                     fontFamily: "'Manrope' !important",
-                    fontSize: { lg: "16px !important", xs: "14px" },
+                    fontSize: { lg: "16px !important", xs: "12px" },
                     fontWeight: "400 !important",
-                    lineHeight: { lg: "165% !important", xs: "21px" },
+                    lineHeight: { lg: "165% !important", xs: "16px" },
                     color: "#85898F",
                     marginBottom: "40px",
                     maxWidth: "600px",
                   }}
                 >
-                  {lang["Flash transfer is the first platform in the world that allows you to buy, send or sell cryptocurrencies, via our merchant network with reasonable fees. Flash wallet will store your crypto by holding your private key and bequeath your funds in the event of death or loss of wallet."]}
+                  {lang["Flash Transfer is the world's first platform that allows you to buy crypto with cash, transfer, or sell cryptocurrencies for cash through our network of merchants, with reasonable fees. Flash Wallet, our non-custodial wallet, has a smart contract that you can use to transfer your crypto in the event of death. When making payments on the blockchain, you can use Flash Pay, our escrow smart contract, to secure your transactions without any third party holding your crypto. Find the best fees with Flash Dex, our aggregator swap & bridge!"]}
                 </Typography>
                 <Box sx={{ display: { lg: "flex", xs: "none" } }}>
                   <img src={bannerline} />

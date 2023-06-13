@@ -492,7 +492,7 @@ const FlashEcosystem = () => {
                   fontSize: "20px",
                 }}
               >
-                www.flash-dex.com
+                flash-dex.com
               </a>            
 
               <Box

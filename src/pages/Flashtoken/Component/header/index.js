@@ -34,6 +34,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Languagemodel } from "../../../../Slice/translateSlice";
 import { Translatechangemode } from "../../../../Slice/translateSlice";
 import ReactFlagsSelect from "react-flags-select";
+import HeaderTopBar from "../HeaderTopBar";
 // import MobileDrawer from "../MobileDrawer";
 
 import '../header/style.css';
@@ -175,6 +176,12 @@ const FTheader = () => {
           }
         }
       >
+
+      <Grid sx={ {backgroundColor: 'black'} }>
+        <HeaderTopBar/>
+      </Grid>
+
+{/* mobile mode */}
         <Grid
           container
           sx={{
@@ -233,6 +240,7 @@ const FTheader = () => {
             </Box>
           </Grid>
         </Grid>
+{/* desktop mode */}
         <Grid
           className="container-box"
           item

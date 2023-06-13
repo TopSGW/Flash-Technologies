@@ -37,12 +37,9 @@ const FlashToken = () => {
       <Grid container style={{overflow:'hidden'}}>
         <Grid item md={12} sx={{
           width: "100vw",
-          marginTop: {xs:'71px', lg:'0px'}
+          marginTop: {xs:'120px', lg:'0px'}
         }} 
         >
-          {/* <Grid sx={{ backgroundColor: "black" }}>
-            <HeaderTopBar />
-          </Grid> */}
           {/* <Grid
             sx={{
               backgroundImage: `url(${bannerBackground})`,
