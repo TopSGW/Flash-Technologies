@@ -114,7 +114,7 @@ const HeaderTopBar = () => {
                     </Grid>
                     {/* <Grid container> */}
                     <Grid
-                      sx={{ display: { md: "flex", xs: "none" } }}
+                      sx={{ display: { md: "flex", xs: "none" }, position: 'fixed', transform: 'translate(-50%, 0)', left: '50%' }}
                       item
                       md={4}
                       xs={1}
