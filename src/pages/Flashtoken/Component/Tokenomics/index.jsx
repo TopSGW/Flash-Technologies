@@ -68,7 +68,8 @@ const Tokenomics = () => {
           margin: "0 auto",
           padding: { lg: "60px 0", xs: "30px 0 0 0" },
         }}
-       className={`${isTransfer ? 'unselectable' : ''}`}>
+        >
+       {/* className={`${isTransfer ? 'unselectable' : ''}`}> */}
       {
         isTransfer && <Typography variant="h3" className="soon">{/* Soon*/}</Typography>
 
@@ -241,7 +242,7 @@ const Tokenomics = () => {
                       >
                         {/* {discount} */}
                         {/* <img src={copy}/> */}
-                          {!isTransfer ? discount : '0x4362B603AE4b198ddE3C9EeF641B79C6f801B895'}
+                          {/* {!isTransfer ? discount : '0x4362B603AE4b198ddE3C9EeF641B79C6f801B895'} */}
                           {
                             <>
                               <div 
@@ -429,13 +430,13 @@ const Tokenomics = () => {
                       {" "}{lang["Buy Flash"]}
                     </IconButton>
                       </a>
-                    <a
+                    {/* <a
                     href={isTransfer ? 'https://skynet.certik.com/projects/flash-3.0'
                     : AuditReport}
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       rel="noreferrer"
-                    >
+                    > */}
                       <IconButton
                         className="iconbutton"
                         sx={{
@@ -455,7 +456,7 @@ const Tokenomics = () => {
                         <img src={AuditFlashImage} />
                         {lang["Audit Flash"]}
                       </IconButton>
-                    </a>
+                    {/* </a> */}
 
                     {/* <Button className="audit-flash-button"><img src={AuditFlashCTA} /></Button> */}
                   </Grid>
@@ -621,13 +622,13 @@ const Tokenomics = () => {
               </a>
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
-              <a
+              {/* <a
                 href={isTransfer ? 'https://skynet.certik.com/projects/flash-3.0'
                   : AuditReport}
                 target="_blank"
                 style={{ textDecoration: "none" }}
                 className="Audit"
-              >
+              > */}
                 <IconButton
                   className="iconbutton"
                   sx={{
@@ -646,7 +647,7 @@ const Tokenomics = () => {
                   Audit Flash
                   <img src={AuditFlashImage} style={{ marginLeft: "20px" }} />
                 </IconButton>
-              </a>
+              {/* </a> */}
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
               <a href={FR} target="__blank" style={{textDecoration:'none', cursor:'pointer'}}>
