@@ -23,7 +23,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import UsingFW from "../../../../assests/Images/UsingFlashWallet.png";
 import WhitepaperCTA from "../../../../assests/Images/Whitepaper-fr (2).png";
 import PitchDeckCTA from "../../../../assests/Images/Whitepaper-en2.png";
-import EN from "../../../../assests/pdf/WhitePaperEN.pdf";
+import EN from "../../../../assests/pdf/WhitePaperEnglish.pdf";
 import FR from "../../../../assests/pdf/WhitePaperFR.pdf";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import YouTubeIcon from '@mui/icons-material/YouTube';

@@ -526,7 +526,7 @@ const Tokenomics = () => {
                       style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>5% Marketing</Typography>
                   </div>
                 </Grid> */}
-                <Grid xs={12} md={12} mt={3}>
+                {/* <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
                     <CircularProgress 
                     size={CircleTrack ? '30px' : '20px'} 
@@ -537,8 +537,8 @@ const Tokenomics = () => {
                       style={{ alignSelf: "center" ,fontFamily: "Manrope"}} variant="h6" ml={1}>
                         {!isTransfer ? '5' : '1'}% {lang["Marketing"]}</Typography>
                   </div>
-                </Grid>
-                <Grid xs={12} md={12} mt={3}>
+                </Grid> */}
+                {/* <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
                     <CircularProgress 
                     size={CircleTrack ? '30px' : '20px'} 
@@ -548,8 +548,8 @@ const Tokenomics = () => {
                       sx={{fontSize: { lg: "20px", xs: "13px" }}}
                       style={{ alignSelf: "center" ,fontFamily: "Manrope"}} variant="h6" ml={1}>1% {lang["Liquidity"]}</Typography>
                   </div>
-                </Grid>
-                <Grid xs={12} md={12} mt={3}>
+                </Grid> */}
+                {/* <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
                     <CircularProgress 
                     size={CircleTrack ? '30px' : '20px'} 
@@ -559,8 +559,8 @@ const Tokenomics = () => {
                       sx={{fontSize: { lg: "20px", xs: "13px" }}}
                       style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>1% {lang["Burn"]}</Typography>
                   </div>
-                </Grid>
-                { !isTransfer &&
+                </Grid> */}
+                {/* { !isTransfer &&
                     <Grid xs={12} md={12} mt={3}>
                       <div style={{ display: 'flex'}}>
                         <CircularProgress 
@@ -572,7 +572,7 @@ const Tokenomics = () => {
                           style={{ alignSelf: "center",fontFamily: "Manrope"}} variant="h6" ml={1}>3% {lang["Rewards"]}</Typography>
                       </div>
                     </Grid> 
-                }
+                } */}
               </Grid>
             </Grid>
           </Grid>
