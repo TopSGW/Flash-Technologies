@@ -16,7 +16,7 @@ import smileyIcon from "../../../../assests/Images/smiley-icon.png";
 
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
-
+import { useState, useEffect } from "react";
 import "./index.css";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -34,7 +34,44 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 const HeaderTopBar = () => {
   const classes = useStyles();
+  const [label_day,setday] = useState(0)
+  const [label_showhour, sethour] = useState(0)
+  const [label_showminute, setminute] = useState(0)
+  const [label_second, setsecond] = useState(0)
+  useEffect(()=>{
+      const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+      let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "09/30/",
+      birthday = dayMonth + yyyy;
+      today = mm + "/" + dd + "/" + yyyy;
+      if (today > birthday) {
+        birthday = dayMonth + nextYear;
+      }
 
+      const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(), distance = countDown - now;
+
+        setday(Math.floor(distance / (day)))
+        sethour(Math.floor((distance % (day)) / (hour)))
+        setminute(Math.floor((distance % (hour)) / (minute)))
+        setsecond(Math.floor((distance % (minute)) / second))
+
+        //do something later when date is reached
+        if (distance < 0) {
+          clearInterval(x);
+        }
+      }, 1000)
+      return () => clearInterval(x);
+  },[])
   return (
     <>
       <Grid
@@ -80,19 +117,19 @@ const HeaderTopBar = () => {
                         className="counter-wrap"
                       >
                         <div className="counter-item jours">
-                          <h6>71</h6>
+                          <h6>{label_day}</h6>
                           <p>jours</p>
                         </div>
                         <div className="counter-item heures">
-                          <h6>04</h6>
+                          <h6>{label_showhour}</h6>
                           <p>heures</p>
                         </div>
                         <div className="counter-item minutes">
-                          <h6>13</h6>
+                          <h6>{label_showminute}</h6>
                           <p>minutes</p>
                         </div>
                         <div className="counter-item secondes">
-                          <h6>15</h6>
+                          <h6>{label_second}</h6>
                           <p>secondes</p>
                         </div>
                       </Grid>
@@ -163,19 +200,19 @@ const HeaderTopBar = () => {
               className="counter-wrap"
             >
               <div className="counter-item jours">
-                <h6>71</h6>
+                <h6>{label_day}</h6>
                 <p>jours</p>
               </div>
               <div className="counter-item heures">
-                <h6>04</h6>
+                <h6>{label_showhour}</h6>
                 <p>heures</p>
               </div>
               <div className="counter-item minutes">
-                <h6>13</h6>
+                <h6>{label_showminute}</h6>
                 <p>minutes</p>
               </div>
               <div className="counter-item secondes">
-                <h6>15</h6>
+                <h6>{label_second}</h6>
                 <p>secondes</p>
               </div>
             </Grid>

@@ -507,7 +507,8 @@ const Tokenomics = () => {
                         style={{display:`${!isTransfer ? 'block' : 'none'}`}}  
                   /> 
                   <Doughnut className={isTransfer ? `${classes.blurTransferComponent} doughnut-filter` : 'doughnut-filter'} 
-                      data={TransferChartData} options={Options} 
+                      data={TransferChartData} 
+                      options={Options} 
                       plugins={[transferChartLabel]}
                       style={{display:`${!isTransfer ? 'none' : 'block'}`}}/>
                 </Box>

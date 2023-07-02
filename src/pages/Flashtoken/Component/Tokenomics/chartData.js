@@ -49,7 +49,7 @@ export const TransferChartData = {
             label: "Flash Token",
             data: [3, 3, 3],
             backgroundColor: [ "#5E95FF","#039D81","#FF8D08",  "#FF0808"],
-            borderColor: [  "#5E95FF", "#039D81", "#FF8D08",  "#FF0808"],
+            borderColor: [  "#5E95FF", "#FBBF04", "#FF8D08",  "#FF0808"],
             offset:[ 10,10,10],
             hoverOffset: -10,
             borderWidth: [ 10,10,10],
@@ -118,7 +118,7 @@ export const chartLabel = {
      var fontSize = (height / 114).toFixed(2);
       ctx.font = fontSize + "em Manrope";
       ctx.textBaseline = "middle";
-      var text = "10%",
+      var text = "6%",
           textX = Math.round((width - ctx.measureText(text).width) / 2),
           textY = height / 2.5;
           ctx.fillStyle = "rgb(255,255,255)"
