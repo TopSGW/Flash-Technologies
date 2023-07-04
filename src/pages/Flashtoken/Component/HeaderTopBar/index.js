@@ -17,6 +17,9 @@ import smileyIcon from "../../../../assests/Images/smiley-icon.png";
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Languagemodel } from "../../../../Slice/translateSlice";
+
 import "./index.css";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -38,6 +41,7 @@ const HeaderTopBar = () => {
   const [label_showhour, sethour] = useState(0)
   const [label_showminute, setminute] = useState(0)
   const [label_second, setsecond] = useState(0)
+  const lang = useSelector(Languagemodel)
   useEffect(()=>{
       const second = 1000,
         minute = second * 60,
@@ -118,19 +122,19 @@ const HeaderTopBar = () => {
                       >
                         <div className="counter-item jours">
                           <h6>{label_day}</h6>
-                          <p>jours</p>
+                          <p>{lang['DAYS']}</p>
                         </div>
                         <div className="counter-item heures">
                           <h6>{label_showhour}</h6>
-                          <p>heures</p>
+                          <p>{lang['HOURS']}</p>
                         </div>
                         <div className="counter-item minutes">
                           <h6>{label_showminute}</h6>
-                          <p>minutes</p>
+                          <p>{lang['MINUTES']}</p>
                         </div>
                         <div className="counter-item secondes">
                           <h6>{label_second}</h6>
-                          <p>secondes</p>
+                          <p>{lang['SECONDS']}</p>
                         </div>
                       </Grid>
                     </Grid>
@@ -168,7 +172,7 @@ const HeaderTopBar = () => {
                 <Grid container sx={{ display: { xs: "none", md: "flex" } }}>
                   <Grid item xs={12}>
                     <div className="sold-coins">
-                      <h5>300 BNB</h5>
+                      <h5>300 ETH</h5>
                       <BorderLinearProgress
                         className="progressbar-top"
                         variant="determinate"
@@ -201,19 +205,19 @@ const HeaderTopBar = () => {
             >
               <div className="counter-item jours">
                 <h6>{label_day}</h6>
-                <p>jours</p>
+                <p>{lang['DAYS']}</p>
               </div>
               <div className="counter-item heures">
                 <h6>{label_showhour}</h6>
-                <p>heures</p>
+                <p>{lang['HOURS']}</p>
               </div>
               <div className="counter-item minutes">
                 <h6>{label_showminute}</h6>
-                <p>minutes</p>
+                <p>{lang['MINUTES']}</p>
               </div>
               <div className="counter-item secondes">
                 <h6>{label_second}</h6>
-                <p>secondes</p>
+                <p>{lang['SECONDS']}</p>
               </div>
             </Grid>
             <Grid sx={{

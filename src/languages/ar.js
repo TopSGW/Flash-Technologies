@@ -198,4 +198,8 @@ export const Arabic = {
     "Liquidity": "سيولة",
     "Burn": "حرق",
     "Rewards": "Rewards",
+    "DAYS": "DAYS",
+    "HOURS": "HOURS",
+    "MINUTES": "MINUTES",
+    "SECONDS": "SECONDS"
 }

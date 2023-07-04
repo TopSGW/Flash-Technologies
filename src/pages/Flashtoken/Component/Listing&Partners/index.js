@@ -159,6 +159,9 @@ const ListingPartners = () => {
     },
     {
       img: partner18
+    },
+    {
+      img: orangesvg
     }
   ];
 

@@ -198,4 +198,8 @@ export const Potugues = {
     "Liquidity": "Liquidez",
     "Burn": "Queimadura",
     "Rewards": "Recompensas",
+    "DAYS": "DAYS",
+    "HOURS": "HOURS",
+    "MINUTES": "MINUTES",
+    "SECONDS": "SECONDS"
 }

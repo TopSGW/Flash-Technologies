@@ -49,7 +49,7 @@ export const TransferChartData = {
             label: "Flash Token",
             data: [3, 3, 3],
             backgroundColor: [ "#5E95FF","#039D81","#FF8D08",  "#FF0808"],
-            borderColor: [  "#5E95FF", "#FBBF04", "#FF8D08",  "#FF0808"],
+            borderColor: [  "#FBBF04", "#FBBF04", "#FBBF04",  "#FF0808"],
             offset:[ 10,10,10],
             hoverOffset: -10,
             borderWidth: [ 10,10,10],

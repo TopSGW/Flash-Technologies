@@ -198,4 +198,9 @@ export const German = {
     "Liquidity": "Liquidität",
     "Burn": "Verbrennung",
     "Rewards": "Belohnungen",
+    "DAYS": "DAYS",
+    "HOURS": "HOURS",
+    "MINUTES": "MINUTES",
+    "SECONDS": "SECONDS"
+
 }

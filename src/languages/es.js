@@ -198,4 +198,9 @@ export const Spain = {
     "Liquidity": "Liquidez",
     "Burn": "Quemadura",
     "Rewards": "Recompensas",
+    "DAYS": "DAYS",
+    "HOURS": "HOURS",
+    "MINUTES": "MINUTES",
+    "SECONDS": "SECONDS"
+
 }

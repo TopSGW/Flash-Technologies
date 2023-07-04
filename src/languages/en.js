@@ -198,4 +198,8 @@ export const English = {
     "Liquidity": "Liquidity",
     "Burn": "Burn",
     "Rewards": "Rewards",
+    "DAYS": "DAYS",
+    "HOURS": "HOURS",
+    "MINUTES": "MINUTES",
+    "SECONDS": "SECONDS"
 }

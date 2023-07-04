@@ -198,4 +198,9 @@ export const French = {
     "Liquidity": "Liquidité",
     "Burn": "de brûlure",
     "Rewards": "de récompenses",
+    "DAYS": "jours",
+    "HOURS": "heures",
+    "MINUTES": "minutes",
+    "SECONDS": "secondes"
+
 }
