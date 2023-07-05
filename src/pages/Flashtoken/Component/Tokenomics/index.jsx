@@ -402,7 +402,7 @@ const Tokenomics = () => {
                             lineHeight: " 160%",
                           }}
                         >
-                          Ethereum  {isTransfer ? '- BNB Chain - Polygon' : ' - BNB Chain - Polygon'}
+                          Ethereum  {isTransfer ? '- BNB Chain' : ' - BNB Chain'}
                         </Typography>
                       </Box>
                     </Grid>

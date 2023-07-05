@@ -23,7 +23,7 @@ import partner15 from "../../../../assests/Images/partner15.png";
 import partner16 from "../../../../assests/Images/partner16.png";
 import partner17 from "../../../../assests/svg/clertlogo.svg";
 import partner18 from '../../../../assests/svg/dexview-full.svg';
-import orangesvg from '../../../../assests/svg/Orange_Money-Logo.wine.svg'
+import orangesvg from '../../../../assests/svg/Group.svg'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

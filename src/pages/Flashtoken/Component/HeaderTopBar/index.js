@@ -52,16 +52,15 @@ const HeaderTopBar = () => {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy + 1,
-      dayMonth = "09/30/",
+      dayMonth = "07/15/",
       birthday = dayMonth + yyyy;
       today = mm + "/" + dd + "/" + yyyy;
       if (today > birthday) {
         birthday = dayMonth + nextYear;
       }
 
-      const countDown = new Date(birthday).getTime(),
+      const countDown = new Date(birthday).getTime() + 50466000,
       x = setInterval(function() {    
-
         const now = new Date().getTime(), distance = countDown - now;
 
         setday(Math.floor(distance / (day)))
@@ -73,7 +72,7 @@ const HeaderTopBar = () => {
         if (distance < 0) {
           clearInterval(x);
         }
-      }, 1000)
+      }, 800)
       return () => clearInterval(x);
   },[])
   return (
