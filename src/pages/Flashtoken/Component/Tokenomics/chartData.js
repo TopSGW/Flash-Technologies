@@ -47,7 +47,7 @@ export const TransferChartData = {
     datasets: [
         {
             label: "Flash Token",
-            data: [3, 3, 3],
+            data: [1],
             backgroundColor: [ "#5E95FF","#039D81","#FF8D08",  "#FF0808"],
             borderColor: [  "#FBBF04", "#FBBF04", "#FBBF04",  "#FF0808"],
             offset:[ 10,10,10],
@@ -76,32 +76,33 @@ export const Options = {
         }
     },
     onHover: (event, chartElement) => {
+        console.log("................Hover............")
         // console.log(chartElement)
-        if(chartElement[0]?.index == 0){
-            let marketing = document.getElementById('marketing') 
-            marketing.style.color ='#0D5BE1'
-            marketing.style.transition = "100ms linear all"
-        }else if(chartElement[0]?.index == 1){
-            let liquidity = document.getElementById('liquidity') 
-            liquidity.style.color ='#13DAE9 '
-            liquidity.style.transition = "100ms linear all"
-        }
-        else if(chartElement[0]?.index == 2){
-            let burn = document.getElementById('burn')
-            burn.style.color ='#FFB347'
-            burn.style.transition = "100ms linear all"
-        }
-        else if(chartElement[0]?.index == 3){
-            let burn = document.getElementById('reward')
-            burn.style.color ='#DD0004'
-            burn.style.transition = "100ms linear all"
-        }
-        else{
-            document.getElementById('burn').style.color ='#FF8D08'
-            document.getElementById('marketing').style.color ='#5E95FF'
-            document.getElementById('liquidity').style.color ='#039D81'
-            document.getElementById('reward').style.color = "#FF0808"
-        }
+        // if(chartElement[0]?.index == 0){
+        //     let marketing = document.getElementById('marketing') 
+        //     marketing.style.color ='#0D5BE1'
+        //     marketing.style.transition = "100ms linear all"
+        // }else if(chartElement[0]?.index == 1){
+        //     let liquidity = document.getElementById('liquidity') 
+        //     liquidity.style.color ='#13DAE9 '
+        //     liquidity.style.transition = "100ms linear all"
+        // }
+        // else if(chartElement[0]?.index == 2){
+        //     let burn = document.getElementById('burn')
+        //     burn.style.color ='#FFB347'
+        //     burn.style.transition = "100ms linear all"
+        // }
+        // else if(chartElement[0]?.index == 3){
+        //     let burn = document.getElementById('reward')
+        //     burn.style.color ='#DD0004'
+        //     burn.style.transition = "100ms linear all"
+        // }
+        // else{
+        //     document.getElementById('burn').style.color ='#FF8D08'
+        //     document.getElementById('marketing').style.color ='#5E95FF'
+        //     document.getElementById('liquidity').style.color ='#039D81'
+        //     document.getElementById('reward').style.color = "#FF0808"
+        // }
         event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default'
     }
 }

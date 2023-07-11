@@ -63,7 +63,7 @@ const FlashList = () => {
     {img:Tenimg},
     {img:Elevenimg},
     {img:Twelveimg},
-    {img:Thirteenimg},
+    {img:Thirteenimg, link: "https://www.youtube.com/watch?v=x7aKBMyYrtA&ab_channel=CertiK"},
     {img:Fourteenimg},
     {img:Fifteenimg},
   ]
@@ -163,8 +163,15 @@ const FlashList = () => {
                         
                       >
                           <Box sx={{ display: { lg: "flex", xs: "none" } }}>
-                            <img className ="flash-list" src={i.img} 
-                             style={{borderRadius: "16px", height: "300px"}}/>
+                            {
+                              i.img === Thirteenimg ? 
+                              <a href={i.link} target="_blank">
+                                <img className ="flash-list" src={i.img} 
+                                style={{borderRadius: "16px", height: "300px"}}/>
+                              </a>:
+                                <img className ="flash-list" src={i.img} 
+                                style={{borderRadius: "16px", height: "300px"}}/>
+                            }
                         </Box>
                         </motion.button>
                       <Box
@@ -172,8 +179,16 @@ const FlashList = () => {
                           display: { lg: "none", xs: "flex" },
                         }}
                       >
-                        <img className="flash-list" src={i.img} height="120px" 
-                         style={{borderRadius: "8px"}}/>
+                        {
+                          i.img === Thirteenimg ?
+                          <a href={i.link} target="_blank">
+                            <img className="flash-list" src={i.img} height="120px" 
+                            style={{borderRadius: "8px"}}/>
+                          </a>
+                          :
+                          <img className="flash-list" src={i.img} height="120px" 
+                          style={{borderRadius: "8px"}}/> 
+                        }
                       </Box>
 
                       {/* <Typography
