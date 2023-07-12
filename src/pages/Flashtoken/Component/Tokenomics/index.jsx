@@ -242,7 +242,7 @@ const Tokenomics = () => {
                       >
                         {/* {discount} */}
                         {/* <img src={copy}/> */}
-                          {/* {!isTransfer ? discount : '0x4362B603AE4b198ddE3C9EeF641B79C6f801B895'} */}
+                          {!isTransfer ? discount : '0xBb19DA2482308ec02a242ACED4Fe0f09D06b12A7'}
                           {
                             <>
                               <div 
