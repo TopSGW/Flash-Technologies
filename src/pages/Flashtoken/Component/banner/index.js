@@ -35,6 +35,8 @@ import AppButton from "../../../../components/AppButton";
 import { Languagemodel } from "../../../../Slice/translateSlice";
 import { useSelector } from "react-redux";
 // import MobileDrawer from "../MobileDrawer";
+import EN from "../../../../assests/pdf/WhitePaperEN.pdf";
+
 import "./index.css"
 
 const Banner = () => {
@@ -66,7 +68,7 @@ const Banner = () => {
     },
     {
       img: book,
-      link: "https://flash-technologies.org/static/media/WhitePaperEnglish.d026be0272de9aeeb7d6.pdf",
+      link: EN,
     },
     {
       img: In,
@@ -82,7 +84,7 @@ const Banner = () => {
     },
     {
       img: face,
-      link: "#",
+      link: "https://www.pinksale.finance/launchpad/0x0903f032F0cf20e1e105F49fD6C74fFFaF1Df831?chain=ETH",
     },
   ];
   const lang = useSelector(Languagemodel)

@@ -59,7 +59,7 @@ const HeaderTopBar = () => {
         birthday = dayMonth + nextYear;
       }
 
-      const countDown = new Date(birthday).getTime() + 86400000,
+      const countDown = new Date(birthday).getTime() + 61200000,
       x = setInterval(function() {    
         const now = new Date().getTime(), distance = countDown - now;
 
@@ -158,7 +158,7 @@ const HeaderTopBar = () => {
                       // backgroundColor="red"
                     >
                       <div className="notify-button">
-                        <a href="#">
+                        <a href="https://www.pinksale.finance/launchpad/0x0903f032F0cf20e1e105F49fD6C74fFFaF1Df831?chain=ETH" target='_blank'>
                           {" "}
                           <img alt="" src={smileyIcon} /> <span>Pinksale</span>
                         </a>
@@ -222,6 +222,7 @@ const HeaderTopBar = () => {
             <Grid sx={{
               ml: { xs:"20px", lg: '0px'}
             }}>
+              <a href="https://www.pinksale.finance/launchpad/0x0903f032F0cf20e1e105F49fD6C74fFFaF1Df831?chain=ETH" target='_blank'>
               <Box
                 sx={{
                   ml: {xs:"0px",sm:"440px"},
@@ -250,6 +251,7 @@ const HeaderTopBar = () => {
                   <img alt="" src={smileyIcon}/> <span >Pinksale</span>
                 </a> */}
               </Box>
+              </a>
               {/* </Grid> */}
             </Grid>
           </Grid>

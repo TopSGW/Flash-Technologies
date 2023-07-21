@@ -36,6 +36,7 @@ import { Languagemodel } from "../../../../Slice/translateSlice";
 import { useSelector } from "react-redux";
 import "./index.css";
 // import MobileDrawer from "../MobileDrawer";
+import EN from "../../../../assests/pdf/WhitePaperEN.pdf";
 
 const dev = 2; // 1: develop 2: deploy
 // const config = {
@@ -78,7 +79,7 @@ const pics = [
   },
   {
     img: img8,
-    link: "https://flash-technologies.org/static/media/WhitePaperEnglish.d026be0272de9aeeb7d6.pdf",
+    link: EN,
   },
   {
     img: img9,
