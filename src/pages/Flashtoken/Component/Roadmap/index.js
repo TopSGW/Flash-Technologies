@@ -1,6 +1,6 @@
 import { Typography, Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import React ,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStyles } from "../../../../Styles";
 
 import list1 from "../../../../assests/Images/list1.png";
@@ -10,6 +10,7 @@ import list4 from "../../../../assests/Images/list4.png";
 import map1 from "../../../../assests/Images/1T_t.png";
 import map2 from "../../../../assests/Images/1T_t.png";
 import map3 from "../../../../assests/Images/1T_t.png";
+import map4 from "../../../../assests/Images/1T_t.png";
 import right from "../../../../assests/Images/down-arrow.png";
 import left from "../../../../assests/Images/up-arrow.png";
 import hleft from "../../../../assests/Images/hprev.png";
@@ -18,6 +19,7 @@ import hright from "../../../../assests/Images/hnext.png";
 import Map1 from "./map1";
 import Map2 from "./map2";
 import Map3 from "./map3";
+import Map4 from "./map4";
 // import mapV from "../../../../assests/Images/V.png";
 import mapV2 from "../../../../assests/Images/V2.png";
 import flashappOveralIcon from "../../../../assests/Images/flasapp-hanging-icon.png";
@@ -32,48 +34,58 @@ import AppButton from "../../../../components/AppButton";
 
 const photos = [
   {
-    id: 'p1',
-    title: '1',
+    id: "p1",
+    title: "1",
     url: map1,
   },
   {
-    id: 'p2',
-    title: '2',
+    id: "p2",
+    title: "2",
     url: map2,
   },
   {
-    id: 'p3',
-    title: '3',
+    id: "p3",
+    title: "3",
     url: map3,
+  },
+  {
+    id: "p4",
+    title: "4",
+    url: map4,
   },
 ];
 
 const Roadmap = () => {
   const classes = useStyles();
-  const [listItem, setlistItem]= useState([]);
+  const [listItem, setlistItem] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(2);
-  const handleList = (index) =>{
-    switch(index){
-      case 0: setlistItem(details.slice(0,7));break;
-      case 1: setlistItem(details.slice(7,14));break;
+  const handleList = (index) => {
+    switch (index) {
+      case 0:
+        setlistItem(details.slice(0, 7));
+        break;
+      case 1:
+        setlistItem(details.slice(7, 14));
+        break;
       case 2:
-        setlistItem(details.slice(14)); break;
+        setlistItem(details.slice(14));
+        break;
     }
-    // index === 0 ? setlistItem(details.slice(listIndexs[0])) :  
+    // index === 0 ? setlistItem(details.slice(listIndexs[0])) :
     //   setlistItem(details.slice(listIndexs[index],listIndexs[index + 1] ));
-  }
+  };
   const next = () => {
-    handleList((currentIndex + 1) % photos.length);    
-    setCurrentIndex((currentIndex + 1)  % photos.length);
+    handleList((currentIndex + 1) % photos.length);
+    setCurrentIndex((currentIndex + 1) % photos.length);
   };
   const prev = () => {
-    handleList((currentIndex - 1 + photos.length) % photos.length);    
+    handleList((currentIndex - 1 + photos.length) % photos.length);
     setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
   };
   const [hover, setHover] = useState(false);
-  useEffect(()=>{
+  useEffect(() => {
     setlistItem(details.slice(14));
-  },[])
+  }, []);
   // const setFontColor = details.map((num, index) => {
   //   if (index == 1 || 2 || 3 || 4 || 5 || 6 || 7 || 10 || 11 || 12 || 13) {
   //     return num;
@@ -82,7 +94,7 @@ const Roadmap = () => {
   // });
 
   const color_dark = "#85898F";
-  const color_white = "#FFFFFF"
+  const color_white = "#FFFFFF";
   const details = [
     {
       num: "1",
@@ -229,7 +241,7 @@ const Roadmap = () => {
       name: "Polygon",
     },
   ];
-  const lang = useSelector(Languagemodel)
+  const lang = useSelector(Languagemodel);
   return (
     <>
       <Grid
@@ -246,19 +258,22 @@ const Roadmap = () => {
             display: "flex",
             justifyContent: "center",
             position: "relative",
-            paddingTop: {lg:"55px",xs:"0px"},
+            paddingTop: { lg: "55px", xs: "0px" },
           }}
         >
           <Box
             sx={{
               right: "10%",
               left: "unset",
-              bottom: {lg:"-12px",xs:"-50px"},
+              bottom: { lg: "-12px", xs: "-50px" },
               position: "absolute",
-              maxWidth:{lg:'117px',xs:'86px'}
+              maxWidth: { lg: "117px", xs: "86px" },
             }}
           >
-            <img  className="rotating roadmap-overlay" src={flashappOveralIcon} />
+            <img
+              className="rotating roadmap-overlay"
+              src={flashappOveralIcon}
+            />
           </Box>
         </Grid>
         <Grid
@@ -323,7 +338,7 @@ const Roadmap = () => {
               }}
             >
               <Box>
-                <img className="roadmap-image" src={left} onClick= {prev}/>
+                <img className="roadmap-image" src={left} onClick={prev} />
               </Box>
               <Typography
                 sx={{
@@ -333,17 +348,21 @@ const Roadmap = () => {
                   lineHeight: "73px !important",
                 }}
               >
-                  <div
-                    // if the photo is the current photo, show it
-                    className={
-                      photos[currentIndex].id === photos[currentIndex].id ? 'fade' : 'slide fade'
-                    }
-                  >
-                    <div className='roadmap-image'>{photos[currentIndex].title}</div>
+                <div
+                  // if the photo is the current photo, show it
+                  className={
+                    photos[currentIndex].id === photos[currentIndex].id
+                      ? "fade"
+                      : "slide fade"
+                  }
+                >
+                  <div className="roadmap-image">
+                    {photos[currentIndex].title}
                   </div>
+                </div>
               </Typography>
-              <Box >
-                <img className="roadmap-image" src={right} onClick={next}/>
+              <Box>
+                <img className="roadmap-image" src={right} onClick={next} />
               </Box>
             </Box>
           </Grid>
@@ -475,15 +494,20 @@ const Roadmap = () => {
                   alignItems: "center",
                 }}
               >
-                <Box 
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
+                <Box
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
                 >
                   {hover ? (
-                      <img className="roadmap-image" src={left} onClick= {prev} style={{cursor:"pointer"}}/>
-                    ) : (
-                      <img className="roadmap-image" src={left}  />
-                    )}
+                    <img
+                      className="roadmap-image"
+                      src={left}
+                      onClick={prev}
+                      style={{ cursor: "pointer" }}
+                    />
+                  ) : (
+                    <img className="roadmap-image" src={left} />
+                  )}
                   {/* <img className="roadmap-image" src={left} onClick= {prev}/> */}
                 </Box>
                 <Typography
@@ -495,42 +519,51 @@ const Roadmap = () => {
                   }}
                 >
                   {photos.map((photo) => (
-                  <div
-                    key={photo.id}
-
-                    // if the photo is the current photo, show it
-                    className={
-                      photos[currentIndex].id === photo.id ? 'fade' : 'slide fade'
-                    }
-                  >
-                    <div className='roadmap-image'>{photo.title}</div>
-                  </div>
-                ))}
+                    <div
+                      key={photo.id}
+                      // if the photo is the current photo, show it
+                      className={
+                        photos[currentIndex].id === photo.id
+                          ? "fade"
+                          : "slide fade"
+                      }
+                    >
+                      <div className="roadmap-image">{photo.title}</div>
+                    </div>
+                  ))}
                 </Typography>
-                <Box onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
+                <Box
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
                 >
                   {hover ? (
-                      <img className="roadmap-image" src={right} onClick= {next} style={{cursor: "pointer"}}/>
-                    ) : (
-                      <img className="roadmap-image" src={right}  />
-                    )}
+                    <img
+                      className="roadmap-image"
+                      src={right}
+                      onClick={next}
+                      style={{ cursor: "pointer" }}
+                    />
+                  ) : (
+                    <img className="roadmap-image" src={right} />
+                  )}
                 </Box>
               </Box>
-              <Box className='slider-container'>
+              <Box className="slider-container">
                 {photos.map((photo) => (
                   <div
                     key={photo.id}
-
                     // if the photo is the current photo, show it
                     className={
-                      photos[currentIndex].id === photo.id   ? 'fade' : 'slide fade'
+                      photos[currentIndex].id === photo.id
+                        ? "fade"
+                        : "slide fade"
                     }
                   >
-                    <img src={photo.url} alt={photo.title} className='photo' />
-                    {currentIndex == 0 ? <Map1/> : <></>}
-                    {currentIndex == 1 ? <Map2/> : <></>}
-                    {currentIndex == 2 ? <Map3/> : <></>}
+                    <img src={photo.url} alt={photo.title} className="photo" />
+                    {currentIndex == 0 ? <Map1 /> : <></>}
+                    {currentIndex == 1 ? <Map2 /> : <></>}
+                    {currentIndex == 2 ? <Map3 /> : <></>}
+                    {currentIndex == 3 ? <Map4 /> : <></>}
                   </div>
                 ))}
                 {/* <img className="roadmap-image" src={mapV} /> */}

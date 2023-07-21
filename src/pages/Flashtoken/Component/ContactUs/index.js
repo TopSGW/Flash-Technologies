@@ -8,13 +8,13 @@ import {
   Button,
   TextField,
   Alert,
-  Stack
+  Stack,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useStyles } from "../../../../Styles";
 
-import axios from 'axios';
+import axios from "axios";
 import FlashLogo from "../../../../assests/Logo/Flashlogo.png";
 // import inbox from "../../../../assests/Images/inbox.png";
 import img1 from "../../../../assests/Images/social1.png";
@@ -43,10 +43,9 @@ const dev = 2; // 1: develop 2: deploy
 //     SERVER_URL: window.location.origin
 // }
 
-
 const config = {
-  SERVER_URL: 'https://flash-technologies.org:3001'
-}
+  SERVER_URL: "https://flash-technologies.org:3001",
+};
 
 const pics = [
   {
@@ -87,7 +86,7 @@ const pics = [
   },
   {
     img: img10,
-    link: "https://opensea.io/collection/flash-nfts"
+    link: "https://opensea.io/collection/flash-nfts",
   },
 ];
 
@@ -95,51 +94,70 @@ const ContactUs = () => {
   const classes = useStyles();
   const [firstName, SetfirstName] = useState("");
   const [lastName, SetlastName] = useState("");
-  const [emailAddress, SetemailAddress] = useState('');
-  const [messageContent, SetmessageContent] = useState('');
+  const [emailAddress, SetemailAddress] = useState("");
+  const [messageContent, SetmessageContent] = useState("");
   const [messageStatus, SetmessageStatus] = useState(<></>);
-  const SendMessage = async () =>{
+  const SendMessage = async () => {
     const data = {
       firstName: firstName,
       lastName: lastName,
       emailAddress: emailAddress,
-      messageContent: messageContent
-    }
-    await axios.post(`${config.SERVER_URL}/api/messages`, data)
-        .then(res=>{
-          SetmessageStatus(
-            <Alert variant="filled" severity="success" style={{margin: 'auto', width: '60%',
-              animation:"visible 0.8s ease", position:'relative'}}
-              className='AlertSetting'>
-                Success!
-            </Alert>
-          );
-          setTimeout(() => { 
-            SetmessageStatus(<></>);
-          }, 2000);
-            console.log(res.data);
-          })
-        .catch((err)=> {
-          SetmessageStatus(
-            <Alert variant="filled" severity="error" style={{margin: 'auto', width: '60%',
-              animation:"visible 0.8s ease", position:'relative'}}
-              className='AlertSetting'>
-                Error!
+      messageContent: messageContent,
+    };
+    // await axios.post(`${config.SERVER_URL}/api/messages`, data)
+    await axios
+      .post("https://flash-launch.com:3000/send-email", data)
+      .then((res) => {
+        SetmessageStatus(
+          <Alert
+            variant="filled"
+            severity="success"
+            style={{
+              margin: "auto",
+              width: "60%",
+              animation: "visible 0.8s ease",
+              position: "relative",
+            }}
+            className="AlertSetting"
+          >
+            Success!
           </Alert>
-          );
-          setTimeout(() => { 
-            SetmessageStatus(<></>);
+        );
+        setTimeout(() => {
+          SetmessageStatus(<></>);
+        }, 2000);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        SetmessageStatus(
+          <Alert
+            variant="filled"
+            severity="error"
+            style={{
+              margin: "auto",
+              width: "60%",
+              animation: "visible 0.8s ease",
+              position: "relative",
+            }}
+            className="AlertSetting"
+          >
+            Error!
+          </Alert>
+        );
+        setTimeout(() => {
+          SetmessageStatus(<></>);
         }, 2000);
       });
-  }
-  const lang = useSelector(Languagemodel)
-  const LaguageState = useSelector((state) => state.translate.mode)
+  };
+  const lang = useSelector(Languagemodel);
+  const LaguageState = useSelector((state) => state.translate.mode);
   return (
     <>
-      <Stack sx={{ width: '100%', position:'fixed', top:0, zIndex:9999999}} spacing={2}>
-        {
-          messageStatus
-        }
+      <Stack
+        sx={{ width: "100%", position: "fixed", top: 0, zIndex: 9999999 }}
+        spacing={2}
+      >
+        {messageStatus}
       </Stack>
       <Grid
         container
@@ -208,7 +226,11 @@ const ContactUs = () => {
                     paddingRight: { lg: "60px", xs: "60px" },
                   }}
                 >
-                  {lang["Whether you have a question about one of our services or want to get involved in our mission, we are ready to help."]}
+                  {
+                    lang[
+                      "Whether you have a question about one of our services or want to get involved in our mission, we are ready to help."
+                    ]
+                  }
                 </Typography>
                 <Box>
                   <br></br>
@@ -233,15 +255,21 @@ const ContactUs = () => {
                       </Box> */}
                       {/* <br /> */}
                       <Box mt="23px">
-                        <div style={{display:'flex', alignItems:'center'}}>
-                        <a
-                          href="mailto:contact@flash-technologies.org"
-                          style={{ textDecoration: "none" ,display:'flex', alignItems:'center'}}
-                        >
-                          <img className="email-icon" src={contactemail} />
-                        
-                        <p style={{marginLeft:'17px', color:'#fff'}}>contact@flash-technologies.org</p>
-                        </a>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <a
+                            href="mailto:contact@flash-technologies.org"
+                            style={{
+                              textDecoration: "none",
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img className="email-icon" src={contactemail} />
+
+                            <p style={{ marginLeft: "17px", color: "#fff" }}>
+                              contact@flash-technologies.org
+                            </p>
+                          </a>
                         </div>
                       </Box>
                       {/* <img src={contactsectionicons} /> */}
@@ -259,15 +287,21 @@ const ContactUs = () => {
                       </Box> */}
                       {/* <br /> */}
                       <Box mt="23px">
-                        <div style={{display:'flex', alignItems:'center'}}>
-                        <a
-                          href="mailto:contact@flash-technologies.org"
-                          style={{ textDecoration: "none" ,display:'flex', alignItems:'center'}}
-                        >
-                          <img className="email-icon" src={contactemail} />
-                        
-                        <p style={{marginLeft:'17px', color:'#fff'}}>Investor@flash-technologies.org</p>
-                        </a>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <a
+                            href="mailto:contact@flash-technologies.org"
+                            style={{
+                              textDecoration: "none",
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img className="email-icon" src={contactemail} />
+
+                            <p style={{ marginLeft: "17px", color: "#fff" }}>
+                              Investor@flash-technologies.org
+                            </p>
+                          </a>
                         </div>
                       </Box>
                       {/* <img src={contactsectionicons} /> */}
@@ -285,36 +319,42 @@ const ContactUs = () => {
                       </Box> */}
                       {/* <br /> */}
                       <Box mt="23px">
-                        <div style={{display:'flex', alignItems:'center'}}>
-                        <a
-                          href="mailto:contact@flash-technologies.org"
-                          style={{ textDecoration: "none" ,display:'flex', alignItems:'center'}}
-                        >
-                          <img className="email-icon" src={contactemail} />
-                        
-                        <p style={{marginLeft:'17px', color:'#fff'}}>media@flash-technologies.org</p>
-                        </a>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <a
+                            href="mailto:contact@flash-technologies.org"
+                            style={{
+                              textDecoration: "none",
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img className="email-icon" src={contactemail} />
+
+                            <p style={{ marginLeft: "17px", color: "#fff" }}>
+                              media@flash-technologies.org
+                            </p>
+                          </a>
                         </div>
                       </Box>
                       {/* <img src={contactsectionicons} /> */}
                     </Box>
                   </Grid>
                   <Typography
-                        sx={{
-                          mt: {xs:"8px", md:"10px", lg:"24px"},
-                          mb: "5px",
-                          fontFamily: "Manrope",
-                          fontWeight: "700 !important",
-                          fontSize: "16px !important",
-                          lineHeight: "25.6px !important",
-                        }}
-                      >
-                        {lang["Follow us:"]}
+                    sx={{
+                      mt: { xs: "8px", md: "10px", lg: "24px" },
+                      mb: "5px",
+                      fontFamily: "Manrope",
+                      fontWeight: "700 !important",
+                      fontSize: "16px !important",
+                      lineHeight: "25.6px !important",
+                    }}
+                  >
+                    {lang["Follow us:"]}
                   </Typography>
                   <Grid
                     container
                     sx={{
-                      mt: {xs:"7px", md:"10px", lg:"12px"},
+                      mt: { xs: "7px", md: "10px", lg: "12px" },
                       display: "flex",
                       flexDirection: { lg: "row", xs: "row" },
                     }}
@@ -323,23 +363,28 @@ const ContactUs = () => {
                       return (
                         <Grid item xs={2.3} md={1} sm={1}>
                           <Box m="5px" sx={{ lg: "100%", xs: "50px" }}>
-                            {i.img == img2 ?                             
-                            <a
-                              id="telegramlink2"
-                              target="_blank"
-                              style={{ textDecoration: "none" }}
-                              href={`${LaguageState == 'fr' ? 'https://t.me/flashtechnologiesfr' : 'https://t.me/flashtokenenglish'}`}
-                            >
-                              <img src={i.img} />
-                            </a>:
-                            <a
-                              href={i.link}
-                              target="_blank"
-                              style={{ textDecoration: "none" }}
-                            >
-                              <img src={i.img} />
-                            </a>
-                            }
+                            {i.img == img2 ? (
+                              <a
+                                id="telegramlink2"
+                                target="_blank"
+                                style={{ textDecoration: "none" }}
+                                href={`${
+                                  LaguageState == "fr"
+                                    ? "https://t.me/flashtechnologiesfr"
+                                    : "https://t.me/flashtokenenglish"
+                                }`}
+                              >
+                                <img src={i.img} />
+                              </a>
+                            ) : (
+                              <a
+                                href={i.link}
+                                target="_blank"
+                                style={{ textDecoration: "none" }}
+                              >
+                                <img src={i.img} />
+                              </a>
+                            )}
                           </Box>
                         </Grid>
                       );
@@ -365,8 +410,12 @@ const ContactUs = () => {
                   <div className="contact-form-box">
                     <label>
                       <span>{lang["First Name"]}</span>
-                      <input type="text" placeholder="Jenny" value={firstName} 
-                        onChange={(e)=>SetfirstName(e.target.value)}/>
+                      <input
+                        type="text"
+                        placeholder="Jenny"
+                        value={firstName}
+                        onChange={(e) => SetfirstName(e.target.value)}
+                      />
                     </label>
                   </div>
                 </Grid>
@@ -375,8 +424,12 @@ const ContactUs = () => {
                   <div className="contact-form-box">
                     <label>
                       <span>{lang["Last Name"]}</span>
-                      <input type="text" placeholder="Wilson" value={lastName} 
-                        onChange={(e) => SetlastName(e.target.value)}/>
+                      <input
+                        type="text"
+                        placeholder="Wilson"
+                        value={lastName}
+                        onChange={(e) => SetlastName(e.target.value)}
+                      />
                     </label>
                   </div>
                 </Grid>
@@ -386,7 +439,8 @@ const ContactUs = () => {
                       <span>{lang["Your Email Address"]}</span>
                       <input
                         type="email"
-                        placeholder="jenny.lawson@example.com" value={emailAddress}
+                        placeholder="jenny.lawson@example.com"
+                        value={emailAddress}
                         onChange={(e) => SetemailAddress(e.target.value)}
                       />
                     </label>
@@ -396,8 +450,11 @@ const ContactUs = () => {
                   <div className="contact-form-box">
                     <label>
                       <span>{lang["Tell us about your project"]}</span>
-                      <textarea placeholder={`${lang["Type Here"]}...`} value={messageContent}
-                        onChange={(e) => SetmessageContent(e.target.value)}></textarea>
+                      <textarea
+                        placeholder={`${lang["Type Here"]}...`}
+                        value={messageContent}
+                        onChange={(e) => SetmessageContent(e.target.value)}
+                      ></textarea>
                     </label>
                   </div>
                 </Grid>
@@ -411,10 +468,19 @@ const ContactUs = () => {
                     // width: { lg: "350px", xs: "100%" },
                   }}
                 >
-                  <Grid item xs={12} md={6} className="contact-form-box" style={{padding: "20px"}}>
-                    <Button sx={{ textTransform: "none", padding: "10px" }} 
-                      onClick={()=>SendMessage()}>
-                        {lang["Send Message"]}</Button>
+                  <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    className="contact-form-box"
+                    style={{ padding: "20px" }}
+                  >
+                    <Button
+                      sx={{ textTransform: "none", padding: "10px" }}
+                      onClick={() => SendMessage()}
+                    >
+                      {lang["Send Message"]}
+                    </Button>
                   </Grid>
                 </Grid>
               </Grid>
