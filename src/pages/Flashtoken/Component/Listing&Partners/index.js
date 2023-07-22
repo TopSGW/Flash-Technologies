@@ -22,8 +22,8 @@ import partner14 from "../../../../assests/Images/partner14.png";
 import partner15 from "../../../../assests/Images/partner15.png";
 import partner16 from "../../../../assests/Images/partner16.png";
 import partner17 from "../../../../assests/svg/clertlogo.svg";
-import partner18 from '../../../../assests/svg/dexview-full.svg';
-import orangesvg from '../../../../assests/svg/Group.svg'
+import partner18 from "../../../../assests/svg/dexview-full.svg";
+import orangesvg from "../../../../assests/svg/Group.svg";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -41,8 +41,8 @@ const ListingPartners = () => {
       img: partner3,
     },
     {
-      img:partner17,
-      url: "https://www.certik.com"
+      img: partner17,
+      url: "https://www.certik.com",
     },
     // {
     //   img: partner2,
@@ -67,9 +67,11 @@ const ListingPartners = () => {
     },
     {
       img: partner7,
+      url: "https://www.pinksale.finance",
     },
     {
       img: partner18,
+      url: "https://www.dexview.com",
     },
     {
       img: partner8,
@@ -125,6 +127,7 @@ const ListingPartners = () => {
     },
     {
       img: partner7,
+      url: "https://www.pinksale.finance",
     },
     {
       img: partner8,
@@ -155,14 +158,15 @@ const ListingPartners = () => {
     },
     {
       img: partner17,
-      url: "https://www.certik.com"
+      url: "https://www.certik.com",
     },
     {
-      img: partner18
+      img: partner18,
+      url: "https://www.dexview.com",
     },
     {
-      img: orangesvg
-    }
+      img: orangesvg,
+    },
   ];
 
   const Option = {
@@ -199,7 +203,7 @@ const ListingPartners = () => {
       },
     },
   };
-  const lang = useSelector(Languagemodel)
+  const lang = useSelector(Languagemodel);
   return (
     <>
       <Grid
@@ -263,8 +267,17 @@ const ListingPartners = () => {
               {list5.map((i) => {
                 return (
                   <div>
-                    {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} width="140px" /> </a> :
-                        <img src={i.img} />}                    
+                    {i.img == partner2 ||
+                    i.img == partner17 ||
+                    i.img == partner7 ||
+                    i.img == partner18 ? (
+                      <a href={i.url} target="_blank">
+                        {" "}
+                        <img src={i.img} width="140px" />{" "}
+                      </a>
+                    ) : (
+                      <img src={i.img} />
+                    )}
                   </div>
                 );
               })}
@@ -317,7 +330,18 @@ const ListingPartners = () => {
                         }}
                       >
                         <Box>
-                          <img src={i.img} width="101px" height="auto" />
+                          {i.img == partner7 || i.img == partner18 ? (
+                            <a href={i.url} target="_blank">
+                              {" "}
+                              <img
+                                src={i.img}
+                                width="101px"
+                                height="auto"
+                              />{" "}
+                            </a>
+                          ) : (
+                            <img src={i.img} />
+                          )}
                         </Box>
                       </Box>
                     </motion.button>
@@ -370,8 +394,17 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        {i.img == partner2 || i.img == partner17 ? <a href={i.url} target="_blank"> <img src={i.img} height={"120px"} width={"140px"}/> </a> :
-                        <img src={i.img} />}
+                        {i.img == partner2 ||
+                        i.img == partner17 ||
+                        i.img == partner7 ||
+                        i.img == partner18 ? (
+                          <a href={i.url} target="_blank">
+                            {" "}
+                            <img src={i.img} />{" "}
+                          </a>
+                        ) : (
+                          <img src={i.img} />
+                        )}
                       </Box>
                     </Box>
                   </motion.button>
@@ -405,7 +438,14 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        <img src={i.img} />
+                        {i.img == partner7 || i.img == partner18 ? (
+                          <a href={i.url} target="_blank">
+                            {" "}
+                            <img src={i.img} />{" "}
+                          </a>
+                        ) : (
+                          <img src={i.img} />
+                        )}
                       </Box>
                     </Box>
                   </motion.button>
@@ -439,7 +479,14 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        <img src={i.img} />
+                        {i.img == partner7 || i.img == partner18 ? (
+                          <a href={i.url} target="_blank">
+                            {" "}
+                            <img src={i.img} />{" "}
+                          </a>
+                        ) : (
+                          <img src={i.img} />
+                        )}
                       </Box>
                     </Box>
                   </motion.button>
@@ -473,7 +520,14 @@ const ListingPartners = () => {
                       }}
                     >
                       <Box>
-                        <img src={i.img} />
+                        {i.img == partner7 || i.img == partner18 ? (
+                          <a href={i.url} target="_blank">
+                            {" "}
+                            <img src={i.img} />{" "}
+                          </a>
+                        ) : (
+                          <img src={i.img} />
+                        )}
                       </Box>
                     </Box>
                   </motion.button>

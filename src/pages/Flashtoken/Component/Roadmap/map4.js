@@ -62,7 +62,7 @@ export default function Map4() {
         >
           <p
             style={{
-              color: "#a19898",
+              color: "white",
               textAlign: "right",
               fontSize: "13px",
               margin: 0,

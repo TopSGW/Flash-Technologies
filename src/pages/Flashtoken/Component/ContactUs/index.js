@@ -114,13 +114,16 @@ const ContactUs = () => {
             severity="success"
             style={{
               margin: "auto",
-              width: "60%",
+              width: "100%",
               animation: "visible 0.8s ease",
-              position: "relative",
+              position: "absolute",
+              zIndex: "999999999",
+              height: "50px",
+              display: "flex",
             }}
             className="AlertSetting"
           >
-            Success!
+            Your message has been sent!
           </Alert>
         );
         setTimeout(() => {
@@ -135,13 +138,16 @@ const ContactUs = () => {
             severity="error"
             style={{
               margin: "auto",
-              width: "60%",
+              width: "100%",
               animation: "visible 0.8s ease",
-              position: "relative",
+              position: "absolute",
+              zIndex: "999999999",
+              height: "50px",
+              display: "flex",
             }}
             className="AlertSetting"
           >
-            Error!
+            Error sending message!
           </Alert>
         );
         setTimeout(() => {
@@ -154,7 +160,13 @@ const ContactUs = () => {
   return (
     <>
       <Stack
-        sx={{ width: "100%", position: "fixed", top: 0, zIndex: 9999999 }}
+        sx={{
+          width: "300px",
+          position: "fixed",
+          top: "90%",
+          zIndex: 9999999,
+          right: "10px",
+        }}
         spacing={2}
       >
         {messageStatus}

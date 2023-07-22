@@ -58,7 +58,7 @@ const photos = [
 const Roadmap = () => {
   const classes = useStyles();
   const [listItem, setlistItem] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState(3);
   const handleList = (index) => {
     switch (index) {
       case 0:
@@ -68,7 +68,10 @@ const Roadmap = () => {
         setlistItem(details.slice(7, 14));
         break;
       case 2:
-        setlistItem(details.slice(14));
+        setlistItem(details.slice(14, 21));
+        break;
+      case 3:
+        setlistItem(details.slice(21, 28));
         break;
     }
     // index === 0 ? setlistItem(details.slice(listIndexs[0])) :
@@ -84,7 +87,7 @@ const Roadmap = () => {
   };
   const [hover, setHover] = useState(false);
   useEffect(() => {
-    setlistItem(details.slice(14));
+    setlistItem(details.slice(21));
   }, []);
   // const setFontColor = details.map((num, index) => {
   //   if (index == 1 || 2 || 3 || 4 || 5 || 6 || 7 || 10 || 11 || 12 || 13) {
@@ -221,6 +224,48 @@ const Roadmap = () => {
       name: "2023",
       color: color_dark,
       des: "Launch Flash Transfer extension & application Android + IOS",
+    },
+    {
+      num: "22",
+      name: "2023",
+      color: color_white,
+      des: "Auditing Flash Transfer & Flash Wallet apps",
+    },
+    {
+      num: "23",
+      name: "2023",
+      color: color_white,
+      des: "Flash x Orange Money",
+    },
+    {
+      num: "24",
+      name: "2023",
+      color: color_white,
+      des: "Flash x MTN",
+    },
+    {
+      num: "25",
+      name: "2023",
+      color: color_white,
+      des: "Launch of Flash Payment",
+    },
+    {
+      num: "26",
+      name: "2023",
+      color: color_white,
+      des: "Launch of Dead Wallet",
+    },
+    {
+      num: "27",
+      name: "2023",
+      color: color_white,
+      des: "Waiting for PSAN registration in France",
+    },
+    {
+      num: "28",
+      name: "2023",
+      color: color_dark,
+      des: "Waiting for VASP registration in UAE",
     },
   ];
   const list = [

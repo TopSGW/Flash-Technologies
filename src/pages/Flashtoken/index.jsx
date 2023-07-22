@@ -22,23 +22,26 @@ import ContactUs from "./Component/ContactUs";
 import HeaderTopBar from "./Component/HeaderTopBar";
 import Menu from "./Component/menu";
 import bannerBackground from "../../assests/Images/banner-background.png";
-import Carousel from 'react-material-ui-carousel'
+import Carousel from "react-material-ui-carousel";
 import "./index.css";
 
 import tokenomicsBack from "../../assests/Images/tokenomics-back.jpg";
-import useMediaQuery from '@mui/material/useMediaQuery';
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Media from "./Component/Media";
 
 const FlashToken = () => {
   const classes = useStyles();
-  const tokenomicsBreakpoint = useMediaQuery('(max-width : 1199px)');
+  const tokenomicsBreakpoint = useMediaQuery("(max-width : 1199px)");
   return (
     <>
-      <Grid container style={{overflow:'hidden'}}>
-        <Grid item md={12} sx={{
-          width: "100vw",
-          marginTop: {xs:'120px', lg:'0px'}
-        }} 
+      <Grid container style={{ overflow: "hidden" }}>
+        <Grid
+          item
+          md={12}
+          sx={{
+            width: "100vw",
+            marginTop: { xs: "120px", lg: "0px" },
+          }}
         >
           {/* <Grid
             sx={{
@@ -52,7 +55,7 @@ const FlashToken = () => {
               backgroundColor: "#181818",
               backgroundImage: `url(${bannerBackground})`,
               backgroundSize: "cover",
-              position: "relative"
+              position: "relative",
             }}
           >
             <FTheader />
@@ -80,19 +83,21 @@ const FlashToken = () => {
               backgroundImage: `url(${tokenomicsBack})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
-              position: "relative"
+              position: "relative",
             }}
           >
-            <div style={{
-              width: "100%",
-              height: "40px",
-              position: "absolute",
-              bottom: "100%",
-              backgroundColor: "black",
-              display:`${tokenomicsBreakpoint ? 'none' : 'block'}`
-            }}></div>
-            <Tokenomics/>
-          </Grid> 
+            <div
+              style={{
+                width: "100%",
+                height: "40px",
+                position: "absolute",
+                bottom: "100%",
+                backgroundColor: "black",
+                display: `${tokenomicsBreakpoint ? "none" : "block"}`,
+              }}
+            ></div>
+            <Tokenomics />
+          </Grid>
           <Grid sx={{ backgroundColor: "#181818" }}>
             <FlashRecharge />
           </Grid>
@@ -109,9 +114,15 @@ const FlashToken = () => {
           <Grid id="team" sx={{ backgroundColor: "#181818" }}>
             <CoreTeamMember />
           </Grid>
-          <Grid sx={{ backgroundColor: "black", position: "relative", paddingBottom:{lg:"60px"} }}>
+          <Grid
+            sx={{
+              backgroundColor: "black",
+              position: "relative",
+              paddingBottom: { lg: "60px" },
+            }}
+          >
             <DevTeam />
-            <Media/>
+            <Media />
           </Grid>
           <Grid
             id="faq"
@@ -119,10 +130,13 @@ const FlashToken = () => {
           >
             <Faq />
           </Grid>
-          <Grid id="Contact" sx={{ backgroundColor: "black" }}>
+          <Grid
+            id="Contact"
+            sx={{ backgroundColor: "black", position: "relative" }}
+          >
             <ContactUs />
           </Grid>
-          <Grid sx={{ backgroundColor: "#181818", paddingBottom: '60px'}}>
+          <Grid sx={{ backgroundColor: "#181818", paddingBottom: "60px" }}>
             <Footer />
           </Grid>
         </Grid>
