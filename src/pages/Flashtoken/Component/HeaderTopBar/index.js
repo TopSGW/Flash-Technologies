@@ -42,39 +42,39 @@ const HeaderTopBar = () => {
   const [label_showminute, setminute] = useState(0)
   const [label_second, setsecond] = useState(0)
   const lang = useSelector(Languagemodel)
-  useEffect(()=>{
-      const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-      let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "07/22/",
-      birthday = dayMonth + yyyy;
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > birthday) {
-        birthday = dayMonth + nextYear;
-      }
+  // useEffect(()=>{
+  //     const second = 1000,
+  //       minute = second * 60,
+  //       hour = minute * 60,
+  //       day = hour * 24;
+  //     let today = new Date(),
+  //     dd = String(today.getDate()).padStart(2, "0"),
+  //     mm = String(today.getMonth() + 1).padStart(2, "0"),
+  //     yyyy = today.getFullYear(),
+  //     nextYear = yyyy + 1,
+  //     dayMonth = "07/22/",
+  //     birthday = dayMonth + yyyy;
+  //     today = mm + "/" + dd + "/" + yyyy;
+  //     if (today > birthday) {
+  //       birthday = dayMonth + nextYear;
+  //     }
 
-      const countDown = new Date(birthday).getTime() + 61200000,
-      x = setInterval(function() {    
-        const now = new Date().getTime(), distance = countDown - now;
+  //     const countDown = new Date(birthday).getTime() + 61200000,
+  //     x = setInterval(function() {    
+  //       const now = new Date().getTime(), distance = countDown - now;
 
-        setday(Math.floor(distance / (day)))
-        sethour(Math.floor((distance % (day)) / (hour)))
-        setminute(Math.floor((distance % (hour)) / (minute)))
-        setsecond(Math.floor((distance % (minute)) / second))
+  //       setday(Math.floor(distance / (day)))
+  //       sethour(Math.floor((distance % (day)) / (hour)))
+  //       setminute(Math.floor((distance % (hour)) / (minute)))
+  //       setsecond(Math.floor((distance % (minute)) / second))
 
-        //do something later when date is reached
-        if (distance < 0) {
-          clearInterval(x);
-        }
-      }, 800)
-      return () => clearInterval(x);
-  },[])
+  //       //do something later when date is reached
+  //       if (distance < 0) {
+  //         clearInterval(x);
+  //       }
+  //     }, 800)
+  //     return () => clearInterval(x);
+  // },[])
   return (
     <>
       <Grid
@@ -145,9 +145,9 @@ const HeaderTopBar = () => {
                       <Grid sx={{ display: { md: "flex", xs: "none" } }}>
                         <div className="notify-text">
                           <h4>
-                            Token Sale IN{" "}
-                            <span class="primary-color">fair launch</span>{" "}
-                            (soon)
+                            {/* Token Sale IN{" "} */}
+                            <span class="primary-color">Flash 3.0</span>{" "}
+                            is live
                           </h4>
                         </div>
                       </Grid>

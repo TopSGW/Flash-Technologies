@@ -651,7 +651,7 @@ const Tokenomics = () => {
               </a>
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
-              <a href={FR} target="__blank" style={{textDecoration:'none', cursor:'pointer'}}>
+              {/* <a href={FR} target="__blank" style={{textDecoration:'none', cursor:'pointer'}}> */}
                 <IconButton
                   className="iconbutton"
                   sx={{
@@ -670,7 +670,7 @@ const Tokenomics = () => {
                   Whitepaper FR
                   <img src={paper} style={{ marginLeft: "30px" }} />
                 </IconButton>
-              </a>
+              {/* </a> */}
             </Grid>
             <Grid item md={2.8} xs={5.4} m={1}>
               <IconButton
