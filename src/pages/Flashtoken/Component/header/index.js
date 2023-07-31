@@ -177,9 +177,9 @@ const FTheader = () => {
         }
       >
 
-      <Grid sx={ {backgroundColor: 'black'} }>
+      {/* <Grid sx={ {backgroundColor: 'black'} }>
         <HeaderTopBar/>
-      </Grid>
+      </Grid> */}
 
 {/* mobile mode */}
         <Grid

@@ -40,7 +40,7 @@ const FlashToken = () => {
           md={12}
           sx={{
             width: "100vw",
-            marginTop: { xs: "120px", lg: "0px" },
+            marginTop: { xs: "70px", lg: "0px" },
           }}
         >
           {/* <Grid

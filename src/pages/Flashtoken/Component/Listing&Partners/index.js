@@ -40,10 +40,10 @@ const ListingPartners = () => {
     {
       img: partner3,
     },
-    {
-      img: partner17,
-      url: "https://www.certik.com",
-    },
+    // {
+    //   img: partner17,
+    //   url: "https://www.certik.com",
+    // },
     // {
     //   img: partner2,
     //   url: "https://solidproof.io/"
